@@ -1,0 +1,36 @@
+#include <vector>
+
+class Solution {
+public:
+    vector<string> anagrams(vector<string> &strs) {
+        unordered_map<string, int> keys;
+        vector<string> result;
+        
+        for(int i = 0;i < strs.size();i++)
+        {
+            string s = strs[i];
+            sort(s.begin(), s.end());
+            unordered_map<string, int>::iterator it = keys.find(s);
+            if(it == keys.end())
+            {
+                keys[s] = i;
+            }
+            else
+            {
+                result.push_back(strs[i]); 
+                if(it->second >= 0)
+                {
+                    result.push_back(strs[it->second]);
+                    it->second = -1;
+                }
+            }
+        }
+        return result;
+    }
+};
+
+int main()
+{
+    solution s;
+    return 0;
+}
