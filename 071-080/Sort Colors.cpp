@@ -1,8 +1,8 @@
 class Solution {
 public:
     void sortColors(int A[], int n) {
-        int i, j, k;
-        i = j = k = 0;
+        int i, j;
+        i = j;
         
         for(int r = 0; r < n; r++)
         {
@@ -11,15 +11,11 @@ public:
                 swap(A[j],A[r]);
                 swap(A[i],A[j]);
                 i++;
-                k++;
                 j++;
             } else if(A[r] == 1)
             {
                 swap(A[r],A[j]);
                 j++;
-                k++;
-            } else {
-                k++;
             }
         }
         
