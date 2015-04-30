@@ -17,7 +17,7 @@ public:
         int j = 0;
         int minLen = INT_MAX;
         int minIdx = 0;
-        while (i < (int)S.size() && j < (int)S.size())
+        while (i < (int)S.size() )
         {
             if (count)
             {
