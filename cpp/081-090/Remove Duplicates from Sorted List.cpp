@@ -17,27 +17,17 @@ struct ListNode {
 class Solution {
 public:
     ListNode* deleteDuplicates(ListNode* head) {
-        if(!head) return NULL;
         
-        int prev(head->val);
-        ListNode *result(head);
-        head = head->next;
-        ListNode *_head = result;
-        
-        while(head)
+        ListNode *node(head);
+        while(node && node->next)
         {
-            if(head->val != prev)
-            {
-                _head->next = head;
-                _head = head;
-                prev = head->val;
-            }
-            head = head->next;
+            if (node->val == node->next->val)
+                node->next = node->next->next;
+            else
+                node = node->next;
         }
-        _head->next = NULL;
         
-        return result;
-        
+        return head;
     }
     
 };
