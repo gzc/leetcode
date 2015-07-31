@@ -1,39 +1,32 @@
 #include <iostream>
-#include <unordered_map>
 #include <vector>
-#include <stack>
-#include <queue>
+#include <algorithm>
 
 using namespace std;
 
 class Solution {
     
 public:
-    void nextPermutation(vector<int> &num) {
-        int len = num.size();
-        if(num[len-1] > num[len-2]) {
-            swap(num[len-1], num[len-2]);
-            return;
-        }
+    void nextPermutation(vector<int> &num)
+    {
+        if (num.empty()) return;
         
-        int index1(len), index2(0);
-        while(index1 > 1 && num[index1-1] <= num[index1-2])
-            index1--;
-        if(index1 == 1){
-            sort(num.begin(), num.end());
-            return;
-        }
-        int v = num[index1-2];
-        sort(num.begin()+index1-1, num.end());
+        // in reverse order, find the first number which is in increasing trend (we call it violated number here)
+        int i;
+        for (i = num.size()-2; i >= 0; --i)
+            if (num[i] < num[i+1]) break;
         
-        for(int k = index1-1;k < len;k++)
-            if(num[k] > v) {
-                swap(num[index1-2], num[k]);
-                break;
-            }
+        // reverse all the numbers after violated number
+        reverse(begin(num)+i+1, end(num));
         
-        return;
+        // if violated number not found, because we have reversed the whole array, then we are done!
+        if (i == -1) return;
         
+        // else binary search find the first number larger than the violated number
+        auto itr = upper_bound(num.begin()+i+1, num.end(), num[i]);
+        
+        // swap them, done!
+        swap(num[i], *itr);
     }
     
 };
