@@ -20,7 +20,7 @@ public:
             for(int j = 0;j < 9;j++)
             {
                 char ch = board[i][j];
-                if(ch <= '0' || ch > '9') continue;
+                if(!isdigit(ch)) continue;
                 int num = ch - '1';
                 if(r[i][num] == true) return false;
                 r[i][num] = true;
