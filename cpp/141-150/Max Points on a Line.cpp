@@ -1,7 +1,17 @@
-int gcd(int a, int b) {
-        if(b==0) return a;
-        else return gcd(b, a%b);
-    }
+/**
+ * Definition for a point.
+ * struct Point {
+ *     int x;
+ *     int y;
+ *     Point() : x(0), y(0) {}
+ *     Point(int a, int b) : x(a), y(b) {}
+ * };
+ */
+int gcd(int a, int b)
+{
+    if(a == 0) return b;
+    return gcd(b%a, a);
+}
 
 class Solution {
 public:
@@ -13,17 +23,15 @@ public:
         
         for(int i = 0;i < points.size();i++)
         {
-            int localmax(0),overlap(0),vertical(0);
+            int localmax(0),overlap(0);
             map<pair<int, int>,int> statistic;
             for(int j = i+1;j < points.size();j++)
             {
+                //if(j == i) continue;
                 if(points[j].x==points[i].x && points[j].y==points[i].y) {
                     overlap++;
                     continue;
-                }else if(points[j].x==points[i].x) {
-                    vertical++;
-                }
-                else {
+                } else {
                     int x = points[j].x - points[i].x;
                     int y = points[j].y - points[i].y;
                     int divide = gcd(x,y);
@@ -34,7 +42,6 @@ public:
                     localmax=max(statistic[p], localmax);
                 }
             }
-            localmax=max(vertical, localmax);
             maxNum=max(maxNum, localmax+overlap+1);
         }
         
