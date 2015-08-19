@@ -4,7 +4,6 @@ public:
         
         int res = 0;
         stack<int> s;
-        int i = 0;
         hist.push_back(0);
         
         for(int i = 0;i < hist.size();i++)
