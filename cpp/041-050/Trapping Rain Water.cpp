@@ -1,58 +1,20 @@
-#include <iostream>
-#include <unordered_map>
-#include <vector>
-#include <stack>
-#include <queue>
-
-using namespace std;
-
 class Solution {
 public:
-    int trap(int A[], int n) {
-        
-        int now = A[0];
-        int index = 0;
-        int trap = 0;
-        
-        for(int i = 1;i < n;i++)
+    int trap(vector<int>& height) {
+        int result(0),i(0),j(height.size()-1);
+        int maxleft(0), maxright(0);
+        while(i < j)
         {
-            if(A[i] > now)
-            {
-                now = A[i];
-                index = i;
-            }
-            else if(A[i] <= now)
-            {
-                trap += now-A[i];
+            if(height[i] <= height[j]) {
+                if(height[i] > maxleft) maxleft = height[i];
+                else result += (maxleft - height[i]);
+                i++;
+            } else {
+                if(height[j] > maxright) maxright = height[j];
+                else result += (maxright - height[j]);
+                j--;
             }
         }
-        int tmp = now;
-        
-        
-        now = A[n-1];
-        for(int i = n-1;i > index;i--)
-        {
-            trap = trap - tmp+A[i];
-            if(A[i] > now)
-            {
-                now = A[i];
-            }
-            else if(A[i] <= now)
-            {
-                trap += now-A[i];
-            }
-        }
-        
-        return trap;
+        return result;
     }
-    
 };
-
-int main()
-{
-    Solution s;
-    int a[] = {9,6,8,8,5,6,3};
-    cout << s.trap(a, 7);
-
-    return 0;
-}
