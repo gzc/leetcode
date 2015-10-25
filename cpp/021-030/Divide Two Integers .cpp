@@ -1,57 +1,25 @@
-#include <iostream>
-#include <unordered_map>
-#include <vector>
-#include <stack>
-#include <queue>
-
-using namespace std;
-
 class Solution {
 public:
     int divide(long long dividend, long long divisor) {
-        
-        if(dividend > 0 && divisor > 0 && dividend < divisor) return 0;
-        if(dividend < 0 && divisor < 0 && dividend > divisor) return 0;
-        
-        int sign(1);
-        if(dividend > 0 && divisor < 0) sign = -1;
-        else if(dividend < 0 && divisor > 0)sign = -1;
-        
+        if(dividend == INT_MIN && divisor == -1) return INT_MAX;
+        long long result(0);
+        long long sign(1);
+        if(dividend*divisor < 0) sign = -1;
         dividend = abs(dividend);
         divisor = abs(divisor);
         
-        long long r(0), times(1);
-        
-        while( (dividend >> 1) >= divisor)
-        {
-            times = times << 1;
-            divisor = divisor << 1;
-        }
-        
-        while(times > 0)
-        {
-            if(dividend >= divisor)
-            {
-                r += times;
-                dividend -= divisor;
+        while(dividend >= divisor) {
+            long long tmp = divisor;
+            long long factor = 1;
+            
+            while(dividend >= tmp) {
+                dividend -= tmp;
+                result += factor;
+                tmp = tmp << 1;
+                factor = factor << 1;
             }
-            times /= 2;
-            divisor /= 2;
         }
-        r = r * sign;
         
-        if(r > INT_MAX || r < INT_MIN) return INT_MAX;
-        
-        return r;
+        return sign*result;
     }
-    
 };
-
-int main()
-{
-    Solution s;
-
-    cout << s.divide(INT_MIN, 1);
-    
-    return 0;
-}
