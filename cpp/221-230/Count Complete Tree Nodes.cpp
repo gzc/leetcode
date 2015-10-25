@@ -1,35 +1,25 @@
 class Solution {
-
-    int help(TreeNode *root, int h)
-    {
-        
-        if(!root) return 0;
-        
-        int tmp(0);
-        TreeNode *p = root;
-        while(p)
-        {
-            tmp++;
-            p = p->right;
-        }
-        if(tmp == h)
-            return (int)pow(2, h) - 1;
-        else
-            return 1+help(root->left, h-1) + help(root->right, h-1);
-    }
     
 public:
     int countNodes(TreeNode* root) {
         
         if(!root) return 0;
-        int height(0);
-        TreeNode *p(root);
-        while(p)
-        {
-            p = p->left;
-            height++;
+        
+        int lh(0),rh(0);
+        
+        TreeNode *l(root), *r(root);
+        
+        while(l) {
+            lh++;
+            l = l->left;
         }
         
-        return help(root, height);
+        while(r) {
+            rh++;
+            r = r->right;
+        }
+        
+        if(lh == rh) return pow(2, lh) - 1;
+        else return 1 + countNodes(root->left) + countNodes(root->right);
     }
 };
