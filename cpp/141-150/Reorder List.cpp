@@ -1,11 +1,9 @@
 class Solution {
     
-    ListNode* offset(ListNode *head)
+    ListNode* reverse(ListNode *head)
     {
-        ListNode   *tmp = NULL;
-        ListNode   *p = NULL;
-        
-        tmp = head->next;
+        ListNode *tmp = head->next;
+        ListNode *p = nullptr;
         head->next = NULL;
         while (tmp)
         {
@@ -26,22 +24,20 @@ public:
         
         while(head2 && head2->next) {
             head1 = head1->next;
-            head2 = head2->next;
-            if(head2) head2 = head2->next;
+            head2 = head2->next->next;
         }
-        cout << head1 ->val;
+
         head2 = head1 -> next;
-        head1 -> next = NULL;
+        head1 -> next = nullptr;
         head1 = head;
-        head2 = offset(head2);
+        head2 = reverse(head2);
 
         ListNode *tmp = head1 -> next;
-        while(tmp){
+        while(head2){
             head1 -> next = head2;
             head1 = head2;
             head2 = tmp;
             tmp = head1->next;
         }
-        head1->next = head2;
     }
 };
