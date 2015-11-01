@@ -1,35 +1,19 @@
-#include <iostream>
-#include <unordered_map>
-#include <vector>
-#include <stack>
-#include <queue>
-
-using namespace std;
-
-
-struct ListNode {
-    int val;
-    struct ListNode *next;
-};
-
-
-struct ListNode* removeElements(struct ListNode* head, int val) {
-    
-    while(head && head->val == val) head = head->next;
-    struct ListNode* result = head;
-    
-    while(head && head->next)
-    {
-        if(head->next->val == val)
-            head->next = head->next->next;
-        else
+class Solution {
+public:
+    ListNode* removeElements(ListNode* head, int val) {
+        ListNode* res = new ListNode(1);
+        res->next = head;
+        ListNode* backup = res;
+        
+        //res -> head -> head->next
+        while(head) {
+            if(head->val == val)
+                res->next = head->next;
+            else 
+                res = head;
             head = head->next;
+        }
+        
+        return backup->next;
     }
-    
-    return result;
-}
-
-int main()
-{
-    return 0;
-}
+};
