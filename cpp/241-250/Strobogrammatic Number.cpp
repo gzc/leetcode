@@ -2,12 +2,7 @@ class Solution {
     
 public:
     bool isStrobogrammatic(string num) {
-        map<char, char> m;
-        m['6'] = '9';
-        m['9'] = '6';
-        m['1'] = '1';
-        m['8'] = '8';
-        m['0'] = '0';
+        unordered_map<char, char> m = {{'0', '0'}, {'1', '1'}, {'6','9'}, {'8','8'}, {'9', '6'}};
         
         string temp = "";
         int len = num.length();

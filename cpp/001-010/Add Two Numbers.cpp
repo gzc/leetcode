@@ -14,8 +14,7 @@ class Solution {
 public:
     ListNode *addTwoNumbers(ListNode *l1, ListNode *l2) {
         ListNode *head = new ListNode(0);
-        ListNode *cur = head;
-        ListNode *pre = cur;
+        ListNode *pre = head;
         int add = 0;
         
         while(l1 || l2 || add) {
@@ -24,17 +23,15 @@ public:
             int c = a + b + add;
             add = c > 9? 1 : 0;
             int v = c%10;
+            ListNode *cur = new ListNode(0);
             cur->val = v;
-            ListNode *next = new ListNode(0);
-            cur -> next = next;
-            pre = cur;
-            cur = next;
+            pre->next = cur;
+            pre = pre->next;
             if(l1) l1 = l1->next;
             if(l2) l2 = l2->next;
         }
-        
-        pre->next = NULL;
-        return head;
+
+        return head->next;
     }
 };
 

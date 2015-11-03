@@ -11,7 +11,7 @@ public:
     bool isPalindrome(ListNode* head) {
         if(!head || !head->next)
             return true;
-        ListNode* slow(head),fast(head);
+        ListNode *slow(head),*fast(head);
         
         while(fast->next && fast->next->next){
             slow = slow->next;
