@@ -1,6 +1,6 @@
 class Solution {
     
-    int r;
+    int r = 0;
     map<char, char> m;
     char chs[5] = {'1','6','9','8','0'};
     
@@ -8,15 +8,15 @@ class Solution {
     {
         if(high.length() > low.length()) return true;
         if(high.length() < low.length()) return false;
-        return high <= low;
+        return high >= low;
     }
     
-    void help(string temp, int cur, int &n, string &low, string &high)
+    void help(string temp, int cur, int n, string low, string high)
     {
         if(n >= 2 && temp[0] == '0') return;
         if(cur == (n+1)/2)
         {
-            if(check(low, temp) && check(temp, high)) r++;
+            if(check(low, temp) && check(temp, high)) {r++;}
             return;
         }
         
@@ -24,12 +24,8 @@ class Solution {
         {
             temp[cur] = chs[i];
             temp[n - cur - 1] = m[chs[i]];
-            if(n % 2 == 1 && cur == n/2)
-            {
-                if(chs[i] == m[chs[i]])
-                    help(result, temp, cur+1, n);
-            }
-            else help(result, temp, cur+1, n);
+            if(n % 2 == 1 && cur == n/2 && chs[i] != m[chs[i]]) {}
+            else help(temp, cur+1, n, low, high);
         }
     }
     
@@ -40,7 +36,6 @@ public:
         m['1'] = '1';
         m['8'] = '8';
         m['0'] = '0';
-        r = 0;
         
         int n1 = low.length();
         int n2 = high.length();
