@@ -3,12 +3,11 @@ class Solution {
     map<char, char> m;
     char chs[5] = {'1','6','9','8','0'};
     
-    void help(vector<string>& result, string temp, int cur, int &n)
+    void help(vector<string>& result, string temp, int cur, int n)
     {
-        if(n >= 2 && temp[0] == '0') return;
+        if(n > 1 && temp[0] == '0') return;
         if(cur == (n+1)/2)
         {
-            cout << temp << endl;
             result.push_back(temp);
             return;
         }
@@ -17,11 +16,7 @@ class Solution {
         {
             temp[cur] = chs[i];
             temp[n - cur - 1] = m[chs[i]];
-            if(n % 2 == 1 && cur == n/2)
-            {
-                if(chs[i] == m[chs[i]])
-                    help(result, temp, cur+1, n);
-            }
+            if(n % 2 == 1 && cur == n/2 && chs[i] != m[chs[i]]) {}  //奇数长度并且是6,9什么都不做
             else help(result, temp, cur+1, n);
         }
     }
