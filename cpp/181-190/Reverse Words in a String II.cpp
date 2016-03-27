@@ -9,7 +9,6 @@ public:
             if(temp.size() == 0) break;
             result = temp + " " + result;
         }
-        result = result.substr(0, result.length()-1);
-        s = result;
+        s = result.substr(0, result.length()-1);
     }
 };
