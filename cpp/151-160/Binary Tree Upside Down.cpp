@@ -8,29 +8,19 @@
  * };
  */
 class Solution {
-    
-    TreeNode* help(TreeNode* root, TreeNode *p, TreeNode *r)
-    {
-        TreeNode* nextroot = root->left;
-        TreeNode* si = root->right;
-        
-        TreeNode * check = root->left;
-        root->left = r;
-        root->right = p;
-        
-        if(!check) return root;
-        
-        return help(nextroot, root, si);
-    }
-    
+
 public:
+
     TreeNode* upsideDownBinaryTree(TreeNode* root) {
-        if(!root) return root;
-        if(!root->left) return root;
-        
-        TreeNode* res = help(root->left, root, root->right);
+        if (!root || !root->left) return root;
+        TreeNode* cur_left = root->left;
+        TreeNode* cur_right = root->right;
+        TreeNode* new_root = upsideDownBinaryTree(root->left);
+        cur_left->right = root;
+        cur_left->left = cur_right;
         root->left = nullptr;
         root->right = nullptr;
-        return res;
+        return new_root;
     }
+    
 };
