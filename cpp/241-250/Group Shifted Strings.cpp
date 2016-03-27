@@ -9,9 +9,7 @@ class Solution {
             int temp = (s2[i]-s1[i])%26;
             if(temp < 0) temp += 26;
             if(v < 0) v= temp;
-            else {
-                if(temp != v) return false;
-            }
+            if(temp != v) return false;
         }
         return true;
     }
