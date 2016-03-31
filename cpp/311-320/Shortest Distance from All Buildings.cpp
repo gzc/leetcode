@@ -1,10 +1,3 @@
-#include <iostream>
-#include <vector>
-#include <queue>
-#include <stack>
-
-using namespace std;
-
 struct point {
     int i;
     int j;
@@ -47,7 +40,7 @@ class Solution {
                 }
             }
         }
-        
+    
         for(int i = 0;i < m;i++)
             for(int j = 0;j < n;j++)
                 if(!visited[i][j])
@@ -63,24 +56,10 @@ public:
         
         vector<vector<int> > records(m, vector<int>(n, 0));
         
-        for(int i = 0;i < m;i++) {
-            for(int j = 0;j < n;j++) {
-                if(grid[i][j] == 1) {
+        for(int i = 0;i < m;i++)
+            for(int j = 0;j < n;j++)
+                if(grid[i][j] == 1)
                     BFS(i, j, grid, records);
-                    
-                    /*
-                     for(auto v1 : records) {
-                     for(auto v2 : v1) {
-                     cout << v2 << " ";
-                     }
-                     cout << endl;
-                     }
-                     cout << endl << endl << endl;
-                     //cout << "lala" << endl;
-                     */
-                }
-            }
-        }
         
         int result(INT_MAX);
         
@@ -93,24 +72,4 @@ public:
         return result;
     }
     
-    
 };
-
-int main(int argc, const char * argv[]) {
-    
-    Solution s;
-    
-    /*
-     vector<int> v1{1,0,2,0,1};
-     vector<int> v2{0,0,0,0,0};
-     vector<int> v3{0,0,1,0,0};
-     
-     vector<vector<int>>v{v1,v2,v3};
-     */
-    vector<int> v1{1,0};
-    
-    
-    vector<vector<int>>v{v1};
-    
-    cout << s.shortestDistance(v);
-}
