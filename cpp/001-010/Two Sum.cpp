@@ -1,9 +1,3 @@
-#include <iostream>
-#include <unordered_map>
-#include <vector>
-
-using namespace std;
-
 class Solution {
 public:
     vector<int> twoSum(vector<int> &numbers, int target) {
@@ -13,22 +7,11 @@ public:
             int remain = target - numbers[i];
             if(m.count(remain) > 0) {
                 r.push_back(m[remain]);
-                r.push_back(i+1);
+                r.push_back(i);
                 return r;
-            } else {
-                m[numbers[i]] = i+1;
             }
+            m[numbers[i]] = i;
         }
         return r;
     }
 };
-
-int main()
-{
-    int a[3] = {3,2,4};
-    vector<int> v{a, a+3};
-    Solution s;
-    s.twoSum(v, 6);
-    
-    return 0;
-}
