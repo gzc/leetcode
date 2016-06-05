@@ -1,16 +1,8 @@
-#include <iostream>
-#include <unordered_map>
-#include <vector>
-
-using namespace std;
-
 class Solution {
 public:
-    int atoi(string str) {
-        
+    int myAtoi(string str) {
         int r(0);
         int sign(0);
-        bool overflow(false);
         
         while(str[0] == ' ')
             str.erase(0, 1);
@@ -33,7 +25,7 @@ public:
         {
             if(!isdigit(str[i])) break;
             int v = str[i] - '0';
-            
+
             if(r > INT_MAX/10)
             {
                 if(sign == 1) return INT_MAX;
@@ -44,17 +36,9 @@ public:
                 if(sign == -1 && v > 8) return INT_MIN;
             }
             r = 10*r + v;
-            
+
         }
         
         return r*sign;
     }
-    
 };
-
-int main()
-{
-    Solution s;
-    
-    cout << s.atoi("      -11919730356x");
-}
