@@ -1,17 +1,3 @@
-#include <iostream>
-#include <unordered_map>
-#include <vector>
-
-using namespace std;
-
-/*
-struct ListNode {
-    int val;
-    ListNode *next;
-    ListNode(int x) : val(x), next(NULL) {}
-};
- */
-
 class Solution {
 public:
     int reverse(int x) {
@@ -28,17 +14,8 @@ public:
         
         if(x < 0) r = -r;
         if(x > 0 && r > INT_MAX) return 0;
-        if(x < 0 && r < -INT_MIN) return 0;
+        if(x < 0 && r < INT_MIN) return 0;
         return r;
-        
     }
     
 };
-
-int main()
-{
-    Solution s;
-    cout << s.reverse(-123);
-    
-    return 0;
-}
