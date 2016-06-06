@@ -1,46 +1,24 @@
-#include <iostream>
-#include <unordered_map>
-#include <vector>
-#include <stack>
-#include <queue>
-
-using namespace std;
-
 class Solution {
     
-    void help(vector<int> v, vector<vector<int>>& result, int n, vector<int> &num)
+    void help(vector<vector<int>>& result, int begin, vector<int> &num)
     {
-        if(v.size() == n) {
-            result.push_back(v);
+        if(begin == num.size()) {
+            result.push_back(num);
             return;
         }
-        
-        for(int i = 0;i < num.size();i++)
+            
+        for(int i = begin; i < num.size();i++)
         {
-            int tmp = num[i];
-            v.push_back(num[i]);
-            num.erase(num.begin()+i);
-            help(v, result, n, num);
-            num.insert(num.begin()+i, tmp);
-            v.pop_back();
+            swap(num[begin], num[i]);
+            help(result, begin+1, num);
+            swap(num[begin], num[i]);
         }
     }
     
 public:
     vector<vector<int> > permute(vector<int> &num) {
-        
-        vector<int> v;
         vector<vector<int>> result;
-        help(v, result, num.size(), num);
+        help(result, 0, num);
         return result;
     }
-    
 };
-
-int main()
-{
-    Solution s;
-    int a[] = {1,2,3};
-    
-    return 0;
-}
