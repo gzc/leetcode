@@ -17,25 +17,23 @@ class Solution {
     {
         if(i == n)
         {
-            if(n == tmp.size())
+            string s(n, '.');
+            vector<string>t{n,s};
+            for(int k = 0;k < tmp.size();k++)
+                t[tmp[k].first][tmp[k].second] = 'Q';
+            result.push_back(t);
+            return;
+        } 
+            
+        for(int j = 0;j < n;j++)
+        {
+            if(valid(i, j))
             {
-                string s(n, '.');
-                vector<string>t{n,s};
-                for(int k = 0;k < tmp.size();k++)
-                    t[tmp[k].first][tmp[k].second] = 'Q';
-                result.push_back(t);
-            }
-        } else {
-            for(int j = 0;j < n;j++)
-            {
-                if(valid(i, j))
-                {
-                    rows[i] = cols[j] = add[i+j] = diff[i-j+n] = true;
-                    tmp.push_back(make_pair(i, j));
-                    help(result, tmp, i+1);
-                    tmp.pop_back();
-                    rows[i] = cols[j] = add[i+j] = diff[i-j+n] = false;
-                }
+                rows[i] = cols[j] = add[i+j] = diff[i-j+n] = true;
+                tmp.push_back(make_pair(i, j));
+                help(result, tmp, i+1);
+                tmp.pop_back();
+                rows[i] = cols[j] = add[i+j] = diff[i-j+n] = false;
             }
         }
     }
