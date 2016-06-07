@@ -1,6 +1,5 @@
 class Solution {
     
-    bool *rows;
     bool *cols;
     bool *add;
     bool *diff;
@@ -8,7 +7,7 @@ class Solution {
     
     bool valid(int i, int j)
     {
-        if(!rows[i] && !cols[j] && !add[i+j] && !diff[i-j+n])
+        if(!cols[j] && !add[i+j] && !diff[i-j+n])
             return true;
         return false;
     }
@@ -29,19 +28,18 @@ class Solution {
         {
             if(valid(i, j))
             {
-                rows[i] = cols[j] = add[i+j] = diff[i-j+n] = true;
+                cols[j] = add[i+j] = diff[i-j+n] = true;
                 tmp.push_back(make_pair(i, j));
                 help(result, tmp, i+1);
                 tmp.pop_back();
-                rows[i] = cols[j] = add[i+j] = diff[i-j+n] = false;
+                cols[j] = add[i+j] = diff[i-j+n] = false;
             }
         }
     }
     
 public:
     vector<vector<string> > solveNQueens(int n) {
-        
-        rows = new bool[n];
+
         cols = new bool[n];
         add = new bool[2*n];
         diff = new bool[2*n];
