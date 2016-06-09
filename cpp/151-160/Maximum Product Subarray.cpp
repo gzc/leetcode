@@ -1,55 +1,23 @@
 class Solution {
 public:
-    int maxProduct(vector<int>& A) {
-        if(A.size() == 1)
-    		return A[0];
-        
-        
-        int *positive = new int[A.size()+1];
-        int *negative = new int[A.size()+1];
-        positive[0] = 0;
-        negative[0] = 0;
-        
-        for(int i = 0;i < A.size();i++)
-        {
-        	if(A[i] > 0)
-        	{
-        		if(positive[i] == 0)
-        			positive[i+1] = A[i];
-        		else
-        			positive[i+1] = positive[i]*A[i];
-        		negative[i+1] = negative[i]*A[i];
-        	}
-        	
-        	else if(A[i] < 0)
-        	{
-        	    positive[i+1] = negative[i]*A[i];
-        		if(negative[i] == 0) {
-        			if(i > 0 && positive[i] > 0)
-        				negative[i+1] = positive[i]*A[i];
-        			else 
-        				negative[i+1] = A[i];
-        		}
-        		else
-        		{
-        			if(positive[i] == 0)
-        				negative[i+1] = A[i];
-        			else
-        				negative[i+1] = positive[i]*A[i];
-        		}
-        	}
-        	
-        	else if(A[i] == 0)
-        	{
-        		negative[i+1] = 0;
-    			positive[i+1] = 0;
-        	}
+    int maxProduct(vector<int>& nums) {
+        if (nums.size() == 0) return 0;
+        int maxEndHere = nums[0];
+        int minEndHere = nums[0];
+        int maxSoFar = nums[0];
+
+        for (int i = 1; i < nums.size(); i++) {
+            int num = nums[i];
+            if (num >= 0) {
+                maxEndHere = max(maxEndHere * num, num);
+                minEndHere = min(minEndHere * num, num);
+            } else {
+                int temp = maxEndHere;
+                maxEndHere = max(minEndHere * num, num);
+                minEndHere = min(temp * num, num);
+            }
+            maxSoFar = max(maxEndHere, maxSoFar);
         }
- 
-        int res = 0;
-        for(int i =1;i <= A.size();i++)
-        	res = max(res, positive[i]);
-        
-        return res;
+        return maxSoFar;
     }
 };
