@@ -29,12 +29,9 @@ public:
         
         int add = 1;
         
-        while(tail) {
-            
-            if(add != 1) break;
-            
-            if(tail->val < 9) {
-                tail->val++;
+        while(tail || add == 1) {
+            if(tail->val + add < 10) {
+                tail->val += add;
                 break;
             } else {
                 tail->val = 0;
