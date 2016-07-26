@@ -19,13 +19,8 @@ public:
                 int f = 0;
                 if(word1[i-1] != word2[j-1])
                     f = 1;
-                
-                if( (p[i-1][j] + 1) <= (p[i][j-1] + 1)  &&  (p[i-1][j] + 1) <= (p[i-1][j-1]+f))
-                    p[i][j] = p[i-1][j]+1;
-                else if ( (p[i][j-1] + 1) <= (p[i-1][j] + 1)  &&  (p[i][j-1] + 1) <= (p[i-1][j-1]+f) )
-                    p[i][j] = p[i][j-1]+1;
-                else
-                    p[i][j] = p[i-1][j-1]+f;
+            
+                p[i][j] = min(p[i-1][j-1]+f, 1+min(p[i][j-1], p[i-1][j]));
             }
         }
         
