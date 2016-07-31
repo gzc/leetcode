@@ -10,60 +10,59 @@ class Solution {
     
 public:
     int calculate(string s) {
-        
         stack<char> symbol;
-        stack<int>ss;
+        stack<int> nums;
         int v = 0;
         bool number = false;
-        for(auto e : s)
+        for (const char& e : s)
         {
-            if( number && (e < '0' || e > '9'))
+            if (number && !isdigit(e))
             {
-                ss.push(v);
+                nums.push(v);
                 v = 0;
                 number = false;
             }
             
-            if(e == ' ') continue;
-            else if(e == ')')
+            if (e == ' ') continue;
+            else if (e == ')')
             {
-                while(symbol.top() != '(')
+                while (symbol.top() != '(')
                 {
                     char c = symbol.top();
-                    apply(ss, c);
+                    apply(nums, c);
                     symbol.pop();
                 }
                 symbol.pop();
-            } else if(e == '(') {
+            } else if (e == '(') {
                 symbol.push('(');
-            } else if(e >= '0' && e <= '9') {
+            } else if (isdigit(e)) {
                 v = 10*v + (e-'0');
                 number = true;
-            } else if(e == '+' || e == '-') {
+            } else if (e == '+' || e == '-') {
                 if(symbol.empty())
                     symbol.push(e);
                 else {
-                    while(!symbol.empty() && symbol.top() != '(')
+                    while (!symbol.empty() && symbol.top() != '(')
                     {
                         char c = symbol.top();
                         symbol.pop();
-                        apply(ss, c);
+                        apply(nums, c);
                     }
                     symbol.push(e);
                 }
             }
         }
         
-        if( number )
-            ss.push(v);
+        if (number)
+            nums.push(v);
         
-        while(!symbol.empty())
+        while (!symbol.empty())
         {
             char c = symbol.top();
-            apply(ss,c);
+            apply(nums,c);
             symbol.pop();
         }
-        
-        return ss.top();
+
+        return nums.top();
     }
 };
