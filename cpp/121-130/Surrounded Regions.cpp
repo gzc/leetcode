@@ -2,11 +2,11 @@ class Solution {
     
     void help(vector<vector<char>> &board, int ii, int jj)
     {
-        if(board[ii][jj] == 0 || board[ii][jj] == 'X') return;
+        if (board[ii][jj] == 0 || board[ii][jj] == 'X') return;
         board[ii][jj] = 0;
         queue<pair<int,int>>q;
         q.push(make_pair(ii,jj));
-        while(!q.empty())
+        while (!q.empty())
         {
             pair<int,int> cur = q.front(); q.pop();
             pair<int, int> adjs[4] = {{cur.first-1, cur.second}, 
@@ -30,31 +30,31 @@ class Solution {
 public:
     void solve(vector<vector<char>> &board) {
         
-        if(board.size() == 0) return;
+        if (board.empty()) return;
         
-        for(int i = 0;i < board.size();i++)
+        for (int i = 0;i < board.size();i++)
         {
-            if(board[i].front() == 'O')
+            if (board[i].front() == 'O')
                 help(board, i, 0);
-            if(board[i].back() == 'O')
+            if (board[i].back() == 'O')
                 help(board, i, board[i].size()-1);
         }
         
-        for(int i = 0;i < board[0].size();i++)
+        for (int i = 0;i < board[0].size();i++)
         {
-            if(board.front()[i] == 'O')
+            if (board.front()[i] == 'O')
                 help(board, 0, i);
-            if(board.back()[i] == 'O')
+            if (board.back()[i] == 'O')
                 help(board, board.size()-1, i);
         }
         
-        for(int i = 0;i < board.size();i++)
+        for (int i = 0;i < board.size();i++)
         {
-            for(int j = 0;j < board[i].size();j++)
+            for (int j = 0;j < board[i].size();j++)
             {
-                if(board[i][j] == 'O')
+                if (board[i][j] == 'O')
                     board[i][j] = 'X';
-                else if(board[i][j] == 0)
+                else if (board[i][j] == 0)
                     board[i][j] = 'O';
             }
         }
