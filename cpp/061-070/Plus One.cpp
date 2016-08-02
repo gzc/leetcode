@@ -4,16 +4,16 @@ public:
         
         reverse(digits.begin(), digits.end());
         
-        int add(1);
-        for(int i = 0;i < digits.size();i++)
+        int carry(1);
+        for (int i = 0;i < digits.size();i++)
         {
-            int tmp = digits[i] + add;
-            add = tmp/10;
+            int tmp = digits[i] + carry;
+            carry = tmp/10;
             digits[i] = tmp%10;
         }
         
-        if(add)
-            digits.push_back(1);
+        if (carry)
+            digits.push_back(carry);
         
         reverse(digits.begin(), digits.end());
         return digits;
