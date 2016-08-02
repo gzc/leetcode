@@ -1,46 +1,21 @@
-#include <iostream>
-#include <unordered_map>
-#include <vector>
-#include <stack>
-#include <queue>
-
-using namespace std;
-
 class Solution {
 public:
-    int search(int A[], int n, int target) {
+    int search(vector<int>& nums, int target) {
+        int i(0), j(nums.size()-1);
         
-        int i(0),j(n-1);
-        
-        while(1)
+        while(i <= j)
         {
-            int mid = (i+j)/2;
-            if(A[mid] == target) return mid;
-            if(i == j) return -1;
-            if(i == mid)
-            {
-                i++;
-                continue;
-            }
-            else if(A[mid] < A[i])
-            {
-                if(A[mid] < target && A[j] >= target) i = mid;
-                else j = mid;
+            int mid((i+j)/2);
+            if (nums[mid] == target) return mid;
+            if (nums[mid] < nums[i]) {
+                if (nums[mid] <= target && nums[j] >= target) i = mid+1;
+                else j = mid-1;
             } else {
-                if(A[mid] > target && A[i] <= target) j = mid;
-                else i = mid;
+                if (nums[mid] >= target && nums[i] <= target) j = mid-1;
+                else i = mid+1;
             }
         }
         
+        return -1;
     }
-    
 };
-
-int main()
-{
-    Solution s;
-    int a[7] = {4,5,6,0,1,2,3};
-
-    cout << s.search(a, 7, 2);
-    return 0;
-}
