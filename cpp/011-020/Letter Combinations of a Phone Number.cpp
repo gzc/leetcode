@@ -1,51 +1,31 @@
-#include <iostream>
-#include <unordered_map>
-#include <vector>
-
-using namespace std;
-
 class Solution {
     
-    string p[10] = {"", "", "abc", "def", "ghi", "jkl", "mno", "pqrs", "tuv", "wxyz"};
+    string symbols[10] = {"", "", "abc", "def", "ghi", "jkl", "mno", "pqrs", "tuv", "wxyz"};
     
 public:
     vector<string> letterCombinations(string digits) {
+        vector<string> result;
+        if (digits.empty()) return result;
+        result.emplace(result.end(), "");
         
-        vector<string> v;
-        
-        if(digits.length() == 0) return v;
-        v.push_back("");
-        
-        for(int i = 0;i < digits.length();i++)
+        for (int i = 0;i < digits.length();i++)
         {
             int num = digits[i]-'0';
-            int l = v.size();
-            for(int j = 0;j < l;j++)
+            int current_combinations = result.size();
+            for (int j = 0;j < current_combinations;j++)
             {
-                string s = v[j];
-                string letter = p[num];
-                for(int k = 0;k < letter.length();k++)
+                string s = result[j];
+                string letters = symbols[num];
+                for (int k = 0;k < letters.length();k++)
                 {
-                    string tmp = s+letter[k];
-                    v.push_back(tmp);
+                    string tmp = s+letters[k];
+                    result.emplace(result.end(), tmp);
                 }
             }
-            v.erase(v.begin(), v.begin()+l);
+            result.erase(result.begin(), result.begin()+current_combinations);
         }
         
-        
-        return v;
+        return result;
     }
     
 };
-
-int main()
-{
-    Solution s;
-    vector<string>v = s.letterCombinations("23");
-    
-    for(int i = 0;i < v.size();i++)
-        cout << v[i] << endl;
-    
-    return 0;
-}
