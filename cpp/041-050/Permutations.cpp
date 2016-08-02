@@ -2,12 +2,12 @@ class Solution {
     
     void help(vector<vector<int>>& result, int begin, vector<int> &num)
     {
-        if(begin == num.size()) {
-            result.push_back(num);
+        if (begin == num.size()) {
+            result.emplace(result.end(), num);
             return;
         }
             
-        for(int i = begin; i < num.size();i++)
+        for (int i = begin; i < num.size();i++)
         {
             swap(num[begin], num[i]);
             help(result, begin+1, num);
