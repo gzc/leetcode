@@ -2,14 +2,13 @@ class Solution {
     
     int kthSmallest(vector<int>& arr, int l, int r, int k)
     {
-
         if (k > 0 && k <= r - l + 1)
         {
             int pos = randomPartition(arr, l, r);
         
             if (pos-l == k-1)
                 return arr[pos];
-            else if(pos-l > k-1)
+            else if (pos-l > k-1)
                 return kthSmallest(arr, l, pos-1, k);
             else
                 return kthSmallest(arr, pos+1, r, k-pos+l-1);
@@ -20,7 +19,7 @@ class Solution {
     int partition(vector<int>& arr, int l, int r)
     {
         int x = arr[r], i = l;
-        for(int j = l; j <= r - 1; j++)
+        for (int j = l; j <= r - 1; j++)
         {
             if (arr[j] <= x)
             {
