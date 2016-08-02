@@ -1,22 +1,22 @@
 class Solution {
 public:
     vector<int> preorderTraversal(TreeNode *root) {
-        vector<int>v;
-        if(!root) return v;
-        stack<TreeNode*> stacks;
-        stacks.push(root);
+        vector<int> result;
+        if (root == nullptr) return result;
+        stack<TreeNode*> nodes_ready_for_visiting;
+        nodes_ready_for_visiting.emplace(root);
         
-        while(!stacks.empty())
+        while (!nodes_ready_for_visiting.empty())
         {
-            root = stacks.top();
-            stacks.pop();
-            v.push_back(root->val);
+            root = nodes_ready_for_visiting.top();
+            nodes_ready_for_visiting.pop();
+            result.emplace(result.end(), root->val);
             
-            if(root->right)
-                stacks.push(root->right);
-            if(root->left)
-                stacks.push(root->left);
+            if (root->right)
+                nodes_ready_for_visiting.push(root->right);
+            if (root->left)
+                nodes_ready_for_visiting.push(root->left);
         }
-        return v;
+        return result;
     }
 };
