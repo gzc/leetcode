@@ -16,8 +16,10 @@ public:
     }
     
     bool hasNext() {
-        while (i != iEnd && j == (*i).size())
-            i++, j = 0;
+        while (i != iEnd && j == (*i).size()) {
+            i++;
+            j = 0;
+        }
         return i != iEnd;
     }
 };
