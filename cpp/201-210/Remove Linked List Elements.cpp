@@ -6,8 +6,8 @@ public:
         ListNode* backup = res;
         
         //res -> head -> head->next
-        while(head) {
-            if(head->val == val)
+        while (head) {
+            if (head->val == val)
                 res->next = head->next;
             else 
                 res = head;
