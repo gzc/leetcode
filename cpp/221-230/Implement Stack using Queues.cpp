@@ -7,7 +7,7 @@ class Stack {
 public:
     // Push element x onto stack.
     void push(int x) {
-        if(!q1.empty())
+        if (!q1.empty())
             q1.push(x);
         else
             q2.push(x);
@@ -16,21 +16,21 @@ public:
 
     // Removes the element on top of the stack.
     void pop() {
-        if(!q1.empty())
+        if (!q1.empty())
         {
-            while(!q1.empty())
+            while (!q1.empty())
             {
                 int tmp = q1.front();
-                if(q1.size() > 1) q2.push(tmp);
-                if(q1.size() == 2) v= tmp;
+                if (q1.size() > 1) q2.push(tmp);
+                if (q1.size() == 2) v= tmp;
                 q1.pop();
             }
         } else {
-            while(!q2.empty())
+            while (!q2.empty())
             {
                 int tmp = q2.front();
-                if(q2.size() > 1) q1.push(tmp);
-                if(q2.size() == 2) v= tmp;
+                if (q2.size() > 1) q1.push(tmp);
+                if (q2.size() == 2) v= tmp;
                 q2.pop();
             }
         }
