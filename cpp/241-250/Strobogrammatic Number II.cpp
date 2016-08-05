@@ -5,18 +5,19 @@ class Solution {
     
     void help(vector<string>& result, string temp, int cur, int n)
     {
-        if(n > 1 && temp[0] == '0') return;
-        if(cur == (n+1)/2)
+        // "0" is OK, "0xxxxx" is not
+        if (n > 1 && temp[0] == '0') return;
+        if (cur == (n+1)/2)
         {
             result.push_back(temp);
             return;
         }
         
-        for(int i = 0;i <= 4;i++)
+        for (int i = 0;i <= 4;i++)
         {
             temp[cur] = chs[i];
             temp[n - cur - 1] = m[chs[i]];
-            if(n % 2 == 1 && cur == n/2 && chs[i] != m[chs[i]]) {}  //奇数长度并且是6,9什么都不做
+            if (n % 2 == 1 && cur == n/2 && chs[i] != m[chs[i]]) { }  //奇数长度并且是6,9什么都不做
             else help(result, temp, cur+1, n);
         }
     }
