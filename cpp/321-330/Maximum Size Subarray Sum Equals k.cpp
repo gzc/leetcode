@@ -9,16 +9,15 @@ public:
     int maxSubArrayLen(vector<int>& nums, int k) {
         
         map<int, int> mymap;
-        int sum = 0;
-        int res = 0;
+        int sum(0), res(0);
         
-        for(int i = 0;i < nums.size();i++) {
+        for (int i = 0;i < nums.size();i++) {
             sum += nums[i];
-            if(sum == k) res = i+1;
+            if (sum == k) res = i+1;
             else {
-                if(mymap.count(sum - k) > 0) res = max(res, i - mymap[sum-k]);
+                if (mymap.count(sum - k) > 0) res = max(res, i - mymap[sum-k]);
             }
-            if(mymap.count(sum) == 0) mymap[sum] = i;
+            if (mymap.count(sum) == 0) mymap[sum] = i;
         }
         
         return res;
