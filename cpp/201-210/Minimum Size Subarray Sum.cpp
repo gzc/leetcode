@@ -3,15 +3,14 @@ public:
     int minSubArrayLen(int s, vector<int>& nums) {
         
         int i(0),j(0),sum(0);
-        int len(INT_MAX), index(-1);
+        int len(INT_MAX);
         nums.push_back(-1);
         
-        while(j < nums.size())
+        while (j < nums.size())
         {
-            if(sum >= s)
+            if (sum >= s)
             {
                 len = min(len, j-i);
-                index = i;
                 sum -= nums[i];
                 i++;
             } else {
@@ -21,7 +20,7 @@ public:
             
         }
         
-        if(index == -1) return 0;
+        if (len == INT_MAX) return 0;
         return len;
     }
 };
