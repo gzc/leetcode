@@ -18,12 +18,12 @@
 class Solution {
     
     int DFS(vector<NestedInteger>& nestedList, int depth){
-        int sum = 0;
-        for(int i = 0;i < nestedList.size();i++){
+        int sum(0);
+        for (int i = 0;i < nestedList.size();i++){
             if(nestedList[i].isInteger())
-            sum += nestedList[i].getInteger()*depth;
+                sum += nestedList[i].getInteger()*depth;
             else
-            sum += DFS(nestedList[i].getList(),depth+1);
+                sum += DFS(nestedList[i].getList(),depth+1);
         }
         return sum;
     }
