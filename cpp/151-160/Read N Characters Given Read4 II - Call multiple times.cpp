@@ -14,5 +14,4 @@ public:
             buf[i++] = buf4[i4++];
         return i;
     }
-    
 };
