@@ -9,11 +9,10 @@ public:
      * @return    The number of characters read
      */
     int read(char *buf, int n) {
-        
         int hasread(0);
         int nn = n;
         
-        while(n > 0) {
+        while (n > 0) {
             int temp = read4(buf);
             if(temp == 0) break;
             hasread += temp;
