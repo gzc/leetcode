@@ -4,11 +4,8 @@ public:
         if (S.empty() || T.empty()) return "";
         int needed(T.size());
         int require[128] = {0};
-        bool chSet[128] = {false};
-        for (int i = 0; i < needed; ++i)
-        {
+        for (int i = 0; i < needed; ++i) {
             require[T[i]]++;
-            chSet[T[i]] = true;
         }
         int left(0), right(-1);
         int minLen(INT_MAX), minIdx(0);
@@ -16,7 +13,7 @@ public:
             if (needed) {
                 char ch = S[++right];
                 require[ch]--;
-                if (chSet[ch] && require[ch] >= 0) {
+                if (require[ch] >= 0) {
                     needed--;
                 }
             }
@@ -28,7 +25,7 @@ public:
                     minIdx = left;
                 }
                 require[ch]++;
-                if (chSet[ch] && require[ch] > 0) {
+                if (require[ch] > 0) {
                     needed++;
                 }
                 left++;
