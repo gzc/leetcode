@@ -1,10 +1,3 @@
-#include <iostream>
-#include <unordered_map>
-#include <vector>
-#include <map>
-
-using namespace std;
-
 class Solution {
 public:
     
@@ -20,9 +13,9 @@ public:
         m['M'] = 1000;
         
         int r(0);
-        for(int i = 0;i < s.length();i++)
+        for (int i = 0;i < s.length();i++)
         {
-            if(i < s.length()-1 && m[s[i]] < m[s[i+1]] ) r -= m[s[i]];
+            if (i < s.length()-1 && m[s[i]] < m[s[i+1]] ) r -= m[s[i]];
             else r += m[s[i]];
         }
         
@@ -30,9 +23,3 @@ public:
     }
     
 };
-
-int main()
-{
-    Solution s;
-    cout << s.romanToInt("XXX");
-}
