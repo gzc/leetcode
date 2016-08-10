@@ -6,7 +6,8 @@ class Solution {
             dis[start] = 1;
             q.push(start);
             while (!q.empty()) {
-                string word = q.front(); q.pop();
+                string word = q.front();
+                q.pop();
                 if (word == end) break;
                 for (int i = 0; i < word.size(); i++) {
                     for (int j = 0; j < 26; j++) {
