@@ -2,8 +2,7 @@ class Solution {
 
     long long mysqrt(long long x) {
         long long i(0), j(x);
-        
-        while(i < j) {
+        while (i < j) {
             long long mid = (i+j)/2;
             long long v = mid*mid;
             if (v == x) return mid;
@@ -15,14 +14,9 @@ class Solution {
     
 public:
     bool isPerfectSquare(int num) {
-        
-        if(num < 0) return false;
-        
+        if (num < 0) return false;
         int v = mysqrt(num);
-        
-        if(v*v == num) return true;
-        
+        if (v*v == num) return true;
         return false;
-        
     }
 };
