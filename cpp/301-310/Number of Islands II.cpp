@@ -52,35 +52,29 @@ public:
 };
 
 class Solution {
-    
-    int col,row;
-    
-    int convert(int m, int n) {
+
+    inline int convert(int m, int n, int col) {
         return col*m + n;
     }
     
 public:
     vector<int> numIslands2(int m, int n, vector<pair<int, int>>& positions) {
-        row = m;
-        col = n;
         vector<int> res;
         UF uf(m*n);
         int count = 0;
         pair<int,int> pos[4] = {{0,1},{0,-1},{1,0},{-1,0}};
-        vector<bool> marked(m*n+100, false);
+        vector<bool> marked(m*n+10, false);
         
-        for(auto e : positions) {
+        for(auto& e : positions) {
             count++;
-            int curisland = convert(e.first, e.second);
+            int curisland = convert(e.first, e.second, n);
             marked[curisland] = true;
             for(int i = 0;i < 4;i++) {
                 int posi = e.first + pos[i].first;
                 int posj = e.second + pos[i].second;
-                int neighborisland = convert(posi, posj);
+                int neighborisland = convert(posi, posj, n);
                 if(posi < 0 || posj < 0 || posi >= m || posj >= n || !marked[neighborisland]) continue;
-                if(uf.connected(curisland, neighborisland)) {
-                    continue;
-                } else {
+                if(!uf.connected(curisland, neighborisland)) {
                     uf.Union(curisland, neighborisland);
                     count--;
                 }
