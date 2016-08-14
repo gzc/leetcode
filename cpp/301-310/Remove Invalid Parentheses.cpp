@@ -1,11 +1,11 @@
 class Solution {
     
-    int check(string &s) {
+    int check(const string &s) {
         stack<char> mystack;
         int num(0);
-        for(auto e : s) {
-            if(e == '(') mystack.push(e);
-            else if(e == ')') {
+        for (auto e : s) {
+            if (e == '(') mystack.push(e);
+            else if (e == ')') {
                 if(mystack.empty()) num++;
                 else mystack.pop();
             }
@@ -15,7 +15,6 @@ class Solution {
     
 public:
     vector<string> removeInvalidParentheses(string s) {
-        
         queue<string> myqueue;
         map<string, bool> mymap;
         myqueue.push(s);
@@ -24,14 +23,13 @@ public:
         
         while(!myqueue.empty()) {
             string str = myqueue.front();
-            int num1(0);
-            num1 = check(str);
-            if(num1 == 0) break;
+            int num1 = check(str);
+            if (num1 == 0) break;
             myqueue.pop();
             int i = 0;
             while(i < str.length()) {
                 if(str[i] != '(' && str[i] != ')') { i++; continue;}
-                string tmp = str.substr(0,i) + (i+1 == str.length()? "" : str.substr(i+1));
+                string tmp = str.substr(0,i) + str.substr(i+1);
                 int num2 = check(tmp);
                 if(mymap.count(tmp) == 0 && num2 < num1) {
                     myqueue.push(tmp);
