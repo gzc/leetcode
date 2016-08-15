@@ -10,15 +10,12 @@ public:
             int j(i + 1), k(num.size()-1);
             int remain(target - num[i]);
             
-            while (j < k)
-            {
+            while (j < k) {
                 int tmp = abs(num[j] + num[k] - remain);
-                if (tmp < diff)
-                {
+                if (tmp < diff) {
                     diff = tmp;
                     result = num[i] + num[j] + num[k];
                 }
-                
                 if (num[j] + num[k] > remain) k--;
                 else j++;
             }
