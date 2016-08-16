@@ -18,33 +18,34 @@
 class NestedIterator {
     
     stack<NestedInteger> mystack;
+    bool cached;
     int v;
     
 public:
     NestedIterator(vector<NestedInteger> &nestedList) {
-        for(int i = nestedList.size()-1;i >= 0;i--)
+        for (int i = nestedList.size()-1;i >= 0;i--)
             mystack.push(nestedList[i]);
+        cached = false;
     }
 
     int next() {
+        hasNext();
+        cached = false;
         return v;
     }
 
     bool hasNext() {
-    
+        if (cached) return true;
         while (!mystack.empty()) {
-            
             NestedInteger tmp = mystack.top();
             mystack.pop();
             if (tmp.isInteger()) {
                 v = tmp.getInteger();
+                cached = true;
                 return true;
             }
-            
             vector<NestedInteger> nlist = tmp.getList();
-            
-            for(int i = nlist.size()-1;i >= 0;i--) mystack.push(nlist[i]);
-        
+            for (int i = nlist.size()-1;i >= 0;i--) mystack.push(nlist[i]);
         }
         return false;
     }
