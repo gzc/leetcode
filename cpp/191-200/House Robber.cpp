@@ -1,8 +1,7 @@
 class Solution {
 public:
     int rob(vector<int> &num) {
-        if (num.size() == 0) return 0;
-        if (num.size() == 1) return num[0];
+        if (num.empty()) return 0;
         
         int p[num.size()];
         p[0] = num[0];
