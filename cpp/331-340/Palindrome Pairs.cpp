@@ -19,7 +19,7 @@ public:
             mymap[words[i]] = i;
         
         for(int i = 0;i < words.size();i++) {
-            string word = words[i];
+            const string& word = words[i];
         
             if (mymap.count("") > 0 && word != "" && isPalindrome(word)) {
                 int bidx = mymap[""];
