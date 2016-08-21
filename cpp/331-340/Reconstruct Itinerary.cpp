@@ -2,26 +2,22 @@ class Solution {
 public:
     vector<string> findItinerary(vector<pair<string, string>> tickets) {
         vector<string> ans;
-        int n = tickets.size();
-        for(int i = 0; i < n; ++ i){
+        unordered_map<string, multiset<string> > g;
+        for (int i = 0; i < tickets.size(); ++ i) {
             g[tickets[i].first].insert(tickets[i].second);
         }
-        dfs("JFK", ans, 1, n);
+        dfs("JFK", ans, g);
         reverse(ans.begin(), ans.end());
         return ans;
     }
     
 private:
-    void dfs(string u, vector<string> &ans, int dep, int tot){
-        while(g[u].size()){
+    void dfs(string u, vector<string> &ans, unordered_map<string, multiset<string> >& g){
+        while (!g[u].empty()) {
             string v = *g[u].begin();
             g[u].erase(g[u].begin());
-            dfs(v, ans, dep + 1, tot);
+            dfs(v, ans, g);
         }
         ans.push_back(u);
     }
-    
-private:
-    unordered_map<string, multiset<string> > g;
-    
 };
