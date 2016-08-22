@@ -13,38 +13,37 @@ public:
     vector<vector<int>> verticalOrder(TreeNode* root) {
         map<int, vector<int>> mymap;
         vector<vector<int>> res;
-        
-        if(!root) return res;
+        if (root == nullptr) return res;
         
         queue<TreeNode*> nodequeue;
         queue<int>idqueue;
         nodequeue.push(root);
         idqueue.push(0);
         
-        while(!nodequeue.empty()) {
+        while (!nodequeue.empty()) {
             TreeNode* cur = nodequeue.front();
             int id = idqueue.front();
             nodequeue.pop();
             idqueue.pop();
             
-            if(mymap.count(id) == 0) {
+            if (mymap.count(id) == 0) {
                 vector<int> temp;
                 mymap[id] = temp;
             }
             mymap[id].push_back(cur->val);
             
-            if(cur -> left) {
+            if (cur -> left != nullptr) {
                 nodequeue.push(cur->left);
                 idqueue.push(id-1);
             }
-            if(cur -> right) {
+            if (cur -> right != nullptr) {
                 nodequeue.push(cur->right);
                 idqueue.push(id+1);
             }
         }
         
-        for(auto e : mymap)
-            res.push_back(e.second);
+        for (const auto& e : mymap)
+            res.emplace_back(e.second);
         return res;
     }
 };
