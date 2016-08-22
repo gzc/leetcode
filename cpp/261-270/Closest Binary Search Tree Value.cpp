@@ -10,19 +10,15 @@
 class Solution {
 public:
     int closestValue(TreeNode* root, double target) {
-        
-        double diff(fabs(root->val - target));
         int v = root->val;
+        double diff(fabs(v - target));
         
-        while(root)
-        {
-            if(fabs(root->val - target) <= diff)
-            {
+        while (root != nullptr) {
+            if(fabs(root->val - target) <= diff) {
                 diff = fabs(root->val - target);
                 v = root->val;
             }
-            
-            if(target <= root->val) {
+            if (target <= root->val) {
                 root = root->left;
             } else {
                 root = root->right;
