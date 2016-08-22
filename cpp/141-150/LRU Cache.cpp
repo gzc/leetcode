@@ -1,59 +1,40 @@
-struct My_node {
-    int key, value;
-    My_node(int k ,int v) : key(k),value(v) {}
-};
-
-class LRUCache{
-    
-    int capacity;
-    typedef list<My_node> mylist;
-    typedef unordered_map<int, mylist::iterator> mymap;
-    mylist lists;
-    mymap maps;
-    
-    void MoveToFront(mylist::iterator it)
-    {
-        lists.emplace_front(*it);
-        maps[it->key] = lists.begin();
-        lists.erase(it);
-    }
-    
+class LRUCache {
 public:
-    LRUCache(int capacity) {
-        this->capacity = capacity;
-        maps.reserve(capacity);
-    }
+    LRUCache(int capacity) : _capacity(capacity) {}
     
     int get(int key) {
-        mymap::iterator it = maps.find(key);
-        if(it == maps.end()){
-            return -1;
-        }
-        mylist::iterator node = it->second;
-        MoveToFront(node);
-        return node->value;
+        auto it = cache.find(key);
+        if (it == cache.end()) return -1;
+        touch(it);
+        return it->second.first;
     }
     
     void set(int key, int value) {
-        mymap::iterator it = maps.find(key);
-        if(it != maps.end()){
-            mylist::iterator list_it = it->second;
-            list_it->value = value;
-            MoveToFront(list_it);
-            return;
+        auto it = cache.find(key);
+        if (it != cache.end()) touch(it);
+        else {
+			if (cache.size() == _capacity) {
+				cache.erase(used.back());
+				used.pop_back();
+			}
+            used.push_front(key);
         }
-        
-        if(lists.size() == capacity)
-        {
-            My_node node = lists.back();
-            maps.erase(node.key);
-            lists.pop_back();
-        }
-        
-        My_node node(key,value);
-        lists.emplace_front(node);
-        maps[key] = lists.begin();
-
+        cache[key] = { value, used.begin() };
     }
     
+private:
+    typedef list<int> LI;
+    typedef pair<int, LI::iterator> PII;
+    typedef unordered_map<int, PII> HIPII;
+    
+    void touch(HIPII::iterator it) {
+        int key = it->first;
+        used.erase(it->second.second);
+        used.push_front(key);
+        it->second.second = used.begin();
+    }
+    
+    HIPII cache;
+    LI used;
+    int _capacity;
 };
