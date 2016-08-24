@@ -10,13 +10,13 @@
 class Solution {
     
     void help(TreeNode* root, int &a, int &b) {
-        if(root == nullptr) {
-            a = 0;
-            b = 0;
+        if (root == nullptr) {
+            a = b = 0;
             return;
         }
         
-        int a1,a2,b1,b2;
+        // a is including current root, b is not
+        int a1, a2, b1, b2;
         help(root->left, a1, b1);
         help(root->right, a2, b2);
         
@@ -29,19 +29,8 @@ class Solution {
     
 public:
     int rob(TreeNode* root) {
-        
-        if(!root) return 0;
-        int a,b;
+        int a, b;
         help(root, a, b);
-        return max(a,b);
+        return max(a, b);
     }
 };
-
-/*
- 4
- 1
- 2
- 3
- 
- 
- */
