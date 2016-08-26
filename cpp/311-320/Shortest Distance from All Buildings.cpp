@@ -18,7 +18,7 @@ class Solution {
         myqueue.push(cur);
         visited[i][j] = true;
         
-        while(!myqueue.empty()) {
+        while (!myqueue.empty()) {
             cur = myqueue.front();
             myqueue.pop();
             
@@ -27,13 +27,12 @@ class Solution {
             
             pair<int,int> pos[4] = {{-1,0},{1,0},{0,1},{0,-1}};
             
-            for(int k = 0;k < 4;k++) {
+            for (int k = 0;k < 4;k++) {
                 int curi = cur.i + pos[k].first;
                 int curj = cur.j + pos[k].second;
                 
-                //cout << curi << " " << curj << endl;
-                
-                if(curi >= 0 && curi < m && curj >= 0 && curj < n && !visited[curi][curj] && grid[curi][curj] == 0) {
+                if (curi >= 0 && curi < m && curj >= 0 && curj < n && !visited[curi][curj] &&
+                grid[curi][curj] == 0 && records[curi][curj] >= 0) {
                     point p(curi, curj, cur.v+1);
                     visited[curi][curj] = true;
                     myqueue.push(p);
@@ -41,12 +40,10 @@ class Solution {
             }
         }
     
-        for(int i = 0;i < m;i++)
-            for(int j = 0;j < n;j++)
-                if(!visited[i][j])
+        for (int i = 0;i < m;i++)
+            for (int j = 0;j < n;j++)
+                if (!visited[i][j])
                     records[i][j] = INT_MIN;
-        
-        return;
     }
     
 public:
