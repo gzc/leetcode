@@ -4,8 +4,7 @@ public:
     // Encodes a list of strings to a single string.
     string encode(vector<string>& strs) {
         string result("");
-        for(string str : strs)
-        {
+        for (const string& str : strs) {
             string len = to_string(str.length());
             result = result + len + "#" + str;
         }
@@ -16,8 +15,7 @@ public:
     vector<string> decode(string s) {
         vector<string> result;
         size_t i = 0;
-        while(i < s.length())
-        {
+        while (i < s.length()) {
             size_t index = s.find('#', i);
             int len = stoi(s.substr(i, index-i));
             result.push_back(s.substr(index+1, len));
