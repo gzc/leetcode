@@ -27,7 +27,7 @@ class Codec {
         TreeNode *root(nullptr);
         readNext(ss, val, isnumber);
         
-        if(isnumber) {
+        if (isnumber) {
             root = new TreeNode(val);
             root->left = help(ss);
             root->right = help(ss);
@@ -39,7 +39,7 @@ public:
     
     // Encodes a tree to a single string.
     string serialize(TreeNode* root) {
-        if(!root) return "# ";
+        if (root == nullptr) return "# ";
         else return to_string(root->val) + " " + serialize(root->left) + serialize(root->right);
     }
     
