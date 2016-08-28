@@ -13,10 +13,10 @@ public:
         auto it = cache.find(key);
         if (it != cache.end()) touch(it);
         else {
-			if (cache.size() == _capacity) {
-				cache.erase(used.back());
-				used.pop_back();
-			}
+            if (cache.size() == _capacity) {
+		cache.erase(used.back());
+		used.pop_back();
+            }
             used.push_front(key);
         }
         cache[key] = { value, used.begin() };
