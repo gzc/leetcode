@@ -1,7 +1,7 @@
 class Solution {
     
-    bool valid(int i, int j) {
-        if(i >= 0 && j >= 0 && i < M && j < N) return true;
+    inline bool valid(int i, int j) {
+        if (i >= 0 && j >= 0 && i < M && j < N) return true;
         return false;
     }
     
@@ -20,7 +20,7 @@ public:
     
     int numIslands(vector<vector<char>> &grid) {
         int result(0);
-        if (grid.size() == 0 || grid[0].size() == 0) return 0;
+        if (grid.empty() || grid[0].empty()) return 0;
         M = grid.size();
         N = grid[0].size();
         
