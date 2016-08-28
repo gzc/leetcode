@@ -1,17 +1,16 @@
 class Solution {
 public:
     struct comp{
-        bool operator ()(const int &a, const int &b){ return a > b;}
+        bool operator ()(int a, int b){ return a > b;}
     };
     
     struct mycomparison{
-        bool operator ()(pair<int, int> &a, pair<int, int> &b){ return a.first >= b.first;}
+        bool operator ()(const pair<int, int> &a, const pair<int, int> &b){ return a.first >= b.first;}
     };
 
     vector<pair<int, int>> getSkyline(vector<vector<int>>& buildings) {
         vector<pair<int, int> > ret;
-        typedef std::priority_queue<pair<int, int>,std::vector<pair<int, int>>, mycomparison> mypq_type;
-        mypq_type points;
+        priority_queue<pair<int, int>, vector<pair<int, int>>, mycomparison> points;
         for(auto e : buildings) {
             points.push(make_pair(e[0], e[2]));
             points.push(make_pair(e[1], e[2] * -1));
