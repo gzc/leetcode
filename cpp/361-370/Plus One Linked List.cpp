@@ -9,10 +9,8 @@
 class Solution {
     
     ListNode* reverseList(ListNode* head) {
-        
-        ListNode *tmp(NULL),*prev(NULL);
-        while(head)
-        {
+        ListNode *tmp(nullptr), *prev(nullptr);
+        while (head != nullptr) {
             tmp = head->next;
             head->next = prev;
             prev = head;
@@ -23,20 +21,16 @@ class Solution {
     
 public:
     ListNode* plusOne(ListNode* head) {
-        
         ListNode* tail = reverseList(head);
         ListNode* tmptail = tail;
-        
-        int add = 1;
-        
-        while(tail || add == 1) {
-            if(tail->val + add < 10) {
-                tail->val += add;
+        int carry(1);
+        while (tail || carry > 0) {
+            if (tail->val + carry < 10) {
+                tail->val ++;
                 break;
             } else {
                 tail->val = 0;
-                add = 1;
-                if(tail->next) {
+                if (tail->next != nullptr) {
                     tail = tail->next;
                 } else {
                     ListNode *newtail = new ListNode(1);
@@ -44,10 +38,7 @@ public:
                     break;
                 }
             }
-            
         }
-        
         return reverseList(tmptail);
-        
     }
 };
