@@ -13,10 +13,8 @@ public:
         stack<TreeNode*>s;
         TreeNode *p = root;
         
-        while(p || !s.empty())
-        {
-            while(p)
-            {
+        while(p || !s.empty()) {
+            while(p) {
                 s.push(p);
                 p = p->left;
             }
@@ -24,9 +22,10 @@ public:
             p = s.top();
             s.pop();
             k--;
-            if(k == 0) return p->val;
+            if (k == 0) return p->val;
             p = p->right;
         }
+        
+        return -1;
     }
-};
 };
