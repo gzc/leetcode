@@ -1,18 +1,11 @@
-#include <iostream>
-#include <vector>
-#include <algorithm>
-
-using namespace std;
-
 class Solution {
     
 public:
-    void nextPermutation(vector<int> &num)
-    {
+    void nextPermutation(vector<int> &num) {
         if (num.empty()) return;
         
         // in reverse order, find the first number which is in increasing trend (we call it violated number here)
-        int i;
+        int i(0);
         for (i = num.size()-2; i >= 0; --i)
             if (num[i] < num[i+1]) break;
         
@@ -30,16 +23,3 @@ public:
     }
     
 };
-
-int main()
-{
-    Solution s;
-
-    int a[] = {1,2};
-    vector<int> v(a,a+2);
-    s.nextPermutation(v);
-    
-    for(int i = 0;i < v.size();i++)
-        cout << v[i] << endl;
-    return 0;
-}
