@@ -1,38 +1,19 @@
 class Solution {
-    
-    void help(TreeNode *root, int sum, vector<int>& tmp, vector<vector<int>>& r)
-    {
-        if(!root) return;
-
-        if(!root->left && !root->right && (sum == root->val))
-        {
-            tmp.push_back(root->val);
-            r.push_back(tmp);
-            tmp.pop_back();
-            return;
-        }
-
-        if(root->left)
-        {
-            tmp.push_back(root->val);
-            help(root->left,sum - root->val,tmp,r);
-            tmp.pop_back();
-        }
-        if(root->right)
-        {
-            tmp.push_back(root->val);
-            help(root->right,sum - root->val,tmp,r);
-            tmp.pop_back();
-        }
-    }
-    
 public:
-    vector<vector<int> > pathSum(TreeNode *root, int sum) {
-        vector<int> tmp;
-        vector<vector<int>>v;
-        
-        help(root, sum, tmp, v);
-        
-        return v;
+    vector<vector<int>> pathSum(TreeNode* root, int sum) {
+        vector<vector<int> > paths;
+        vector<int> path;
+        findPaths(root, sum, path, paths);
+        return paths;  
+    }
+private:
+    void findPaths(TreeNode* node, int sum, vector<int>& path, vector<vector<int> >& paths) {
+        if (node == nullptr) return;
+        path.push_back(node -> val);
+        if (!(node -> left) && !(node -> right) && sum == node -> val)
+            paths.push_back(path);
+        findPaths(node -> left, sum - node -> val, path, paths);
+        findPaths(node -> right, sum - node -> val, path, paths);
+        path.pop_back();
     }
 };
