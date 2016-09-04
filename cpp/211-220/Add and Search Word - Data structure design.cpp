@@ -1,14 +1,3 @@
-#include <iostream>
-#include <string>
-#include <vector>
-#include <cmath>
-#include <stack>
-#include <string>
-
-using namespace std;
-
-
-
 class TrieNode {
     
 public:
@@ -18,28 +7,20 @@ public:
     TrieNode() {
         word = false;
         for(int i = 0;i < 26;i++)
-            nodes[i]=NULL;
+            nodes[i] = nullptr;
     }
 };
 
 class Trie {
     
-    bool _search(string word, int offset, TrieNode *node)
-    {
-        if(!node) return false;
+    bool _search(string word, int offset, TrieNode *node) {
+        if (node == nullptr) return false;
+        if (offset == word.length()) return node->word;
         
-        if(offset == word.length())
-        {
-            if(node && node->word) return true;
-            return false;
-        }
-        
-        if(word[offset] == '.')
-        {
-            for(int j = 0;j < 26;j++)
-            {
+        if (word[offset] == '.') {
+            for (int j = 0; j < 26; j++) {
                 bool fff = _search(word, offset+1, node->nodes[j]);
-                if(fff) return true;
+                if (fff) return true;
             }
             return false;
         } else {
@@ -55,10 +36,9 @@ public:
     // Inserts a word into the trie.
     void insert(string s) {
         TrieNode *tmp = root;
-        for(int i = 0;i < s.length();i++)
-        {
+        for (int i = 0; i < s.length(); i++) {
             int index = s[i] - 'a';
-            if(tmp->nodes[index] == NULL)
+            if(tmp->nodes[index] == nullptr)
                 tmp->nodes[index] = new TrieNode();
             tmp = tmp->nodes[index];
         }
@@ -73,8 +53,6 @@ public:
 private:
     TrieNode* root;
 };
-
-
 
 class WordDictionary {
     
@@ -94,24 +72,7 @@ public:
     }
 };
 
-
-
-
-
-int main()
-{
-    //addWord("a"),addWord("a"),search("."),search("a"),search("aa"),search("a"),search(".a"),search("a.")
-
-    WordDictionary wd;
-    wd.addWord("a");
-    wd.addWord("a");
-    cout << wd.search(".") << endl;
-    cout << wd.search("a") << endl;
-    cout << wd.search("aa") << endl;
-    cout << wd.search("a") << endl;
-    cout << wd.search(".a") << endl;
-    cout << wd.search("a.") << endl;
-    
-    cout << "-----end----" << endl;
-    
-}
+// Your WordDictionary object will be instantiated and called as such:
+// WordDictionary wordDictionary;
+// wordDictionary.addWord("word");
+// wordDictionary.search("pattern");
