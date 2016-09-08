@@ -6,10 +6,9 @@ int guess(int num);
 class Solution {
 public:
     int guessNumber(int n) {
-        int low(1);
-        int high(n);
+        int low = 1, high = n;
         
-        while(low <= high) {
+        while (low <= high) {
             int mid = ((long)low+(long)high)/2;
             int flag = guess(mid);
             if(flag == 0) return mid;
