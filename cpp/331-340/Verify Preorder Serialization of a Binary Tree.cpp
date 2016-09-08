@@ -1,48 +1,16 @@
 class Solution {
-    
-    std::vector<std::string> &split(const std::string &s, char delim, std::vector<std::string> &elems) {
-        std::stringstream ss(s);
-        std::string item;
-        while (std::getline(ss, item, delim)) {
-            elems.push_back(item);
-        }
-        return elems;
-    }
-    
-    
-    std::vector<std::string> split(const std::string &s, char delim) {
-        std::vector<std::string> elems;
-        split(s, delim, elems);
-        return elems;
-    }
-    
+
 public:
     bool isValidSerialization(string preorder) {
-        
-        vector<string> myres = split(preorder, ',');
-        stack<string> mystack;
-        
-        for(int i = 0;i < myres.size();i++) {
-            if(mystack.size() == 1 && mystack.top() == "#") return false;
-            else if(mystack.empty() || myres[i] != "#") mystack.push(myres[i]);
-            else {
-                if(mystack.top() != "#") mystack.push(myres[i]);
-                //else if(mystack.size() == 1 && mystack.top() == "#") return false;
-                else {
-                    mystack.push("#");
-                    bool con = true;
-                    while(con) {
-                        mystack.pop();
-                        mystack.pop();
-                        mystack.pop();
-                        con = !mystack.empty() && (mystack.top() == "#");
-                        mystack.push("#");
-                    }
-                }
-            }
+        if (preorder.empty()) return false;
+        preorder += ',';
+        int capacity = 1;
+        for (int idx = 0; idx < preorder.size(); idx++) {
+            if (preorder[idx]!=',') continue;
+            capacity--;
+            if (capacity < 0) return false;
+            if (preorder[idx-1] != '#') capacity += 2;
         }
-        
-        return mystack.size() == 1 && mystack.top() == "#";
+        return capacity == 0;
     }
-    
 };
