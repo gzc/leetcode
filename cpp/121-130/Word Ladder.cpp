@@ -20,7 +20,6 @@ class Solution {
                     }
                 }
             }
-            if (dis.count(end) == 0) return 0;
             return dis[end];
         }
         
