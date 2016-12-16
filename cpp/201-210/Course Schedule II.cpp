@@ -1,7 +1,7 @@
 struct Node {
     int state;
     vector<int> edges;
-    Node(int x) : state(x){}
+    Node() : state(0) { }
 };
 
 class Solution {
@@ -13,8 +13,8 @@ class Solution {
         for (int i = 0;i < Nodes[u].edges.size();i++) {
             int num = Nodes[u].edges[i];
             if (Nodes[num].state == 0) {
-                bool fff = DFS_VISIT(num, v);
-                if(!fff) return false;
+                bool hascircle = !DFS_VISIT(num, v);
+                if(hascircle) return false;
             } else if (Nodes[num].state == 1) {
                 return false;
             }
@@ -27,23 +27,15 @@ class Solution {
 public:
     vector<int> findOrder(int numCourses, vector<pair<int, int>>& prerequisites) {
         vector<int>orders;
-        vector<int>empty;
+        Nodes.resize(numCourses);
         
-        for (int i = 0;i < numCourses;i++)
-            Nodes.push_back(Node(0));
         for (int i = 0;i < prerequisites.size();i++)
             Nodes[prerequisites[i].first].edges.push_back(prerequisites[i].second);
         
         for (int i = 0;i < numCourses;i++) {
-            vector<int> edges = Nodes[i].edges;
             if (Nodes[i].state != 0) continue;
-            if (edges.empty()) {
-                orders.push_back(i);
-                Nodes[i].state = 2;
-                continue;
-            }
-            bool fff = DFS_VISIT(i, orders);
-            if (!fff) return empty;
+            bool hascircle = !DFS_VISIT(i, orders);
+            if (hascircle) return vector<int>();
         }
         return orders;
     }
