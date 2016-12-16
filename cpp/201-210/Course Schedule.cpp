@@ -1,7 +1,7 @@
 struct Node {
     int state;
     vector<int> edges;
-    Node(int x) : state(x) { }
+    Node() : state(0) { }
 };
  
 class Solution {
@@ -13,8 +13,8 @@ class Solution {
         for (int i = 0;i < Nodes[u].edges.size();i++) {
             int num = Nodes[u].edges[i];
             if(Nodes[num].state == 0) {
-                bool fff = dfs_visit(num);
-                if(!fff) return false;
+                bool hascircle = !dfs_visit(num);
+                if(hascircle) return false;
             } else if(Nodes[num].state == 1) {
                 return false;
             }
@@ -25,18 +25,13 @@ class Solution {
     
 public:
     bool canFinish(int numCourses, vector<pair<int, int>>& prerequisites) {
-        Nodes.clear();
-        for (int i = 0;i < numCourses;i++)
-            Nodes.push_back(Node(0));
+        Nodes.resize(numCourses);
         for (int i = 0;i < prerequisites.size();i++)
             Nodes[prerequisites[i].first].edges.push_back(prerequisites[i].second);
         
         for (int i = 0;i < numCourses;i++) {
-            vector<int> edges = Nodes[i].edges;
-            if(edges.empty()) continue;
-            if(Nodes[i].state != 0) continue;
-            bool fff = dfs_visit(i);
-            if(!fff) return false;
+            bool hascircle = !dfs_visit(i);
+            if(hascircle) return false;
         }
         return true;
     }
