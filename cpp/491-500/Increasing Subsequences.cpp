@@ -1,6 +1,6 @@
 class Solution {
 private:
-    void findSubsequences(vector<int> &nums, vector<int> &subsequence, set<vector<int> > &result, int index) {
+    void findSubsequences(const vector<int> &nums, vector<int> &subsequence, set<vector<int> > &result, int index) {
         if (subsequence.size() >= 2)
             result.insert(subsequence);
         
@@ -19,7 +19,6 @@ public:
         vector<int> subsequence;
         findSubsequences(nums, subsequence, resultSet, 0);
 
-        vector<vector<int>> result(resultSet.begin(), resultSet.end());
-        return result;
+        return vector<vector<int>>(begin(resultSet), end(resultSet));
     }
 };
