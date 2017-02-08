@@ -1,21 +1,27 @@
 class Solution {
-public:
-    int longestSubstring(string s, int k) {
-        if(s.size() == 0 || k > s.size())   return 0;
-        if(k == 0)  return s.size();
+    
+    int dfs(const string& s, int k, int start, int end) {
+        int size = end-start+1;
+        if(size == 0 || k > size)   return 0;
+        if(k == 0)  return size;
         
-        unordered_map<char,int> Map;
-        for(int i = 0; i < s.size(); i++){
-            Map[s[i]]++;
+        int Map[26] = {0};
+        for(int i = start; i <= end; i++){
+            Map[s[i]-'a']++;
         }
         
-        int idx =0;
-        while(idx <s.size() && Map[s[idx]] >= k)    idx++;
-        if(idx == s.size()) return s.size();
+        int idx = start;
+        while(idx <= end && Map[s[idx]-'a'] >= k)    idx++;
+        if(idx == end+1) return size;
         
-        int left = longestSubstring(s.substr(0 , idx) , k);
-        int right = longestSubstring(s.substr(idx+1) , k);
+        int left = dfs(s, k, start, idx-1);
+        int right = dfs(s, k, idx+1, end);
         
         return max(left, right);
+    }
+    
+public:
+    int longestSubstring(string s, int k) {
+        return dfs(s, k, 0, s.length()-1);
     }
 };
