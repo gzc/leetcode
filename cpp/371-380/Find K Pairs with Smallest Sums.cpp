@@ -1,24 +1,37 @@
 class Solution {
+    
+    typedef pair<int, vector<int>::iterator> mm;
+    
 private:
     struct mycompare{
-        bool operator()(const pair<int, int>& p1, const pair<int, int>& p2){
-            return p1.first + p1.second < p2.first + p2.second;
+        bool operator()(const mm& p1, const mm& p2){
+            return p1.first + *(p1.second) > p2.first + *(p2.second);
         }
     };
 public:
     vector<pair<int, int>> kSmallestPairs(vector<int>& nums1, vector<int>& nums2, int k) {
-        vector<pair<int, int>> res;
-        priority_queue<pair<int,int>, vector<pair<int, int> >, mycompare> pq;
-        for(int num1 : nums1){
-            for(int num2 : nums2){
-                pq.push(make_pair(num1, num2));
-                if(pq.size() > k) pq.pop();
+        int size = min(k, (int)(nums1.size())*int(nums2.size()));
+        vector<pair<int, int>> res(size);
+        if (nums1.empty() || nums2.empty()) return res;
+        
+        priority_queue<mm, vector<mm>, mycompare> pq;
+        
+        // Given nums1 = [1,7,11], nums2 = [2,4,6],  k = 3
+        // {1, iter}  {7, iter}  {11, iter}
+        for (int v : nums1) {
+            pq.push({v, nums2.begin()});
+        }
+        
+        for (int i = 0; i < k && !pq.empty(); i++) {
+            auto ele = pq.top();
+            pq.pop();
+            res[i] = {ele.first, *(ele.second)};
+            ele.second++;
+            if (ele.second != nums2.end()) {
+                pq.push({ele.first, ele.second});
             }
         }
-        while(!pq.empty()){
-            res.push_back(pq.top());
-            pq.pop();
-        }
+        
         return res;
     }
 };
