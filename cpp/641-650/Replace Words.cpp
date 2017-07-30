@@ -2,7 +2,6 @@ vector<string> split(const string &s, char delim) {
     vector<std::string> elems;
     stringstream ss(s);
     string item;
-    std::back_inserter(elems);
     while (getline(ss, item, delim)) {
         if (item.length() > 0) {
             elems.push_back(item);
