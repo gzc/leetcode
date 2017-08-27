@@ -2,25 +2,19 @@ class Solution {
 public:
     bool checkPossibility(vector<int>& nums) {
         int n = nums.size();
-        if (n <= 2) return true;
-        int cnt1 = 0;
-        int cnt2 = 0;
-        bool flag1 = true;
-        bool flag2 = true;
-        
-        for (int i = 0; i < n-1; i++) {
-            if (nums[i] > nums[i+1]) {
-                cnt1++;
-                if (i!=0 && nums[i-1]>nums[i+1]) flag1=false;
+        int cnt = 0;
+        for (int i = 0; i < n - 1; i++) {
+            if(nums[i] > nums[i+1]) {
+                ++cnt;
+                // 2 3 3 2 4 => 2 3 3 3 4
+                // 4 2 3 => 2 2 3
+                // 3 4 2 3 => 3 3 2 3
+                if (i > 0 && nums[i+1] < nums[i-1]) {
+                    nums[i+1] = nums[i];
+                }
+                else nums[i] = nums[i+1];
             }
         }
-        for (int i = 1; i < n; i++) {
-            if (nums[i] < nums[i-1]) {
-                cnt2++;
-                if (i < n-1 && nums[i+1] < nums[i-1]) flag2=false;
-            }
-        }
-        
-        return (flag1 && cnt1 <= 1) || (flag2 && cnt2 <= 1);
+        return cnt <= 1;
     }
 };
