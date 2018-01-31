@@ -1,21 +1,25 @@
 class Solution {
+    
+    void dfs(int curr, int n, vector<int>& result, int& index) {
+        if (curr <= n) {
+            result[index++] = curr;
+        } else {
+            return;   
+        }
+        
+        for (int i = 0; i <= 9; i++) {
+            dfs(curr*10 + i, n, result, index);
+        }
+    }
+    
 public:
     vector<int> lexicalOrder(int n) {
         vector<int> result(n);
-        int curr = 1;
-        for (int i = 0; i < n; i++) {
-            result[i] = curr;
-            if (curr * 10 <= n) {
-                curr *= 10;
-            } else if (curr % 10 != 9 && curr + 1 <= n) {
-                curr++;
-            } else {
-                while ((curr / 10) % 10 == 9) {
-                    curr /= 10;
-                }
-                curr = curr / 10 + 1;
-            }
-        }
+        int index = 0;
+        
+        for (int i = 1; i <= 9; i++)
+            dfs(i, n, result, index);
+        
         return result;
     }
 };
