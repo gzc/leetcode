@@ -16,7 +16,7 @@ public:
         int result = 0;
         for (auto it : mymap) {
             int key = it.first;
-            if (key >= 80 || ( mymap.count(getLeftChild(key)) == 0 && mymap.count(getLeftChild(key)+1) == 0)) {
+            if ( mymap.count(getLeftChild(key)) == 0 && mymap.count(getLeftChild(key)+1) == 0) {
                 // this is leaf
                 while (mymap.count(key) > 0) {
                     result += mymap[key];
