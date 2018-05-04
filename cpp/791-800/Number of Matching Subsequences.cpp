@@ -1,29 +1,15 @@
 class Solution {
 public:
     int numMatchingSubseq(string S, vector<string>& words) {
-        map<char, vector<int>> mymap;
-        int len = S.length();
-        for (int i = 0; i < len; i++) {
-            mymap[S[i]].push_back(i);
+        vector<const char*> waiting[128];
+        for (auto &w : words)
+            waiting[w[0]].push_back(w.c_str());
+        for (char c : S) {
+            vector<const char*> advance = waiting[c];
+            waiting[c].clear();
+            for (const char* it : advance)
+                waiting[*++it].push_back(it);
         }
-        
-        int ans = 0;
-        for (const string& word : words) {
-            int cur = 0;
-            bool found = true;
-            for (char ch : word) {
-                const vector<int>& temp = mymap[ch];
-                auto it = lower_bound(temp.begin(), temp.end(), cur);
-                if (it == temp.end()) {
-                    found = false;
-                    break;
-                }
-                cur = *it;
-                cur++;
-            }
-            if (found) ans++;
-        }
-        
-        return ans;
+        return waiting[0].size();
     }
 };
