@@ -1,42 +1,29 @@
 class Solution {
 public:
     vector<int> asteroidCollision(vector<int>& asteroids) {
-        vector<int> result(asteroids.size());
-        int size = 0;
-        
-        for (int i = 0; i < asteroids.size(); i++) {
-            if (size == 0 || asteroids[i] > 0) {
-                result[size] = asteroids[i];
-                size++;
-                continue;
-            }
-            if (asteroids[i] <= 0) {
-                while (size > 0) {
-                    if (result[size-1] < 0) {
-                        result[size] = asteroids[i];
-                        size++;
-                        break;
-                    } else {
-                        if (abs(asteroids[i]) > result[size-1]) {
-                            size--;
-                        } else if (abs(asteroids[i]) == result[size-1]) {
-                            size--;
-                            break;
-                        } else {
-                            break;
-                        }
-                        
-                        if (size == 0) {
-                            result[size] = asteroids[i];
-                            size++;
-                            break;
-                        }
-                    }
+        stack<int> mystack;
+        for (int ast : asteroids) {
+            bool eat = false;
+            while (!mystack.empty() && ast < 0 && 0 < mystack.top()) {
+                if (mystack.top() < -ast) {
+                    mystack.pop();
+                    continue;
+                } else if (mystack.top() == -ast) {
+                    eat = true;
+                    mystack.pop();
+                } else {
+                    eat = true;
                 }
+                break;
             }
+            if (!eat) mystack.push(ast);
         }
-        
-        result.resize(size);
-        return result;
+
+        vector<int> ans(mystack.size());
+        for (int t = ans.size() - 1; t >= 0; --t) {
+            ans[t] = mystack.top();
+            mystack.pop();
+        }
+        return ans;
     }
 };
