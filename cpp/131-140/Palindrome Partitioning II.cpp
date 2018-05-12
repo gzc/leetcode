@@ -2,7 +2,7 @@ class Solution {
 public:
     int minCut(string s) {
 
-        vector<vector<int> >p(s.length(), vector<int>(s.length(), 0xffff));
+        vector<vector<int> >p(s.length(), vector<int>(s.length(), 100000));
         for(int i = 0;i < s.length();i++)
             for(int j = 0;j < s.length()-i;j++)
                 if(s[j] == s[j+i])
