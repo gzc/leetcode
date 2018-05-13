@@ -14,21 +14,11 @@ class Solution {
     
 public:
     int deleteAndEarn(vector<int>& nums) {
-        map<int, int> mymap;
-        for (int e : nums) {
-            mymap[e] += e;
-        }
+        int n = 10001;
+        vector<int> values(n, 0);
+        for (int num : nums)
+            values[num] += num;
         
-        vector<int> vec;
-        int last = -1;
-        for (auto& e : mymap) {
-            if (last + 1 < e.first) {
-                vec.push_back(0);
-            }
-            vec.push_back(e.second);
-            last = e.first;
-        }
-        if (vec.size() == 1) return vec[0];
-        return rob(vec);
+        return rob(values);
     }
 };
