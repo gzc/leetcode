@@ -1,24 +1,13 @@
 class MyCalendarThree {
-    multiset<pair<int, bool>> myset;
+    map<int, int> timeline;
 public:
-    MyCalendarThree() {
-        
-    }
-    
-    int book(int start, int end) {
-        int level = 0;
-        int maxLevel = 1;
-        myset.insert({start, true});
-        myset.insert({end, false});
-        for (const auto& e : myset) {
-            if (e.second == true) {
-                level++;
-            } else {
-                level--;
-            }
-            maxLevel = max(maxLevel, level);
-        }
-        return maxLevel;
+    int book(int s, int e) {
+        timeline[s]++; // 1 new event will be starting at [s]
+        timeline[e]--; // 1 new event will be ending at [e];
+        int ongoing = 0, k = 0;
+        for (const pair<int, int>& t : timeline)
+            k = max(k, ongoing += t.second);
+        return k;
     }
 };
 
