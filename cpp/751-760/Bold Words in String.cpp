@@ -1,80 +1,42 @@
-struct TrieNode {
-    unordered_map<char, TrieNode*> nodes;
-    bool word;
-    // Initialize your data structure here.
-    TrieNode(): word(false) { }
-};
-
-class Trie {
-    
-public:
-    Trie() {
-        root = new TrieNode();
-    }
-    
-    // Inserts a word into the trie.
-    void insert(const string& s) {
-        TrieNode *tmp = root;
-        for(char ch : s) {
-            int index = ch;
-            if(tmp->nodes[index] == nullptr) {
-                tmp->nodes[index] = new TrieNode();
-            }
-            tmp = tmp->nodes[index];
-        }
-        tmp->word = true;
-    }
-    
-    int search(const string& s, int i) const {
-        TrieNode *tmp = root;
-        int maxLen = 0;
-        int j = i;
-        for(; j < s.length(); j++) {
-            int index = s[j];
-            if (tmp->word) maxLen = max(maxLen, j - i);
-            if(tmp->nodes[index] == nullptr) return maxLen;
-            tmp = tmp->nodes[index];
-        }
-        if (tmp->word) {
-            int temp = j - i + 1;
-            maxLen = max(maxLen, temp);
-        }
-        return maxLen;
-    }
-    
-private:
-    TrieNode* root;
-};
-
 class Solution {
-public:
-    string boldWords(vector<string>& dict, string s) {
-        vector<bool> myvec(s.length(), false);
-        Trie trie;
-        for (const string& str : dict) trie.insert(str);
-        
-        int end = 0;
-        for (int i = 0; i < s.length(); i++) {
-            int maxLen = trie.search(s, i);
-            end = max(end, i + maxLen);
-            myvec[i] = end > i;
-        }
-        
-        std::stringstream ss;
-        string result = "";
-        for (int i = 0; i < myvec.size(); i++) {
-            if (!myvec[i]) {
-                ss << s[i];
-            } else {
-                int j = i + 1;
-                while (j < myvec.size() && myvec[j]) j++;
-                ss << "<b>";
-                ss << s.substr(i, j - i);
-                ss << "</b>";
-                i = j - 1;
+private:
+    vector<pair<int, int>> findpairs(const string& s, const vector<string>& dict) {
+        vector<pair<int, int>> res;
+        for (const string& w : dict) {
+            int n = w.size();
+            for (int i = 0; (i = s.find(w, i)) != string::npos; i++) {
+                res.emplace_back(make_pair(i, i + n));
             }
         }
-        ss >> result;
-        return result;
+        return res;
+    }
+
+    vector<pair<int, int>> merge(vector<pair<int, int>>& a) {
+        vector<pair<int, int>> r;
+        auto cmp = [&](const pair<int, int>& a, const pair<int, int>& b) {
+            return a.first < b.first || a.first == b.first && a.second < b.second;
+        };
+        sort(a.begin(), a.end(), cmp);
+        for (int i = 0, j = -1; i < a.size(); i++) {
+            if (j < 0 || a[i].first > r[j].second) {
+                r.push_back(a[i]);
+                j++;
+            } else {
+                r[j].second = max(r[j].second, a[i].second);
+            }
+        }
+        
+        return r;
+    }
+public:
+    string boldWords(vector<string>& words, string S) {
+        vector<pair<int, int>> ranges = findpairs(S, words);
+        ranges = merge(ranges);
+        for (auto it = ranges.rbegin(); it != ranges.rend(); it++) {
+            S.insert(it->second, "</b>");
+            S.insert(it->first, "<b>");
+        }
+        return S;
     }
 };
+
