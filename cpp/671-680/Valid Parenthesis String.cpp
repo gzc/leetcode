@@ -22,6 +22,6 @@ public:
             minLeft = max(0, minLeft);
         }
         
-        return minLeft == 0 && maxLeft >= 0;
+        return minLeft == 0;
     }
 };
