@@ -1,13 +1,10 @@
-struct cmp{
-    bool operator() (ListNode *n1, ListNode *n2) {
-        return n1->val >= n2->val;
-    }
-};
-
 class Solution {
 public:
     ListNode *mergeKLists(vector<ListNode *> &lists) {
-        priority_queue<ListNode*, vector<ListNode*>, cmp> qs;
+        auto cmp = [] (ListNode *n1, ListNode *n2) {
+            return n1->val >= n2->val;
+        };
+        priority_queue<ListNode*, vector<ListNode*>, decltype(cmp)> qs(cmp);
         for (int i = 0;i < lists.size();i++)
             if (lists[i]) 
                 qs.push(lists[i]);
