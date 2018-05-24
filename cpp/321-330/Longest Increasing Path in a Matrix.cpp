@@ -29,8 +29,7 @@ public:
         for (int i = 0;i < m;i++) {
             for (int j = 0;j < n;j++) {
                 if (!visited[i][j]) {
-                    dfsvisit(i, j, visited, lens, matrix);
-                    _max = max(_max, lens[i][j]);
+                    _max = max(_max, dfsvisit(i, j, visited, lens, matrix));
                 }
             }
         }
