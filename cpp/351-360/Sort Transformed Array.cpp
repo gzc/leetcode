@@ -1,59 +1,37 @@
 class Solution {
     
-    int cal(int a, int b, int c, int x) {
-        return a*x*x + b*x + c;
+    int transform(int num, int a, int b, int c) {
+        return a * num * num + b * num + c;
     }
     
-public:
-    vector<int> sortTransformedArray(vector<int>& nums, int a, int b, int c) {
-        
-        vector<int> myvec;
-        
-        if(a == 0) {
-            for(auto e : nums) {
-                myvec.push_back(cal(a,b,c,e));
-            }
-            if(b < 0) reverse(myvec.begin(), myvec.end());
-            return myvec;
-        }
-        
-        float xx = b / (-2.0 * a);
-        int pivot(0);
-        for(int i = 0;i < nums.size();i++) {
-            if(nums[i] >= xx) {
-                pivot = i;
-                break;
-            }
-        }
-        
-        int i(pivot-1), j(pivot);
-        
-        while(i >= 0 || j < nums.size()) {
-            
-            if(i < 0) {
-                int x = nums[j];
-                myvec.push_back(cal(a,b,c,x));
-                j++;
-            } else if(j >= nums.size()) {
-                int x = nums[i];
-                myvec.push_back(cal(a,b,c,x));
-                i--;
+    public:
+        vector<int> sortTransformedArray(vector<int>& nums, int a, int b, int c) {
+            vector<int> res(nums.size());
+            if (nums.size() == 0) return res;
+            int i = 0, j = nums.size() - 1;
+            if (a >= 0) {
+                int index = nums.size() - 1;
+                while (i <= j) {
+                    if (transform(nums[i], a, b, c) > transform(nums[j], a, b, c)) {
+                        res[index--] = transform(nums[i], a, b, c);
+                        i++;
+                    } else {
+                        res[index--] = transform(nums[j], a, b, c);
+                        j--;
+                    }
+                }
             } else {
-                int x1 = nums[i];
-                int x2 = nums[j];
-                if(abs(x1-xx) >= abs(x2-xx)) {
-                    myvec.push_back(cal(a,b,c,x2));
-                    j++;
-                } else {
-                    myvec.push_back(cal(a,b,c,x1));
-                    i--;
+                int index = 0;
+                while (i <= j) {
+                    if (transform(nums[i], a, b, c) < transform(nums[j], a, b, c)) {
+                        res[index++] = transform(nums[i], a, b, c);
+                        i++;
+                    } else {
+                        res[index++] = transform(nums[j], a, b, c);
+                        j--;
+                    }
                 }
             }
-
+            return res;
         }
-        
-        if(a < 0) reverse(myvec.begin(), myvec.end());
-        
-        return myvec;
-    }
 };
