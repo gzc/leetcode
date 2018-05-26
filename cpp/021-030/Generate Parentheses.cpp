@@ -8,11 +8,8 @@ class Solution {
             s += temp;
             result.push_back(s);
         } else {
-            if(m == n) help(s+"(", n-1, m, result);
-            else {
-                help(s+"(", n-1, m, result);
-                help(s+")", n, m-1, result);
-            }
+            help(s+"(", n-1, m, result);
+            help(s+")", n, m-1, result);
         }
     }
     
