@@ -1,97 +1,67 @@
-#include <iostream>
-#include <stack>
-#include <string>
-
-using namespace std;
-
 class Solution {
     
-    void apply(stack<int>&s, char c)
-    {
+    void apply(stack<int>&s, stack<char>& symbol) {
+        char c = symbol.top();symbol.pop();
         int b = s.top();s.pop();
         int a = s.top();s.pop();
-        if(c == '+') s.push(a+b);
-        else if(c == '-') s.push(a-b);
-        else if(c == '*') s.push(a*b);
+        if (c == '+') s.push(a+b);
+        else if (c == '-') s.push(a-b);
+        else if (c == '*') s.push(a*b);
         else s.push(a/b);
     }
     
 public:
     int calculate(string s) {
-        
         stack<char> symbol;
         stack<int>ss;
         int v = 0;
         bool number = false;
-        for(auto e : s)
-        {
-            if( number && (e < '0' || e > '9'))
-            {
+        for (char e : s) {
+            if (number && !isdigit(e)) {
                 ss.push(v);
                 v = 0;
                 number = false;
             }
             
-            if(e == ' ') continue;
-            else if(e == ')')
-            {
-                while(symbol.top() != '(')
-                {
-                    char c = symbol.top();
-                    apply(ss, c);
-                    symbol.pop();
+            if (e == ' ') continue;
+            else if (e == ')') {
+                while (symbol.top() != '(') {
+                    apply(ss, symbol);
                 }
                 symbol.pop();
-            } else if(e == '(') {
+            } else if (e == '(') {
                 symbol.push('(');
-            } else if(e >= '0' && e <= '9') {
+            } else if (e >= '0' && e <= '9') {
                 v = 10*v + (e-'0');
                 number = true;
-            } else if(e == '+' || e == '-') {
-                if(symbol.empty())
+            } else if (e == '+' || e == '-') {
+                if (symbol.empty())
                     symbol.push(e);
                 else {
-                    while(!symbol.empty() && symbol.top() != '(')
-                    {
-                        char c = symbol.top();
-                        symbol.pop();
-                        apply(ss, c);
+                    while (!symbol.empty() && symbol.top() != '(') {
+                        apply(ss, symbol);
                     }
                     symbol.push(e);
                 }
-            } else if(e == '*' || e == '/') {
-                if(symbol.empty())
+            } else if (e == '*' || e == '/') {
+                if (symbol.empty())
                     symbol.push(e);
                 else {
-                    while(!symbol.empty() && (symbol.top() == '*' || symbol.top() == '/') )
-                    {
-                        char c = symbol.top();
-                        symbol.pop();
-                        apply(ss, c);
+                    if (!symbol.empty() && (symbol.top() == '*' || symbol.top() == '/') ) {
+                        apply(ss, symbol);
                     }
                     symbol.push(e);
                 }
             }
         }
         
-        if( number )
+        if (number)
             ss.push(v);
         
-        while(!symbol.empty())
-        {
-            char c = symbol.top();
-            apply(ss,c);
-            symbol.pop();
+        while (!symbol.empty()) {
+            apply(ss, symbol);
         }
         
         return ss.top();
     }
 };
-
-int main()
-{
-    Solution s;
-    cout << s.calculate("3+2*2") << endl;
-    
-    return 0;
-}
