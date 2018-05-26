@@ -1,6 +1,6 @@
 class Solution {
     
-    void apply(stack<int>&s, stack<char>& symbol) {
+    void apply(stack<int>& s, stack<char>& symbol) {
         char c = symbol.top();symbol.pop();
         int b = s.top();s.pop();
         int a = s.top();s.pop();
