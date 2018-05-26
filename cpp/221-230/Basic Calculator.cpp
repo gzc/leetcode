@@ -1,7 +1,8 @@
 class Solution {
     
-    void apply(stack<int>&s, char c)
-    {
+    void apply(stack<int>& s, stack<char>& symbol) {
+        char c = symbol.top();
+        symbol.pop();
         int b = s.top();s.pop();
         int a = s.top();s.pop();
         if(c == '+') s.push(a+b);
@@ -14,23 +15,17 @@ public:
         stack<int> nums;
         int v = 0;
         bool number = false;
-        for (const char& e : s)
-        {
-            if (number && !isdigit(e))
-            {
+        for (char e : s) {
+            if (number && !isdigit(e)) {
                 nums.push(v);
                 v = 0;
                 number = false;
             }
             
             if (e == ' ') continue;
-            else if (e == ')')
-            {
-                while (symbol.top() != '(')
-                {
-                    char c = symbol.top();
-                    apply(nums, c);
-                    symbol.pop();
+            else if (e == ')') {
+                while (symbol.top() != '(') {
+                    apply(nums, symbol);
                 }
                 symbol.pop();
             } else if (e == '(') {
@@ -42,11 +37,8 @@ public:
                 if(symbol.empty())
                     symbol.push(e);
                 else {
-                    while (!symbol.empty() && symbol.top() != '(')
-                    {
-                        char c = symbol.top();
-                        symbol.pop();
-                        apply(nums, c);
+                    if (!symbol.empty() && symbol.top() != '(') {
+                        apply(nums, symbol);
                     }
                     symbol.push(e);
                 }
@@ -56,11 +48,8 @@ public:
         if (number)
             nums.push(v);
         
-        while (!symbol.empty())
-        {
-            char c = symbol.top();
-            apply(nums,c);
-            symbol.pop();
+        while (!symbol.empty()) {
+            apply(nums, symbol);
         }
 
         return nums.top();
