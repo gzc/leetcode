@@ -48,20 +48,19 @@ public:
         
         int nexti = curi + move_row;
         int nextj = curj + move_col;
-        if(nexti < 0 || nexti >= height || nextj < 0 || nextj >= width) return -1;
+        if (nexti < 0 || nexti >= height || nextj < 0 || nextj >= width) return -1;
         pair<int, int> head = make_pair(nexti, nextj);
         
-        if(food[idx] == head) {
-            myqueue.push(head);
+        myqueue.push(head);
+        if (food[idx] == head) {
             myset.insert(head);
             ++score;
             ++idx;
         } else {
             pair<int, int> tail = myqueue.front();
             myqueue.pop();
-            myqueue.push(head);
             myset.erase(tail);
-            if(myset.count(head) > 0) return -1;
+            if (myset.count(head) > 0) return -1;
             myset.insert(head);
         }
         
