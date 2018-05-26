@@ -1,47 +1,34 @@
 class Solution {
-    
-    map<string, string> cache;
-    
-    string solve(string str) {
-        string ans(str);
-        int len = str.length();
-        for (int i = 1; i <= len/2; i++) {
-            if (len % i != 0) continue;
-            string part = str.substr(0, i);
-            int dups = len / i;
-            bool ff = true;
-            for (int k = 0; k < dups; k++) {
-                int idx = k * i;
-                bool f = true;
-                for (int j = 0; j < i; j++) {
-                    if (str[idx + j] != str[j]) {
-                        f = false;
-                        break;
-                    }
-                }
-                if (f == false) { ff = false; break; }
-            }
-            if (ff == false) continue;
-            string temp = to_string(dups) + '[' + encode(part) + ']';
-            if (temp.length() < ans.length()) ans = temp;
+    int numRepetition(const string &s, const string &t) {
+        int cnt = 0,i = 0;
+        while (i < s.length()) {
+            if (s.substr(i, t.length()) != t) break;
+            cnt++;
+            i += t.length();
         }
-        //cout << str << " : " << ans << endl;
-        return ans;
+        return cnt;
+    }
+    
+    string dfs(const string& s, unordered_map<string, string> &m) {
+        if (s.length() < 5) return s;
+        if (m.count(s) > 0) return m[s];
+        string res(s);
+        for (int i = 0; i < s.length(); i++) {
+            string s1 = s.substr(0, i+1);
+            int cnt = numRepetition(s, s1);
+            string t;
+            for (int k = 1; k <= cnt; k++) {
+                if (k == 1) t = s1 + dfs(s.substr(i+1), m);
+                else t = to_string(k) + "[" + dfs(s1, m) + "]" + dfs(s.substr(k*s1.length()), m);
+                if (t.length() < res.length()) res=t;            
+            }
+        }
+        return m[s] = res;
     }
     
 public:
     string encode(string s) {
-        int len = s.length();
-        if (len <= 1) return s;
-        if (cache.count(s) > 0) return cache[s];
-        string ans(s);
-        for (int i = 1;i <= len; i++) {
-            string left = s.substr(0, i);
-            string right = s.substr(i);
-            string temp = solve(left) + encode(right);
-            if (temp.length() < ans.length()) ans = temp;
-        }
-        cache[s] = ans;
-        return ans;
+        unordered_map<string,string> m;
+        return dfs(s,m);
     }
 };
