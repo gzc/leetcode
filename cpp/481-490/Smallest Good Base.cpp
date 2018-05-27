@@ -1,32 +1,19 @@
 class Solution {
 public:
     string smallestGoodBase(string n) {
-        unsigned long long tn = (unsigned long long)stoll(n);
-        for (int i = 62; i >= 2; i--) {
-            if ((1<<i)<tn) {
-                unsigned long long cur = mysolve(tn, i);
-                if (cur != 0) return to_string(cur);
+        long long num = stol(n);
+        for (int i = log(num + 1) / log(2); i >= 2; --i) {
+            long long left = 2, right = pow(num, 1.0 / (i - 1)) + 1;
+            while (left < right) {
+                long long mid = left + (right - left) / 2, sum = 0;
+                for (int j = 0; j < i; ++j) {
+                    sum = sum * mid + 1;
+                }
+                if (sum == num) return to_string(mid);
+                else if (sum < num) left = mid + 1;
+                else right = mid;
             }
         }
-        return to_string(tn-1);
+        return to_string(num - 1);
     }
-    
-    unsigned long long mysolve(unsigned long long n, int d) {
-        double tn = (double) n;
-        unsigned long long right = (unsigned long long)(pow(tn,1.0/d)+0);
-        unsigned long long left = 1;
-        while (left <= right){
-            unsigned long long mid = left+(right-left)/2;
-            unsigned long long sum = 1, cur=1;
-            for (int i = 1; i <= d; i++) {
-                cur *= mid;
-                sum += cur;
-            }
-            if (sum == n) return mid;
-            if (sum > n) right = mid-1;
-            else left = mid+1;
-        }
-        return 0;
-    }
-
 };
