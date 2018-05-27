@@ -8,7 +8,9 @@ public:
             count[ch - 'a']++;
         }
         
-        for (auto ch : s) {
+        // bcabc, b -> bc -> a -> ab -> abc
+        // cbacdcbc, c -> b -> a -> ac -> acd -> acd -> acdb 
+        for (char ch : s) {
             int index = ch - 'a';
             count[index]--;
 
