@@ -1,14 +1,15 @@
 class Solution {
 public:
-    vector<vector<string>> findLadders(string start, string end, unordered_set<string> &dict) {
+    vector<vector<string>> findLadders(string beginWord, string endWord, vector<string>& wordList) {
+        unordered_set<string> dict(begin(wordList), end(wordList));
         unordered_map<string, vector<string>> traces;
         unordered_map<string, int> dis;
         queue<string> q;
-        dis[start] = 1;
-        q.push(start);
+        dis[beginWord] = 1;
+        q.push(beginWord);
         while (!q.empty()) {
             string word = q.front(); q.pop();
-            if (word == end) break;
+            if (word == endWord) break;
             for (int i = 0; i < word.size(); i++) {
                 for (int j = 0; j < 26; j++) {
                     string newWord = word;
@@ -29,7 +30,7 @@ public:
         }
         vector<vector<string>>paths;
         vector<string> empty;
-        helper(start, end, traces, paths, empty);
+        helper(beginWord, endWord, traces, paths, empty);
         return paths;
     }
     
@@ -49,3 +50,4 @@ public:
         
     }
 };
+
