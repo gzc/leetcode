@@ -1,6 +1,7 @@
 class Solution {
 public:
-    bool wordBreak(string s, unordered_set<string> &dict) {
+    bool wordBreak(string s, vector<string>& wordDict) {
+        unordered_set<string> dict(begin(wordDict), end(wordDict));
         vector<bool> p(s.length()+1, false);
         p[0]=true;
         for(int i = 0;i < s.length();i++) {
