@@ -2,9 +2,7 @@ class Solution {
     
     unordered_map<string, vector<string>>m;
     
-public:
-    
-    vector<string> wordBreak(string s, unordered_set<string> &dict) {
+    vector<string> dfs(string s, unordered_set<string>& dict) {
         if (m.count(s) > 0) return m[s];
         vector<string> words;
         int len = s.length();
@@ -16,7 +14,7 @@ public:
                     words.push_back(first);
                 else {
                     string remain = s.substr(i);
-                    vector<string> remainVec = wordBreak(remain, dict);
+                    vector<string> remainVec = dfs(remain, dict);
                     for (int k = 0;k < remainVec.size();k++)
                         words.push_back(first + " " + remainVec[k]);
                 }
@@ -24,5 +22,11 @@ public:
         }
         m[s] = words;
         return words;
+    }
+    
+public:
+    vector<string> wordBreak(string s, vector<string>& wordDict) {
+        unordered_set<string> dict(begin(wordDict), end(wordDict));
+        return dfs(s, dict);
     }
 };
