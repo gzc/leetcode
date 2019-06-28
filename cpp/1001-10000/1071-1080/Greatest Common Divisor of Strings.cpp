@@ -2,10 +2,9 @@ class Solution {
     
     bool IsValid(const string& str, const string& candidate) {
         for (int i = 0; i < str.length(); i += candidate.length()) {
-            if (str.substr(i, candidate.length()) == candidate) {
-                continue;
+            if (str.substr(i, candidate.length()) != candidate) {
+                return false;
             }
-            return false;
         }
         return true;
     }
