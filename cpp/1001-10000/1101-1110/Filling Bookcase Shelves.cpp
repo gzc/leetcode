@@ -44,7 +44,7 @@ public:
     }
     int minHeightShelves(vector<vector<int>>& books, int shelf_width) {
         map<pair<int, int>, int> cache; // {ith_book}, {how many width remained in current shelf}
-        // This cache means when I process ith book and in a w position, how many minimum height I need in that state.
+        // This cache means when I process ith book and in a w position, how many remain minimum height I need for remaining books in that state.
         return dfs(books, shelf_width, 0, shelf_width, 0, cache);
     }
 };
