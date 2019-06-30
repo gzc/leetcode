@@ -22,3 +22,29 @@ public:
         return dp.back();
     }
 };
+
+class Solution {
+public:
+    int dfs(vector<vector<int>>& books, int shelf_width, int ind, int remain_width, int current_height, map<pair<int, int>, int>& cache) {
+        if (ind == books.size()) {
+            return current_height;
+        }
+        auto it = cache.find({ind, remain_width});
+        if (it != cache.end()) return it->second;
+        
+        // 1) we can put current book on a new shelf.
+        int minimum_height = INT_MAX;
+        minimum_height = current_height + dfs(books, shelf_width, ind+1, shelf_width - books[ind][0], books[ind][1], cache);
+        // 2) If we have plenty width in current shelf, we can also put in current shelf.
+        if (books[ind][0] <= remain_width) {
+            current_height = max(current_height, books[ind][1]);
+            minimum_height = min(minimum_height, dfs(books, shelf_width, ind+1, remain_width - books[ind][0], current_height, cache));
+        }
+        return cache[{ind, remain_width}] = minimum_height;
+    }
+    int minHeightShelves(vector<vector<int>>& books, int shelf_width) {
+        map<pair<int, int>, int> cache; // {ith_book}, {how many width remained in current shelf}
+        // This chach means when I process ith book and in a w position, how many minimum height I need in that state.
+        return dfs(books, shelf_width, 0, shelf_width, 0, cache);
+    }
+};
