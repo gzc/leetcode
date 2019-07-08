@@ -24,12 +24,6 @@ public:
             current_index++;
         }
         
-        while (!mystack.empty()) {
-            pair<int, int> e = mystack.top();
-            mystack.pop();
-            ans[e.first] = 0;
-        }
-        
         ans.resize(current_index);
         return ans;
     }
