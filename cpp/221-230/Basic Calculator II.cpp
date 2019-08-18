@@ -24,34 +24,21 @@ public:
             }
             
             if (e == ' ') continue;
-            else if (e == ')') {
-                while (symbol.top() != '(') {
-                    apply(ss, symbol);
-                }
-                symbol.pop();
-            } else if (e == '(') {
-                symbol.push('(');
-            } else if (e >= '0' && e <= '9') {
+            if (isdigit(e)) {
                 v = 10*v + (e-'0');
                 number = true;
             } else if (e == '+' || e == '-') {
-                if (symbol.empty())
-                    symbol.push(e);
-                else {
-                    while (!symbol.empty() && symbol.top() != '(') {
-                        apply(ss, symbol);
-                    }
-                    symbol.push(e);
+                while (!symbol.empty()) {
+                    apply(ss, symbol);
                 }
+                symbol.push(e);
             } else if (e == '*' || e == '/') {
-                if (symbol.empty())
-                    symbol.push(e);
-                else {
-                    if (!symbol.empty() && (symbol.top() == '*' || symbol.top() == '/') ) {
+                if (!symbol.empty()) {
+                    if (symbol.top() == '*' || symbol.top() == '/') {
                         apply(ss, symbol);
                     }
-                    symbol.push(e);
                 }
+                symbol.push(e);
             }
         }
         
