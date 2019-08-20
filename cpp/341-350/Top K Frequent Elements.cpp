@@ -23,3 +23,31 @@ public:
         return result;
     }
 };
+
+
+class Solution {
+      struct greater_than{
+        bool operator() (const pair<int, int>&lhs, const pair<int, int>&rhs) {
+            return lhs.second > rhs.second;
+        }
+      };
+public:
+   
+    vector<int> topKFrequent(vector<int>& nums, int k) {
+        unordered_map<int, int>dict;
+        priority_queue<pair<int, int>, vector<pair<int,int>>,greater_than> q;
+        vector<int> res(k);
+        for(int v : nums) dict[v]++;
+        for(const auto &m:dict) {
+            q.push({m.first,m.second});
+            if(q.size() > k) {
+                q.pop();
+            }
+        }
+        while (!q.empty()) {
+            res[--k] = q.top().first;
+            q.pop();
+        }
+        return res;
+    }
+};
