@@ -1,30 +1,37 @@
 class Solution {
     
-    void help(TreeNode *root, int level, vector<vector<int>>& results)
-    {
-        if(root)
-        {
-            if(results.size() == level)
-            {
-                vector<int> v;
-                results.push_back(v);
-            }
-            results[level].push_back(root->val);
-            help(root->left, level+1, results);
-            help(root->right, level+1, results);
-        }
-    }
-    
 public:
     vector<vector<int> > zigzagLevelOrder(TreeNode *root) {
-        vector<vector<int>> results;
+        vector<vector<int>> result;
+        if (!root) return result;
+        queue<TreeNode*> myqueue;
+        myqueue.push(root);
         
-        help(root, 0, results);
+        bool flag = true;
         
-        for(int i = 0;i < results.size();i++)
-            if(i % 2 == 1)
-                reverse(results[i].begin(), results[i].end());
+        while (!myqueue.empty()) {
+            int size_ = myqueue.size();
+            vector<int> n_vec(size_, 0);
+            
+            for (int i = 0; i < size_; i++) {
+                TreeNode* ele = myqueue.front();
+                myqueue.pop();
+                if (flag) n_vec[i] = ele->val;
+                else n_vec[size_ - i - 1] = ele->val;
+                
+                if (ele->left) {
+                    myqueue.push(ele->left);
+                }
+                if (ele->right) {
+                    myqueue.push(ele->right);
+                }
+            }
+            
+            flag = !flag;
+            
+            result.emplace_back(n_vec);
+        }
         
-        return results;
+        return result;
     }
 };
