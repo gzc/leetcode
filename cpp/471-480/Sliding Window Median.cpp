@@ -26,3 +26,6 @@ public:
     }
 
 };
+
+I prefer this solution.
+https://leetcode.com/problems/sliding-window-median/discuss/96347/O(n*log(n))-Time-C%2B%2B-Solution-Using-Two-Heaps-and-a-Hash-Table
