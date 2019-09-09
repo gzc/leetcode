@@ -1,17 +1,31 @@
-class Solution {
-    
-    map<UndirectedGraphNode*, UndirectedGraphNode*> m;
-    
+/*
+// Definition for a Node.
+class Node {
 public:
-    UndirectedGraphNode *cloneGraph(UndirectedGraphNode *node) {
-        
-        if(!node) return nullptr;
-        if(m.find(node) == m.end())
-        {
-            m[node] = new UndirectedGraphNode(node->label);
-            for(auto n : node->neighbors)
-                m[node]->neighbors.push_back(cloneGraph(n));
+    int val;
+    vector<Node*> neighbors;
+
+    Node() {}
+
+    Node(int _val, vector<Node*> _neighbors) {
+        val = _val;
+        neighbors = _neighbors;
+    }
+};
+*/
+class Solution {
+    unordered_map<Node*, Node*> dict;
+public:
+    
+    Node* cloneGraph(Node* node) {
+        //if (!node) return nullptr;
+        if (dict.count(node) == 0) {
+            dict[node] = new Node();
+            dict[node]->val = node->val;
+            for (Node* neighbor : node->neighbors) {
+                dict[node]->neighbors.push_back(cloneGraph(neighbor));
+            }
         }
-        return m[node];
+        return dict[node];
     }
 };
