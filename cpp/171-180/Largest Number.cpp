@@ -1,27 +1,20 @@
 class Solution {
-    
 public:
-    string largestNumber(vector<int> &num) {
-        
-        auto cmp = [&] (const string& lhs, const string& rhs) {
-            return lhs+rhs < rhs+lhs;
-        };
-        
-        typedef std::priority_queue<string, std::vector<string>, decltype(cmp)> mypq_type;
-        mypq_type pq (cmp);
-        
-        for(int i = 0;i < num.size();i++)
-            pq.push(to_string(num[i]));
-        
-        string result("");
-        while (!pq.empty()) {
-            result = result + pq.top();
-            pq.pop();
+    string largestNumber(vector<int>& nums) {
+        string res;
+        bool flag = false;
+        vector<string> numStr;
+        for (int num : nums) {
+            if (num != 0) flag = true;
+            numStr.emplace_back(to_string(num));
         }
-        
-        while(result.length() > 1 && result[0] == '0')
-            result = result.substr(1);
-        
-        return result;
+        auto cmp = [](const string& i, const string& j) {
+            return i + j > j + i;
+        };
+        sort(numStr.begin(), numStr.end(), cmp);
+        for (const string& str : numStr) {
+            res += str;
+        }
+        return flag ? res : "0";
     }
 };
