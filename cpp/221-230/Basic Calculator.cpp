@@ -11,6 +11,8 @@ class Solution {
     
 public:
     int calculate(string s) {
+        s = "(" + s + ")";
+        
         stack<char> symbol;
         stack<int> nums;
         int v = 0;
@@ -40,14 +42,8 @@ public:
                 symbol.push(e);
             }
         }
-        
-        if (number)
-            nums.push(v);
-        
-        while (!symbol.empty()) {
-            apply(nums, symbol);
-        }
 
         return nums.top();
     }
 };
+
