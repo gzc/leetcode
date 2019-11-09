@@ -34,14 +34,10 @@ public:
                 v = 10*v + (e-'0');
                 number = true;
             } else if (e == '+' || e == '-') {
-                if(symbol.empty())
-                    symbol.push(e);
-                else {
-                    if (!symbol.empty() && symbol.top() != '(') {
-                        apply(nums, symbol);
-                    }
-                    symbol.push(e);
+                if (!symbol.empty() && symbol.top() != '(') {
+                    apply(nums, symbol);
                 }
+                symbol.push(e);
             }
         }
         
