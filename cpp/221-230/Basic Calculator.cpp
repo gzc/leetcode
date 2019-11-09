@@ -12,6 +12,7 @@ class Solution {
 public:
     int calculate(string s) {
         s = "(" + s + ")";
+        
         stack<char> symbol;
         stack<int> nums;
         int v = 0;
@@ -23,8 +24,7 @@ public:
                 number = false;
             }
             
-            if (e == ' ') continue;
-            else if (e == ')') {
+            if (e == ')') {
                 while (symbol.top() != '(') {
                     apply(nums, symbol);
                 }
