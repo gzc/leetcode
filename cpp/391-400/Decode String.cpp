@@ -4,11 +4,9 @@ class Solution {
         string result;
         while (i < s.length() && s[i] != ']') {
             int d = 0;
-            if (isdigit(s[i])) {
-                while (isdigit(s[i])) {
-                    d = 10 * d + (s[i] - '0');
-                    i++;
-                }
+            while (isdigit(s[i])) {
+                d = 10 * d + (s[i] - '0');
+                i++;
             }
             
             if (s[i] == '[') {
