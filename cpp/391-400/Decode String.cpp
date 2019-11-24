@@ -14,6 +14,7 @@ class Solution {
             if (s[i] == '[') {
                 i++;
                 string temp = solve(s, i);
+                i++;
                 while (d-- > 0) result += temp;
             } else {
                 result += s[i];
@@ -21,7 +22,6 @@ class Solution {
             }
                        
         }
-        i++;
         return result;
     }
     
