@@ -8,7 +8,7 @@ public:
             for (int j = i+1; j <= 9; j++) {
                 int len = j - i;
                 string str = tmp.substr(i, len);
-                long v = stol(str);
+                int v = stol(str);
                 if (v >= low && v <= high) res.push_back(v);
             }
         }
