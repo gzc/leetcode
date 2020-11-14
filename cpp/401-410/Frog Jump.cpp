@@ -1,24 +1,27 @@
 class Solution {
     
-    unordered_map<int, bool> dp;
+    bool dfs(const vector<int>& stones, int stone_index, int speed, unordered_map<int, bool>& cache) {
+        if (stone_index == stones.size() - 1) return true;
+        
+        int key = (stone_index) | (speed << 12);
+        if (cache.count(key) > 0) {
+            return cache[key];
+        }
+        
+        for (int i = stone_index + 1; i < stones.size(); i++) {
+            int distance = stones[i] - stones[stone_index];
+            if (distance >= (speed - 1) && distance <= (speed + 1)) {
+                if (dfs(stones, i, distance, cache)) {
+                    return cache[key] = true;
+                }
+            }
+        }
+        return cache[key] = false;
+    }
     
 public:
-    bool canCross(vector<int>& stones, int pos = 0, int k = 0) {
-        int key = pos | k << 11;
-    
-        if (dp.count(key) > 0)
-            return dp[key];
-    
-        for (int i = pos + 1; i < stones.size(); i++) {
-            int gap = stones[i] - stones[pos];
-            if (gap < k - 1)
-                continue;
-            if (gap > k + 1)
-                return dp[key] = false;
-            if (canCross(stones, i, gap))
-                return dp[key] = true;
-        }
-    
-        return dp[key] = (pos == stones.size() - 1);
+    bool canCross(vector<int>& stones) {
+        unordered_map<int, bool> cache;
+        return dfs(stones, 0, 0, cache);
     }
 };
