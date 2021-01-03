@@ -19,17 +19,10 @@ public:
             if (it1 == sums.end()) break;
             
             int target = (sum - sum_left )/2 + sum_left;
-            // 0 0 0 0 0 0 1
-            auto it2 = lower_bound(it1, sums.end(), target);
+            auto it2 = upper_bound(it1, --sums.end(), target);
             if (it2 == sums.end()) break;
-            auto it3 = upper_bound(it1, sums.end(), target);
-            if (it3 == sums.end()) {
-                it3--;
-            }
-            it3--;
             
-            ans += (it3 - it1 + 1);
-            ans = ans % mod;
+            ans += (it2 - it1);
         }
         
         return ans % mod;
