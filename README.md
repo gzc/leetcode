@@ -246,4 +246,16 @@ I uploaded some codes [here](https://zhenchaogan.gitbook.io/leetcode-solution/)
         <td align="center"><a href="https://youtu.be/riLoVJ3ROEM"><font color="black">中文Youtube</font></td>
         <td align="center"><a href="https://www.bilibili.com/video/BV1vb4y1R7Ji/"><font color="black">中文b站</font></td>
     </tr>
+    <tr>
+        <td colspan='40'><font size="4px" color="#0x888888">LeetCode 1770. Maximum Score from Performing Multiplication Operations</font></td>
+        <td align="center"><a href="https://youtu.be/ggv0pK4BRuI"><font color="black">English</font></td>
+        <td align="center"><a href="https://youtu.be/SBOp20CzqK0"><font color="black">中文Youtube</font></td>
+        <td align="center"><a href="https://www.bilibili.com/video/BV1QA411M7Da/"><font color="black">中文b站</font></td>
+    </tr>
+    <tr>
+        <td colspan='40'><font size="4px" color="#0x888888">LeetCode 1771. Maximize Palindrome Length From Subsequences</font></td>
+        <td align="center"><a href="https://youtu.be/BJBdt7izITY"><font color="black">English</font></td>
+        <td align="center"><a href="https://youtu.be/8KW1YYn2Puw"><font color="black">中文Youtube</font></td>
+        <td align="center"><a href="https://www.bilibili.com/video/BV1AK4y1H7jA/"><font color="black">中文b站</font></td>
+    </tr>
 </table>
