@@ -166,4 +166,16 @@ I uploaded some codes [here](https://zhenchaogan.gitbook.io/leetcode-solution/)
         <td align="center"><a href="https://youtu.be/goNpyRA02jw"><font color="black">中文Youtube</font></td>
         <td align="center"><a href="https://www.bilibili.com/video/BV18K4y1J7Fm/"><font color="black">中文b站</font></td>
     </tr>
+    <tr>
+        <td colspan='40'><font size="4px" color="#0x888888">LeetCode 26. Remove Duplicates from Sorted Array</font></td>
+        <td align="center"><a href="https://youtu.be/ifVpYbnm05A"><font color="black">English</font></td>
+        <td align="center"><a href="https://youtu.be/Dy9uPt-HvYQ"><font color="black">中文Youtube</font></td>
+        <td align="center"><a href="https://www.bilibili.com/video/BV1Gy4y1a7AB/"><font color="black">中文b站</font></td>
+    </tr>
+    <tr>
+        <td colspan='40'><font size="4px" color="#0x888888">LeetCode 27. Remove Element</font></td>
+        <td align="center"><a href="https://youtu.be/dUENPWnea6g"><font color="black">English</font></td>
+        <td align="center"><a href="https://youtu.be/OFiDGVXm7ko"><font color="black">中文Youtube</font></td>
+        <td align="center"><a href="https://www.bilibili.com/video/BV1ZX4y1G7EE/"><font color="black">中文b站</font></td>
+    </tr>
 </table>
