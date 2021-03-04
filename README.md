@@ -106,4 +106,34 @@ I uploaded some codes [here](https://zhenchaogan.gitbook.io/leetcode-solution/)
         <td align="center"><a href="https://youtu.be/v86W0cgvO5Y"><font color="black">中文Youtube</font></td>
         <td align="center"><a href="https://www.bilibili.com/video/BV1cy4y1J71A/"><font color="black">中文b站</font></td>
     </tr>
+    <tr>
+        <td colspan='40'><font size="4px" color="#0x888888">LeetCode 16. 3Sum Closest</font></td>
+        <td align="center"><a href="https://youtu.be/G9x8UqE_F2k"><font color="black">English</font></td>
+        <td align="center"><a href="https://youtu.be/ovkcwjUUapw"><font color="black">中文Youtube</font></td>
+        <td align="center"><a href="https://www.bilibili.com/video/BV19V411e74N/"><font color="black">中文b站</font></td>
+    </tr>
+    <tr>
+        <td colspan='40'><font size="4px" color="#0x888888">LeetCode 17. Letter Combinations of a Phone Number</font></td>
+        <td align="center"><a href="https://youtu.be/czE2XcQjYyE"><font color="black">English</font></td>
+        <td align="center"><a href="https://youtu.be/PvKXodU6irA"><font color="black">中文Youtube</font></td>
+        <td align="center"><a href="https://www.bilibili.com/video/BV1tZ4y1A7Vg/"><font color="black">中文b站</font></td>
+    </tr>
+    <tr>
+        <td colspan='40'><font size="4px" color="#0x888888">LeetCode 18. 4Sum</font></td>
+        <td align="center"><a href="https://youtu.be/zM8yfKADVfM"><font color="black">English</font></td>
+        <td align="center"><a href="https://youtu.be/HJ8rgwmO1L0"><font color="black">中文Youtube</font></td>
+        <td align="center"><a href="https://www.bilibili.com/video/BV1by4y1J7GF/"><font color="black">中文b站</font></td>
+    </tr>
+    <tr>
+        <td colspan='40'><font size="4px" color="#0x888888">LeetCode 19. Remove Nth Node From End of List</font></td>
+        <td align="center"><a href="https://youtu.be/YKi_YM9Ih_I"><font color="black">English</font></td>
+        <td align="center"><a href="https://youtu.be/aTSVLDJduBM"><font color="black">中文Youtube</font></td>
+        <td align="center"><a href="https://www.bilibili.com/video/BV1qi4y1T7NE/"><font color="black">中文b站</font></td>
+    </tr>
+    <tr>
+        <td colspan='40'><font size="4px" color="#0x888888">LeetCode 20. Valid Parentheses</font></td>
+        <td align="center"><a href="https://youtu.be/rh4T1sI8krU"><font color="black">English</font></td>
+        <td align="center"><a href="https://youtu.be/oAu0zWo3fNw"><font color="black">中文Youtube</font></td>
+        <td align="center"><a href="https://www.bilibili.com/video/BV1Ty4y1e7dQ/"><font color="black">中文b站</font></td>
+    </tr>
 </table>
