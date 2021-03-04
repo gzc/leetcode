@@ -20,4 +20,10 @@ I uploaded some codes [here](https://zhenchaogan.gitbook.io/leetcode-solution/)
         <td align="center"><a href="https://www.youtube.com/watch?v=GKM0IByXKkk&feature=youtu.be"><font color="black">中文Youtube</font></td>
         <td align="center"><a href="https://www.bilibili.com/video/BV1dy4y1n7AS/"><font color="black">中文b站</font></td>
     </tr>
+    <tr>
+        <td colspan='40'><font size="4px" color="#0x888888">LeetCode 2. Add Two Numbers</font></td>
+        <td align="center"><a href="https://youtu.be/nrT4oGpOLfk"><font color="black">English</font></td>
+        <td align="center"><a href="https://youtu.be/LVhNH1BdGGM"><font color="black">中文Youtube</font></td>
+        <td align="center"><a href="https://www.bilibili.com/video/BV1h54y1W7iR/"><font color="black">中文b站</font></td>
+    </tr>
 </table>
