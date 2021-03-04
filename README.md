@@ -1,5 +1,7 @@
 # leetcode
-a backup of my answers
+LeetCode solutions.
+LeetCode solutions in English.
+LeetCode中文解答。
 
 I uploaded some codes [here](https://zhenchaogan.gitbook.io/leetcode-solution/)
 
