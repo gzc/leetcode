@@ -199,25 +199,25 @@ I uploaded some codes [here](https://zhenchaogan.gitbook.io/leetcode-solution/)
         <td align="center"><a href="https://www.bilibili.com/video/BV1654y1W7hY/"><font color="black">中文b站</font></td>
     </tr>
     <tr>
-        <td colspan='40'><font size="4px" color="#0x888888">LeetCode 1751. Maximum Number of Events That Can Be Attended II</font></td>
+        <td colspan='40'><font size="4px" color="#0x888888"><a href="https://github.com/gzc/leetcode/blob/master/cpp/1001-10000/1751-1760/Maximum%20Number%20of%20Events%20That%20Can%20Be%20Attended%20II.cpp">LeetCode 1751. Maximum Number of Events That Can Be Attended II</font></td>
         <td align="center"><a href="https://youtu.be/Az2GoGzOSEQ"><font color="black">English</font></td>
         <td align="center"><a href="https://youtu.be/DBsANiXd0LA"><font color="black">中文Youtube</font></td>
         <td align="center"><a href="https://www.bilibili.com/video/BV13y4y1Y7SW/"><font color="black">中文b站</font></td>
     </tr>
     <tr>
-        <td colspan='40'><font size="4px" color="#0x888888">LeetCode 1754. Largest Merge Of Two Strings</font></td>
+        <td colspan='40'><font size="4px" color="#0x888888"><a href="https://github.com/gzc/leetcode/blob/master/cpp/1001-10000/1751-1760/Largest%20Merge%20Of%20Two%20Strings.cpp">LeetCode 1754. Largest Merge Of Two Strings</font></td>
         <td align="center"><a href="https://youtu.be/l5gKIfFbCIY"><font color="black">English</font></td>
         <td align="center"><a href="https://youtu.be/69YytzC_g_w"><font color="black">中文Youtube</font></td>
         <td align="center"><a href="https://www.bilibili.com/video/BV1C541177NK/"><font color="black">中文b站</font></td>
     </tr>
     <tr>
-        <td colspan='40'><font size="4px" color="#0x888888">LeetCode 1755. Closest Subsequence Sum</font></td>
+        <td colspan='40'><font size="4px" color="#0x888888"><a href="https://github.com/gzc/leetcode/blob/master/cpp/1001-10000/1751-1760/Closest%20Subsequence%20Sum.cpp">LeetCode 1755. Closest Subsequence Sum</font></td>
         <td align="center"><a href="https://youtu.be/K_CB32_SQFs"><font color="black">English</font></td>
         <td align="center"><a href="https://youtu.be/R_fDIPryG78"><font color="black">中文Youtube</font></td>
         <td align="center"><a href="https://www.bilibili.com/video/BV1Fz4y1U7zu/"><font color="black">中文b站</font></td>
     </tr>
     <tr>
-        <td colspan='40'><font size="4px" color="#0x888888">LeetCode 1760. Minimum Limit of Balls in a Bag</font></td>
+        <td colspan='40'><font size="4px" color="#0x888888"><a href="https://github.com/gzc/leetcode/blob/master/cpp/1001-10000/1751-1760/Minimum%20Limit%20of%20Balls%20in%20a%20Bag.cpp">LeetCode 1760. Minimum Limit of Balls in a Bag</font></td>
         <td align="center"><a href="https://youtu.be/5RLgPa7TWMY"><font color="black">English</font></td>
         <td align="center"><a href="https://youtu.be/C2s5lMLwyBE"><font color="black">中文Youtube</font></td>
         <td align="center"><a href="https://www.bilibili.com/video/BV1wb4y1R7F5/"><font color="black">中文b站</font></td>
