@@ -26,4 +26,22 @@ I uploaded some codes [here](https://zhenchaogan.gitbook.io/leetcode-solution/)
         <td align="center"><a href="https://youtu.be/LVhNH1BdGGM"><font color="black">中文Youtube</font></td>
         <td align="center"><a href="https://www.bilibili.com/video/BV1h54y1W7iR/"><font color="black">中文b站</font></td>
     </tr>
+    <tr>
+        <td colspan='40'><font size="4px" color="#0x888888">LeetCode 3. Longest Substring Without Repeating Characters</font></td>
+        <td align="center"><a href="https://youtu.be/51tTP5RJlQ0"><font color="black">English</font></td>
+        <td align="center"><a href="https://youtu.be/BUXpASogwZw"><font color="black">中文Youtube</font></td>
+        <td align="center"><a href="https://www.bilibili.com/video/BV17A411g7xk/"><font color="black">中文b站</font></td>
+    </tr>
+    <tr>
+        <td colspan='40'><font size="4px" color="#0x888888">LeetCode 4. Median of Two Sorted Arrays</font></td>
+        <td align="center"><a href="https://youtu.be/12mkeVQIiQc"><font color="black">English</font></td>
+        <td align="center"><a href="https://youtu.be/iQ1oxyXPJCY"><font color="black">中文Youtube</font></td>
+        <td align="center"><a href="https://www.bilibili.com/video/BV1HU4y1x7dt/"><font color="black">中文b站</font></td>
+    </tr>
+    <tr>
+        <td colspan='40'><font size="4px" color="#0x888888">LeetCode 5. Longest Palindromic Substring</font></td>
+        <td align="center"><a href="https://youtu.be/l0FR5x5dNvs"><font color="black">English</font></td>
+        <td align="center"><a href="https://youtu.be/7jkLvTSyyy4"><font color="black">中文Youtube</font></td>
+        <td align="center"><a href="https://www.bilibili.com/video/BV12541177cx/"><font color="black">中文b站</font></td>
+    </tr>
 </table>
