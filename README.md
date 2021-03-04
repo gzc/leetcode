@@ -258,4 +258,22 @@ I uploaded some codes [here](https://zhenchaogan.gitbook.io/leetcode-solution/)
         <td align="center"><a href="https://youtu.be/8KW1YYn2Puw"><font color="black">中文Youtube</font></td>
         <td align="center"><a href="https://www.bilibili.com/video/BV1AK4y1H7jA/"><font color="black">中文b站</font></td>
     </tr>
+    <tr>
+        <td colspan='40'><font size="4px" color="#0x888888">LeetCode 1774. Closest Dessert Cost</font></td>
+        <td align="center"><a href="https://youtu.be/0XCq29SOhNQ"><font color="black">English</font></td>
+        <td align="center"><a href="https://youtu.be/fE-ZdhJF5Dc"><font color="black">中文Youtube</font></td>
+        <td align="center"><a href="https://www.bilibili.com/video/BV12U4y1H7mX/"><font color="black">中文b站</font></td>
+    </tr>
+    <tr>
+        <td colspan='40'><font size="4px" color="#0x888888">LeetCode. 1775 Equal Sum Arrays With Minimum Number of Operations</font></td>
+        <td align="center"><a href="https://youtu.be/HkMyTGrBQxU"><font color="black">English</font></td>
+        <td align="center"><a href="https://youtu.be/b-5bi-GA8_o"><font color="black">中文Youtube</font></td>
+        <td align="center"><a href="https://www.bilibili.com/video/BV1254y1h7ao/"><font color="black">中文b站</font></td>
+    </tr>
+    <tr>
+        <td colspan='40'><font size="4px" color="#0x888888">LeetCode 1776. Car Fleet II</font></td>
+        <td align="center"><a href="https://youtu.be/iGxc4hgBM4c"><font color="black">English</font></td>
+        <td align="center"><a href="https://youtu.be/0tB6Ozo40Kk"><font color="black">中文Youtube</font></td>
+        <td align="center"><a href="https://www.bilibili.com/video/BV1Qi4y1T7jR/"><font color="black">中文b站</font></td>
+    </tr>
 </table>
