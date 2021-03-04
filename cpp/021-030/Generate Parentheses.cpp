@@ -1,22 +1,24 @@
 class Solution {
     
-    void help(string s, int n, int m, vector<string>& result) {
-        if(m < n) return;
+    void dfs(string s, int open, int close, vector<string>& parentheses) {
+        if (close < open) {
+            return;
+        }
         
-        if(n == 0) {
-            string temp(m, ')');
+        if (open == 0) {
+            string temp(close, ')');
             s += temp;
-            result.push_back(s);
+            parentheses.push_back(s);
         } else {
-            help(s+"(", n-1, m, result);
-            help(s+")", n, m-1, result);
+            dfs(s + "(", open - 1, close, parentheses);
+            dfs(s + ")", open, close - 1, parentheses);
         }
     }
     
 public:
     vector<string> generateParenthesis(int n) {
-        vector<string> result;
-        help("", n, n, result);
-        return result;
+        vector<string> parentheses;
+        dfs("", n, n, parentheses);
+        return parentheses;
     }
 };
