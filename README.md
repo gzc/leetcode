@@ -228,4 +228,22 @@ I uploaded some codes [here](https://zhenchaogan.gitbook.io/leetcode-solution/)
         <td align="center"><a href="https://youtu.be/8ud2wbNKPrM"><font color="black">中文Youtube</font></td>
         <td align="center"><a href="https://www.bilibili.com/video/BV1T54y1Y7QD/"><font color="black">中文b站</font></td>
     </tr>
+    <tr>
+        <td colspan='40'><font size="4px" color="#0x888888">LeetCode 1764. Form Array by Concatenating Subarrays of Another Array</font></td>
+        <td align="center"><a href="https://youtu.be/h6vQbNpfHbc"><font color="black">English</font></td>
+        <td align="center"><a href="https://youtu.be/x8Hjo8C4_mA"><font color="black">中文Youtube</font></td>
+        <td align="center"><a href="https://www.bilibili.com/video/BV1WA411M7MH/"><font color="black">中文b站</font></td>
+    </tr>
+    <tr>
+        <td colspan='40'><font size="4px" color="#0x888888">LeetCode 1765. Map of Highest Peak</font></td>
+        <td align="center"><a href="https://youtu.be/rMH2WLcD-Tc"><font color="black">English</font></td>
+        <td align="center"><a href="https://youtu.be/9bFC2CLXynM"><font color="black">中文Youtube</font></td>
+        <td align="center"><a href="https://member.bilibili.com/platform/upload-manager/article"><font color="black">中文b站</font></td>
+    </tr>
+    <tr>
+        <td colspan='40'><font size="4px" color="#0x888888">LeetCode 1766. Tree of Coprimes</font></td>
+        <td align="center"><a href="https://youtu.be/l4sZZ0NJiCE"><font color="black">English</font></td>
+        <td align="center"><a href="https://youtu.be/riLoVJ3ROEM"><font color="black">中文Youtube</font></td>
+        <td align="center"><a href="https://www.bilibili.com/video/BV1vb4y1R7Ji/"><font color="black">中文b站</font></td>
+    </tr>
 </table>
