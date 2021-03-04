@@ -88,4 +88,22 @@ I uploaded some codes [here](https://zhenchaogan.gitbook.io/leetcode-solution/)
         <td align="center"><a href="https://youtu.be/d80x6Ruh1Ic"><font color="black">中文Youtube</font></td>
         <td align="center"><a href="https://www.bilibili.com/video/BV1bK4y1Q7mc/"><font color="black">中文b站</font></td>
     </tr>
+    <tr>
+        <td colspan='40'><font size="4px" color="#0x888888">LeetCode 13. Roman to Integer</font></td>
+        <td align="center"><a href="https://youtu.be/53XFEgtot7g"><font color="black">English</font></td>
+        <td align="center"><a href="https://youtu.be/LA3qRG3qS48"><font color="black">中文Youtube</font></td>
+        <td align="center"><a href="https://www.bilibili.com/video/BV1AN411d7bX/"><font color="black">中文b站</font></td>
+    </tr>
+    <tr>
+        <td colspan='40'><font size="4px" color="#0x888888">LeetCode 14. Longest Common Prefix</font></td>
+        <td align="center"><a href="https://youtu.be/ukfzYlQPwsY"><font color="black">English</font></td>
+        <td align="center"><a href="https://youtu.be/qdLc68w9X5c"><font color="black">中文Youtube</font></td>
+        <td align="center"><a href="https://www.bilibili.com/video/BV1Rz4y127Bs/"><font color="black">中文b站</font></td>
+    </tr>
+    <tr>
+        <td colspan='40'><font size="4px" color="#0x888888">LeetCode 15. 3Sum</font></td>
+        <td align="center"><a href="https://youtu.be/3Szdf-_uRRE"><font color="black">English</font></td>
+        <td align="center"><a href="https://youtu.be/v86W0cgvO5Y"><font color="black">中文Youtube</font></td>
+        <td align="center"><a href="https://www.bilibili.com/video/BV1cy4y1J71A/"><font color="black">中文b站</font></td>
+    </tr>
 </table>
