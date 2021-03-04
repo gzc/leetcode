@@ -80,4 +80,10 @@ I uploaded some codes [here](https://zhenchaogan.gitbook.io/leetcode-solution/)
         <td align="center"><a href="https://youtu.be/HK5-nhR0Jtc"><font color="black">中文Youtube</font></td>
         <td align="center"><a href="https://www.bilibili.com/video/BV1Ef4y1z75r/"><font color="black">中文b站</font></td>
     </tr>
+    <tr>
+        <td colspan='40'><font size="4px" color="#0x888888">LeetCode 12. Integer to Roman</font></td>
+        <td align="center"><a href="https://youtu.be/oL1hreAAFc0"><font color="black">English</font></td>
+        <td align="center"><a href="https://youtu.be/d80x6Ruh1Ic"><font color="black">中文Youtube</font></td>
+        <td align="center"><a href="https://www.bilibili.com/video/BV1bK4y1Q7mc/"><font color="black">中文b站</font></td>
+    </tr>
 </table>
