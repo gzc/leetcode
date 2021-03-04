@@ -3,28 +3,34 @@ class Solution {
 public:
     vector<vector<int> > fourSum(vector<int> &num, int target) {
         vector<vector<int>>result;
-        if (num.size() < 4) return result;
+        int n = num.size();
         sort(num.begin(), num.end());
         
-        for (int i = 0;i < num.size()-3;) {
-            for (int j = i+1;j < num.size()-2;) {
-                int l(j+1), r(num.size()-1);
-                int remain = num[i] + num[j];
-                while(l < r) {
-                    int tmp = num[l] + num[r];
-                    if(tmp + remain == target) {
-                        int a[4] = {num[i], num[j], num[l], num[r]};
-                        vector<int>v(a, a+4);
-                        result.push_back(v);
-                        do {l++;}while(l < r && num[l-1] == num[l]);
-                        do {r--;}while(l < r && num[r+1] == num[r]);
-                    }
-                    else if(tmp + remain > target) do {r--;}while(l < r && num[r+1] == num[r]);
-                    else do {l++;}while(l < r && num[l-1] == num[l]);
-                }
-                do {j++;}while(j < num.size() && num[j-1] == num[j]);
+        for (int i = 0; i < n; i++) {
+            if (i > 0 && num[i-1] == num[i]) {
+                continue;
             }
-            do {i++;}while(i < num.size() && num[i-1] == num[i]);
+            for (int j = i + 1; j < n; j++) {
+                if (j > (i + 1) && num[j-1] == num[j]) {
+                    continue;
+                }
+                int l = j + 1, r = n - 1;
+                int partial_sum = num[i] + num[j];
+                while (l < r) {
+                    int sum = partial_sum + num[l] + num[r];
+                    if (sum < target) {
+                        l++;
+                    } else if (sum > target) {
+                        r--;
+                    } else {
+                        result.push_back({num[i], num[j], num[l], num[r]});
+                        while ((l + 1) < num.size() && num[l] == num[l+1]) l++;
+                        l++;
+                        while ((r - 1) >= 0 && num[r] == num[r - 1]) r--;
+                        r--;
+                    }
+                }
+            }
         }
         return result;
     }
