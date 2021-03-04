@@ -1,38 +1,16 @@
-#include <iostream>
-#include <unordered_map>
-#include <vector>
-
-using namespace std;
-
 class Solution {
 public:
     bool isPalindrome(int x) {
-        if(x < 0) return false;
+        if (x == 0) return true;
+        if (x < 0) return false;
+        if (x % 10 == 0) return false;
         
-        int n(x), base(0),rbase(1);
-        
-        while(n > 0)
-        {
-            if(base == 0) base = 1;
-            else base *= 10;
-            n /= 10;
+        int sum = 0;
+        while (x > sum) {
+            sum = sum * 10 + x % 10;
+            x /= 10;
         }
-        
-        while(base > rbase)
-        {
-            if( (x / base - x / rbase) % 10 != 0) return false;
-            base /= 10;
-            rbase *= 10;
-        }
-        
-        return true;
+        return (x == sum) || (x == sum / 10);
     }
     
 };
-
-int main()
-{
-    Solution s;
-    
-    cout << s.isPalindrome(1000000001);
-}
