@@ -178,4 +178,22 @@ I uploaded some codes [here](https://zhenchaogan.gitbook.io/leetcode-solution/)
         <td align="center"><a href="https://youtu.be/OFiDGVXm7ko"><font color="black">中文Youtube</font></td>
         <td align="center"><a href="https://www.bilibili.com/video/BV1ZX4y1G7EE/"><font color="black">中文b站</font></td>
     </tr>
+    <tr>
+        <td colspan='40'><font size="4px" color="#0x888888">Leetcode 295. Find Median from Data Stream</font></td>
+        <td align="center"><a href="https://youtu.be/sSUCgilaVJ4"><font color="black">English</font></td>
+        <td align="center"><a href="https://youtu.be/ByZgcvujtSA"><font color="black">中文Youtube</font></td>
+        <td align="center"><a href="https://www.bilibili.com/video/BV16v411s7KH/"><font color="black">中文b站</font></td>
+    </tr>
+    <tr>
+        <td colspan='40'><font size="4px" color="#0x888888">Leetcode 297. Serialize and Deserialize Binary Tree</font></td>
+        <td align="center"><a href="https://youtu.be/iZHDx-k2Mxw"><font color="black">English</font></td>
+        <td align="center"><a href="https://youtu.be/8_JSg4RWvhY"><font color="black">中文Youtube</font></td>
+        <td align="center"><a href="https://www.bilibili.com/video/BV1rN411d7K1/"><font color="black">中文b站</font></td>
+    </tr>
+    <tr>
+        <td colspan='40'><font size="4px" color="#0x888888">LeetCode 300. Longest Increasing Subsequence</font></td>
+        <td align="center"><a href="https://youtu.be/MGoFqowsxbU"><font color="black">English</font></td>
+        <td align="center"><a href="https://youtu.be/7g3uoteFKug"><font color="black">中文Youtube</font></td>
+        <td align="center"><a href="https://www.bilibili.com/video/BV1Vh411C7if/"><font color="black">中文b站</font></td>
+    </tr>
 </table>
