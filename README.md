@@ -220,4 +220,16 @@ I uploaded some codes [here](https://zhenchaogan.gitbook.io/leetcode-solution/)
         <td align="center"><a href="https://youtu.be/R_fDIPryG78"><font color="black">中文Youtube</font></td>
         <td align="center"><a href="https://www.bilibili.com/video/BV1Fz4y1U7zu/"><font color="black">中文b站</font></td>
     </tr>
+    <tr>
+        <td colspan='40'><font size="4px" color="#0x888888">LeetCode 1760. Minimum Limit of Balls in a Bag</font></td>
+        <td align="center"><a href="https://youtu.be/5RLgPa7TWMY"><font color="black">English</font></td>
+        <td align="center"><a href="https://youtu.be/C2s5lMLwyBE"><font color="black">中文Youtube</font></td>
+        <td align="center"><a href="https://www.bilibili.com/video/BV1wb4y1R7F5/"><font color="black">中文b站</font></td>
+    </tr>
+    <tr>
+        <td colspan='40'><font size="4px" color="#0x888888">LeetCode 1761. Minimum Degree of a Connected Trio in a Graph</font></td>
+        <td align="center"><a href="https://youtu.be/gSLz62X1eUY"><font color="black">English</font></td>
+        <td align="center"><a href="https://youtu.be/8ud2wbNKPrM"><font color="black">中文Youtube</font></td>
+        <td align="center"><a href="https://www.bilibili.com/video/BV1T54y1Y7QD/"><font color="black">中文b站</font></td>
+    </tr>
 </table>
