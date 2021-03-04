@@ -259,7 +259,7 @@ I uploaded some codes [here](https://zhenchaogan.gitbook.io/leetcode-solution/)
         <td align="center"><a href="https://www.bilibili.com/video/BV1AK4y1H7jA/"><font color="black">中文b站</font></td>
     </tr>
     <tr>
-        <td colspan='40'><font size="4px" color="#0x888888">LeetCode 1774. Closest Dessert Cost</font></td>
+        <td colspan='40'><font size="4px" color="#0x888888"><a href="https://github.com/gzc/leetcode/blob/master/cpp/1001-10000/1771-1780/Closest%20Dessert%20Cost.cpp">LeetCode 1774. Closest Dessert Cost</font></td>
         <td align="center"><a href="https://youtu.be/0XCq29SOhNQ"><font color="black">English</font></td>
         <td align="center"><a href="https://youtu.be/fE-ZdhJF5Dc"><font color="black">中文Youtube</font></td>
         <td align="center"><a href="https://www.bilibili.com/video/BV12U4y1H7mX/"><font color="black">中文b站</font></td>
