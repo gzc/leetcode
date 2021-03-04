@@ -18,8 +18,8 @@ I uploaded some codes [here](https://zhenchaogan.gitbook.io/leetcode-solution/)
     </tr>
     <tr>
         <td colspan='40'><font size="4px" color="#0x888888">LeetCode 1. Two Sum</font></td>
-        <td align="center"><a href="https://www.youtube.com/watch?v=dUENPWnea6g&feature=youtu.be"><font color="black">English Solution</font></td>
-        <td colspan='20'><font size="4px" color="#0x888888">[中文Youtube](https://www.youtube.com/watch?v=OFiDGVXm7ko&feature=youtu.be)</font></td>
-        <td colspan='20'><font size="4px" color="#0x888888">中文b站</font></td>
+        <td align="center"><a href="https://www.youtube.com/watch?v=WbSOR-Qewt0&feature=youtu.be"><font color="black">English</font></td>
+        <td align="center"><a href="https://www.youtube.com/watch?v=GKM0IByXKkk&feature=youtu.be"><font color="black">中文Youtube</font></td>
+        <td align="center"><a href="https://www.bilibili.com/video/BV1dy4y1n7AS/"><font color="black">中文b站</font></td>
     </tr>
 </table>
