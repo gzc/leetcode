@@ -1,54 +1,32 @@
-#include <iostream>
-#include <unordered_map>
-#include <vector>
-
-using namespace std;
-
-/*
-struct ListNode {
-    int val;
-    ListNode *next;
-    ListNode(int x) : val(x), next(NULL) {}
-};
- */
-
 class Solution {
 public:
-    double findMedianSortedArrays(int A[], int m, int B[], int n) {
-        
-        int sum = m + n;
-        if(sum % 2 == 1) {
-            return findKth(A, m, B, n, sum/2+1);
+    double findMedianSortedArrays(vector<int>& nums1, vector<int>& nums2) {
+        int m = nums1.size(), n = nums2.size();
+        if ((m + n) % 2 == 1) {
+            return findKthElement((m + n) / 2 + 1, nums1, 0, nums2, 0);
         } else {
-            return (findKth(A, m, B, n, sum/2)+findKth(A, m, B, n, sum/2+1))/2;
-        }
-        
-    }
-    
-    double findKth(int A[], int m, int B[], int n, int k) {
-        
-        if(m > n) return findKth(B, n, A, m, k);
-        if(m == 0) return B[k-1];
-        if(k == 1) return min(A[0], B[0]);
-        
-        int aMin = min(m, k/2);
-        int bMin = k - aMin;
-        if(A[aMin-1] > B[bMin-1]) {
-            return findKth(A, m, B+bMin, n - bMin, k - bMin);
-        } else {
-            return findKth(A+aMin, m-aMin, B, n, k - aMin);
+            return (findKthElement((m + n) / 2, nums1, 0 ,nums2, 0) + findKthElement((m + n) / 2 + 1, nums1, 0 ,nums2, 0)) / 2;
         }
     }
     
+    double findKthElement(int k, const vector<int>& nums1, int idx1, const vector<int>& nums2, int idx2) {
+        int l1 = nums1.size() - idx1;
+        int l2 = nums2.size() - idx2;
+        if (l1 > l2) {
+            return findKthElement(k, nums2, idx2, nums1, idx1);
+        }
+        if (l1 == 0) {
+            return nums2[idx2 + k - 1];
+        }
+        if (k == 1) {
+            return min(nums1[idx1], nums2[idx2]);
+        }
+        int cut1 = min(k/2, l1);
+        int cut2 = k - cut1;
+        if (nums1[idx1 + cut1 - 1] > nums2[idx2 + cut2 - 1]) {
+            return findKthElement(k - cut2, nums1, idx1, nums2, idx2 + cut2);
+        } else {
+            return findKthElement(k - cut1, nums1, idx1 + cut1, nums2, idx2);
+        }
+    }
 };
-
-int main()
-{
-    Solution s;
-    int A[5] = {3,5,7,9,11};
-    int B[5] = {1,2,3,4,20};
-    
-    cout << s.findMedianSortedArrays(A, 5, B, 5);
-    
-    return 0;
-}
