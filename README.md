@@ -223,31 +223,31 @@ I uploaded some codes [here](https://zhenchaogan.gitbook.io/leetcode-solution/)
         <td align="center"><a href="https://www.bilibili.com/video/BV1wb4y1R7F5/"><font color="black">中文b站</font></td>
     </tr>
     <tr>
-        <td colspan='40'><font size="4px" color="#0x888888">LeetCode 1761. Minimum Degree of a Connected Trio in a Graph</font></td>
+        <td colspan='40'><font size="4px" color="#0x888888"><a href="https://github.com/gzc/leetcode/blob/master/cpp/1001-10000/1761-1770/Minimum%20Degree%20of%20a%20Connected%20Trio%20in%20a%20Graph.cpp">LeetCode 1761. Minimum Degree of a Connected Trio in a Graph</font></td>
         <td align="center"><a href="https://youtu.be/gSLz62X1eUY"><font color="black">English</font></td>
         <td align="center"><a href="https://youtu.be/8ud2wbNKPrM"><font color="black">中文Youtube</font></td>
         <td align="center"><a href="https://www.bilibili.com/video/BV1T54y1Y7QD/"><font color="black">中文b站</font></td>
     </tr>
     <tr>
-        <td colspan='40'><font size="4px" color="#0x888888">LeetCode 1764. Form Array by Concatenating Subarrays of Another Array</font></td>
+        <td colspan='40'><font size="4px" color="#0x888888"><a href="https://github.com/gzc/leetcode/blob/master/cpp/1001-10000/1761-1770/Form%20Array%20by%20Concatenating%20Subarrays%20of%20Another%20Array.cpp">LeetCode 1764. Form Array by Concatenating Subarrays of Another Array</font></td>
         <td align="center"><a href="https://youtu.be/h6vQbNpfHbc"><font color="black">English</font></td>
         <td align="center"><a href="https://youtu.be/x8Hjo8C4_mA"><font color="black">中文Youtube</font></td>
         <td align="center"><a href="https://www.bilibili.com/video/BV1WA411M7MH/"><font color="black">中文b站</font></td>
     </tr>
     <tr>
-        <td colspan='40'><font size="4px" color="#0x888888">LeetCode 1765. Map of Highest Peak</font></td>
+        <td colspan='40'><font size="4px" color="#0x888888"><a href="https://github.com/gzc/leetcode/blob/master/cpp/1001-10000/1761-1770/Map%20of%20Highest%20Peak.cpp">LeetCode 1765. Map of Highest Peak</font></td>
         <td align="center"><a href="https://youtu.be/rMH2WLcD-Tc"><font color="black">English</font></td>
         <td align="center"><a href="https://youtu.be/9bFC2CLXynM"><font color="black">中文Youtube</font></td>
         <td align="center"><a href="https://member.bilibili.com/platform/upload-manager/article"><font color="black">中文b站</font></td>
     </tr>
     <tr>
-        <td colspan='40'><font size="4px" color="#0x888888">LeetCode 1766. Tree of Coprimes</font></td>
+        <td colspan='40'><font size="4px" color="#0x888888"><a href="https://github.com/gzc/leetcode/blob/master/cpp/1001-10000/1761-1770/Tree%20of%20Coprimes.cpp">LeetCode 1766. Tree of Coprimes</font></td>
         <td align="center"><a href="https://youtu.be/l4sZZ0NJiCE"><font color="black">English</font></td>
         <td align="center"><a href="https://youtu.be/riLoVJ3ROEM"><font color="black">中文Youtube</font></td>
         <td align="center"><a href="https://www.bilibili.com/video/BV1vb4y1R7Ji/"><font color="black">中文b站</font></td>
     </tr>
     <tr>
-        <td colspan='40'><font size="4px" color="#0x888888">LeetCode 1770. Maximum Score from Performing Multiplication Operations</font></td>
+        <td colspan='40'><font size="4px" color="#0x888888"><a href="https://github.com/gzc/leetcode/blob/master/cpp/1001-10000/1761-1770/Maximum%20Score%20from%20Performing%20Multiplication%20Operations.cpp">LeetCode 1770. Maximum Score from Performing Multiplication Operations</font></td>
         <td align="center"><a href="https://youtu.be/ggv0pK4BRuI"><font color="black">English</font></td>
         <td align="center"><a href="https://youtu.be/SBOp20CzqK0"><font color="black">中文Youtube</font></td>
         <td align="center"><a href="https://www.bilibili.com/video/BV1QA411M7Da/"><font color="black">中文b站</font></td>
