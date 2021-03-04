@@ -271,7 +271,7 @@ I uploaded some codes [here](https://zhenchaogan.gitbook.io/leetcode-solution/)
         <td align="center"><a href="https://www.bilibili.com/video/BV1254y1h7ao/"><font color="black">中文b站</font></td>
     </tr>
     <tr>
-        <td colspan='40'><font size="4px" color="#0x888888">LeetCode 1776. Car Fleet II</font></td>
+        <td colspan='40'><font size="4px" color="#0x888888"><a href="https://github.com/gzc/leetcode/blob/master/cpp/1001-10000/1771-1780/Car%20Fleet%20II.cpp">LeetCode 1776. Car Fleet II</font></td>
         <td align="center"><a href="https://youtu.be/iGxc4hgBM4c"><font color="black">English</font></td>
         <td align="center"><a href="https://youtu.be/0tB6Ozo40Kk"><font color="black">中文Youtube</font></td>
         <td align="center"><a href="https://www.bilibili.com/video/BV1Qi4y1T7jR/"><font color="black">中文b站</font></td>
