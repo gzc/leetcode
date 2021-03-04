@@ -202,4 +202,22 @@ I uploaded some codes [here](https://zhenchaogan.gitbook.io/leetcode-solution/)
         <td align="center"><a href="https://youtu.be/6S1eKneFu8I"><font color="black">中文Youtube</font></td>
         <td align="center"><a href="https://www.bilibili.com/video/BV1654y1W7hY/"><font color="black">中文b站</font></td>
     </tr>
+    <tr>
+        <td colspan='40'><font size="4px" color="#0x888888">LeetCode 1751. Maximum Number of Events That Can Be Attended II</font></td>
+        <td align="center"><a href="https://youtu.be/Az2GoGzOSEQ"><font color="black">English</font></td>
+        <td align="center"><a href="https://youtu.be/DBsANiXd0LA"><font color="black">中文Youtube</font></td>
+        <td align="center"><a href="https://www.bilibili.com/video/BV13y4y1Y7SW/"><font color="black">中文b站</font></td>
+    </tr>
+    <tr>
+        <td colspan='40'><font size="4px" color="#0x888888">LeetCode 1754. Largest Merge Of Two Strings</font></td>
+        <td align="center"><a href="https://youtu.be/l5gKIfFbCIY"><font color="black">English</font></td>
+        <td align="center"><a href="https://youtu.be/69YytzC_g_w"><font color="black">中文Youtube</font></td>
+        <td align="center"><a href="https://www.bilibili.com/video/BV1C541177NK/"><font color="black">中文b站</font></td>
+    </tr>
+    <tr>
+        <td colspan='40'><font size="4px" color="#0x888888">LeetCode 1755. Closest Subsequence Sum</font></td>
+        <td align="center"><a href="https://youtu.be/K_CB32_SQFs"><font color="black">English</font></td>
+        <td align="center"><a href="https://youtu.be/R_fDIPryG78"><font color="black">中文Youtube</font></td>
+        <td align="center"><a href="https://www.bilibili.com/video/BV1Fz4y1U7zu/"><font color="black">中文b站</font></td>
+    </tr>
 </table>
