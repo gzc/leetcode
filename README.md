@@ -44,4 +44,34 @@ I uploaded some codes [here](https://zhenchaogan.gitbook.io/leetcode-solution/)
         <td align="center"><a href="https://youtu.be/7jkLvTSyyy4"><font color="black">中文Youtube</font></td>
         <td align="center"><a href="https://www.bilibili.com/video/BV12541177cx/"><font color="black">中文b站</font></td>
     </tr>
+    <tr>
+        <td colspan='40'><font size="4px" color="#0x888888">LeetCode 6. ZigZag Conversion</font></td>
+        <td align="center"><a href="https://youtu.be/1v4c3nj_8jc"><font color="black">English</font></td>
+        <td align="center"><a href="https://youtu.be/eG9JVMAhKz8"><font color="black">中文Youtube</font></td>
+        <td align="center"><a href="https://www.bilibili.com/video/BV1iv4y1Z7M9/"><font color="black">中文b站</font></td>
+    </tr>
+    <tr>
+        <td colspan='40'><font size="4px" color="#0x888888">LeetCode 7. Reverse Integer</font></td>
+        <td align="center"><a href="https://youtu.be/9Uoze4Wfesg"><font color="black">English</font></td>
+        <td align="center"><a href="https://youtu.be/2Wrdfm0FBOs"><font color="black">中文Youtube</font></td>
+        <td align="center"><a href="https://www.bilibili.com/video/BV1Ry4y1E7mA/"><font color="black">中文b站</font></td>
+    </tr>
+    <tr>
+        <td colspan='40'><font size="4px" color="#0x888888">LeetCode 8. String to Integer (atoi)</font></td>
+        <td align="center"><a href="https://youtu.be/VMr_bFDLXrA"><font color="black">English</font></td>
+        <td align="center"><a href="https://youtu.be/1EwgseajIOE"><font color="black">中文Youtube</font></td>
+        <td align="center"><a href="https://www.bilibili.com/video/BV1kV411i7kM/"><font color="black">中文b站</font></td>
+    </tr>
+    <tr>
+        <td colspan='40'><font size="4px" color="#0x888888">LeetCode 9. Palindrome Number</font></td>
+        <td align="center"><a href="https://youtu.be/99fQ34HHTuw"><font color="black">English</font></td>
+        <td align="center"><a href="https://youtu.be/obBNRAfHsno"><font color="black">中文Youtube</font></td>
+        <td align="center"><a href="https://www.bilibili.com/video/BV1vU4y1W7Zf/"><font color="black">中文b站</font></td>
+    </tr>
+    <tr>
+        <td colspan='40'><font size="4px" color="#0x888888">LeetCode 10. Regular Expression Matching</font></td>
+        <td align="center"><a href="https://youtu.be/_U3vZCgLhXE"><font color="black">English</font></td>
+        <td align="center"><a href="https://youtu.be/cHwEdvY8rRg"><font color="black">中文Youtube</font></td>
+        <td align="center"><a href="https://www.bilibili.com/video/BV1Tb4y1R7Fs/"><font color="black">中文b站</font></td>
+    </tr>
 </table>
