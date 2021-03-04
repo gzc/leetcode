@@ -196,4 +196,10 @@ I uploaded some codes [here](https://zhenchaogan.gitbook.io/leetcode-solution/)
         <td align="center"><a href="https://youtu.be/7g3uoteFKug"><font color="black">中文Youtube</font></td>
         <td align="center"><a href="https://www.bilibili.com/video/BV1Vh411C7if/"><font color="black">中文b站</font></td>
     </tr>
+    <tr>
+        <td colspan='40'><font size="4px" color="#0x888888">LeetCode 1727. Largest Submatrix With Rearrangements</font></td>
+        <td align="center"><a href="https://youtu.be/DDN9ROQPwzA"><font color="black">English</font></td>
+        <td align="center"><a href="https://youtu.be/6S1eKneFu8I"><font color="black">中文Youtube</font></td>
+        <td align="center"><a href="https://www.bilibili.com/video/BV1654y1W7hY/"><font color="black">中文b站</font></td>
+    </tr>
 </table>
