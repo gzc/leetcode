@@ -136,4 +136,34 @@ I uploaded some codes [here](https://zhenchaogan.gitbook.io/leetcode-solution/)
         <td align="center"><a href="https://youtu.be/oAu0zWo3fNw"><font color="black">中文Youtube</font></td>
         <td align="center"><a href="https://www.bilibili.com/video/BV1Ty4y1e7dQ/"><font color="black">中文b站</font></td>
     </tr>
+    <tr>
+        <td colspan='40'><font size="4px" color="#0x888888">LeetCode 21. Merge Two Sorted Lists</font></td>
+        <td align="center"><a href="https://youtu.be/LsaQUAQacZA"><font color="black">English</font></td>
+        <td align="center"><a href="https://youtu.be/Darw7d-fg6U"><font color="black">中文Youtube</font></td>
+        <td align="center"><a href="https://www.bilibili.com/video/BV1EN41197Fo/"><font color="black">中文b站</font></td>
+    </tr>
+    <tr>
+        <td colspan='40'><font size="4px" color="#0x888888">LeetCode 22. Generate Parentheses</font></td>
+        <td align="center"><a href="https://www.youtube.com/watch?v=7UnrtxdII2g"><font color="black">English</font></td>
+        <td align="center"><a href="https://www.youtube.com/watch?v=AfCUpUedBgU"><font color="black">中文Youtube</font></td>
+        <td align="center"><a href="https://www.bilibili.com/video/BV15N41197Qq/"><font color="black">中文b站</font></td>
+    </tr>
+    <tr>
+        <td colspan='40'><font size="4px" color="#0x888888">LeetCode 23. Merge k Sorted Lists</font></td>
+        <td align="center"><a href="https://youtu.be/Xequ4LCiHgM"><font color="black">English</font></td>
+        <td align="center"><a href="https://youtu.be/BHoY6wjfx4g"><font color="black">中文Youtube</font></td>
+        <td align="center"><a href="https://www.bilibili.com/video/BV1ki4y1T77r/"><font color="black">中文b站</font></td>
+    </tr>
+    <tr>
+        <td colspan='40'><font size="4px" color="#0x888888">LeetCode 24. Swap Nodes in Pairs</font></td>
+        <td align="center"><a href="https://youtu.be/xHD8uzI3D3Y"><font color="black">English</font></td>
+        <td align="center"><a href="https://youtu.be/eeV5zbeqous"><font color="black">中文Youtube</font></td>
+        <td align="center"><a href="https://www.bilibili.com/video/BV1Wp4y1H72Z/"><font color="black">中文b站</font></td>
+    </tr>
+    <tr>
+        <td colspan='40'><font size="4px" color="#0x888888">LeetCode 25. Reverse Nodes in k-Group</font></td>
+        <td align="center"><a href="https://youtu.be/dc4gxhpCrPY"><font color="black">English</font></td>
+        <td align="center"><a href="https://youtu.be/goNpyRA02jw"><font color="black">中文Youtube</font></td>
+        <td align="center"><a href="https://www.bilibili.com/video/BV18K4y1J7Fm/"><font color="black">中文b站</font></td>
+    </tr>
 </table>
