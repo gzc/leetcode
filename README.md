@@ -175,6 +175,12 @@ I uploaded some codes [here](https://zhenchaogan.gitbook.io/leetcode-solution/)
         <td align="center"><a href="https://www.bilibili.com/video/BV1ZX4y1G7EE/"><font color="black">中文b站</font></td>
     </tr>
     <tr>
+        <td colspan='40'><font size="4px" color="#0x888888"><a href="https://github.com/gzc/leetcode/blob/master/cpp/021-030/Implement%20strStr().cpp">LeetCode 28. Implement strStr()</font></td>
+        <td align="center"><a href="https://youtu.be/G9c18kcusBY"><font color="black">English</font></td>
+        <td align="center"><a href="https://youtu.be/2XJeC0eVNrc"><font color="black">中文Youtube</font></td>
+        <td align="center"><a href="https://www.bilibili.com/video/BV1CA411K7f8/"><font color="black">中文b站</font></td>
+    </tr>
+    <tr>
         <td colspan='40'><font size="4px" color="#0x888888"><a href="https://github.com/gzc/leetcode/blob/master/cpp/291-300/Find%20Median%20from%20Data%20Stream.cpp">Leetcode 295. Find Median from Data Stream</font></td>
         <td align="center"><a href="https://youtu.be/sSUCgilaVJ4"><font color="black">English</font></td>
         <td align="center"><a href="https://youtu.be/ByZgcvujtSA"><font color="black">中文Youtube</font></td>
@@ -265,7 +271,7 @@ I uploaded some codes [here](https://zhenchaogan.gitbook.io/leetcode-solution/)
         <td align="center"><a href="https://www.bilibili.com/video/BV12U4y1H7mX/"><font color="black">中文b站</font></td>
     </tr>
     <tr>
-        <td colspan='40'><font size="4px" color="#0x888888"><a href="https://github.com/gzc/leetcode/blob/master/cpp/1001-10000/1771-1780/Equal%20Sum%20Arrays%20With%20Minimum%20Number%20of%20Operations.cpp">LeetCode. 1775 Equal Sum Arrays With Minimum Number of Operations</font></td>
+        <td colspan='40'><font size="4px" color="#0x888888"><a href="https://github.com/gzc/leetcode/blob/master/cpp/1001-10000/1771-1780/Equal%20Sum%20Arrays%20With%20Minimum%20Number%20of%20Operations.cpp">LeetCode 1775. Equal Sum Arrays With Minimum Number of Operations</font></td>
         <td align="center"><a href="https://youtu.be/HkMyTGrBQxU"><font color="black">English</font></td>
         <td align="center"><a href="https://youtu.be/b-5bi-GA8_o"><font color="black">中文Youtube</font></td>
         <td align="center"><a href="https://www.bilibili.com/video/BV1254y1h7ao/"><font color="black">中文b站</font></td>
