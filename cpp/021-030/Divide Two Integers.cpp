@@ -32,7 +32,7 @@ public:
             new_divisor /= 2;
         }
         
-        return (long)sign * result;
+        return sign * result;
     }
 };
 
