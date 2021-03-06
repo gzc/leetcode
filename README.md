@@ -295,7 +295,7 @@ I uploaded some codes [here](https://zhenchaogan.gitbook.io/leetcode-solution/)
         <td align="center"><font color="black">中文b站</font></td>
     </tr>
     <tr>
-        <td colspan='40'><font size="4px" color="#0x888888"><a href="https://github.com/gzc/leetcode/tree/master/cpp/1001-10000/1771-1780">LeetCode 1780. Check if Number is a Sum of Powers of Three</font></td>
+        <td colspan='40'><font size="4px" color="#0x888888"><a href="https://github.com/gzc/leetcode/blob/master/cpp/1001-10000/1771-1780/Check%20if%20Number%20is%20a%20Sum%20of%20Powers%20of%20Three.cpp">LeetCode 1780. Check if Number is a Sum of Powers of Three</font></td>
         <td align="center"><font color="black">English</font></td>
         <td align="center"><font color="black">中文Youtube</font></td>
         <td align="center"><font color="black">中文b站</font></td>
