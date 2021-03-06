@@ -181,6 +181,12 @@ I uploaded some codes [here](https://zhenchaogan.gitbook.io/leetcode-solution/)
         <td align="center"><a href="https://www.bilibili.com/video/BV1CA411K7f8/"><font color="black">中文b站</font></td>
     </tr>
     <tr>
+        <td colspan='40'><font size="4px" color="#0x888888"><a href="https://github.com/gzc/leetcode/blob/master/cpp/021-030/Divide%20Two%20Integers.cpp">LeetCode 29. Divide Two Integers</font></td>
+        <td align="center"><a href="https://youtu.be/7-_MeN35y6M"><font color="black">English</font></td>
+        <td align="center"><a href="https://youtu.be/0BdG-hLtDZ4"><font color="black">中文Youtube</font></td>
+        <td align="center"><a href="https://www.bilibili.com/video/BV16N41197Go/"><font color="black">中文b站</font></td>
+    </tr>
+    <tr>
         <td colspan='40'><font size="4px" color="#0x888888"><a href="https://github.com/gzc/leetcode/blob/master/cpp/291-300/Find%20Median%20from%20Data%20Stream.cpp">Leetcode 295. Find Median from Data Stream</font></td>
         <td align="center"><a href="https://youtu.be/sSUCgilaVJ4"><font color="black">English</font></td>
         <td align="center"><a href="https://youtu.be/ByZgcvujtSA"><font color="black">中文Youtube</font></td>
