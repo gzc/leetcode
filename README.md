@@ -187,6 +187,12 @@ I uploaded some codes [here](https://zhenchaogan.gitbook.io/leetcode-solution/)
         <td align="center"><a href="https://www.bilibili.com/video/BV16N41197Go/"><font color="black">中文b站</font></td>
     </tr>
     <tr>
+        <td colspan='40'><font size="4px" color="#0x888888"><a href="https://github.com/gzc/leetcode/blob/master/cpp/021-030/Substring%20with%20Concatenation%20of%20All%20Words.cpp">LeetCode 30. Substring with Concatenation of All Words</font></td>
+        <td align="center"><a href="https://youtu.be/n9fYwG3dC_Q"><font color="black">English</font></td>
+        <td align="center"><a href="https://youtu.be/eebtefMRvjQ"><font color="black">中文Youtube</font></td>
+        <td align="center"><a href="https://www.bilibili.com/video/BV1up4y1h7AC/"><font color="black">中文b站</font></td>
+    </tr>
+    <tr>
         <td colspan='40'><font size="4px" color="#0x888888"><a href="https://github.com/gzc/leetcode/blob/master/cpp/291-300/Find%20Median%20from%20Data%20Stream.cpp">Leetcode 295. Find Median from Data Stream</font></td>
         <td align="center"><a href="https://youtu.be/sSUCgilaVJ4"><font color="black">English</font></td>
         <td align="center"><a href="https://youtu.be/ByZgcvujtSA"><font color="black">中文Youtube</font></td>
