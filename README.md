@@ -289,6 +289,12 @@ I uploaded some codes [here](https://zhenchaogan.gitbook.io/leetcode-solution/)
         <td align="center"><a href="https://www.bilibili.com/video/BV1Qi4y1T7jR/"><font color="black">中文b站</font></td>
     </tr>
     <tr>
+        <td colspan='40'><font size="4px" color="#0x888888"><a href="https://github.com/gzc/leetcode/tree/master/cpp/1001-10000/1771-1780">LeetCode 1780. Check if Number is a Sum of Powers of Three</font></td>
+        <td align="center"><font color="black">English</font></td>
+        <td align="center"><font color="black">中文Youtube</font></td>
+        <td align="center"><font color="black">中文b站</font></td>
+    </tr>
+    <tr>
         <td colspan='40'><font size="4px" color="#0x888888"><a href="https://github.com/gzc/leetcode/blob/master/cpp/1001-10000/1781-1790/Sum%20of%20Beauty%20of%20All%20Substrings.cpp">LeetCode 1781. Sum of Beauty of All Substrings</font></td>
         <td align="center"><font color="black">English</font></td>
         <td align="center"><font color="black">中文Youtube</font></td>
