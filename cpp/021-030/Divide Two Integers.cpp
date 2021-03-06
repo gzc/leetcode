@@ -8,9 +8,9 @@ public:
         if (dividend == INT_MIN && divisor == -1) {
             return INT_MAX;
         }
-        int sign = 1;
+        bool positive = true;
         if ((dividend > 0 && divisor < 0) || (dividend < 0 && divisor > 0)) {
-            sign = -1;
+            positive = false;
         }
 
         long new_dividend = abs((long)dividend);
@@ -18,8 +18,8 @@ public:
         long result = 0;
 
         int power = 0;
-        while (new_divisor <= new_dividend / 2) {
-            new_divisor *= 2;
+        while (new_divisor <= (new_dividend >> 1)) {
+            new_divisor = new_divisor << 1;
             power++;
         }
         
@@ -29,10 +29,10 @@ public:
                 new_dividend -= new_divisor;
             }
             power--;
-            new_divisor /= 2;
+            new_divisor = new_divisor >> 1;
         }
         
-        return sign * result;
+        return positive ? result : -result;
     }
 };
 
@@ -48,17 +48,17 @@ public:
                 return INT_MAX;
             } 
             if (divisor > 0) {
-                return -1 + divide(dividend+divisor, divisor);
+                return -1 + divide(dividend + divisor, divisor);
             } else {
-                return 1 + divide(dividend-divisor, divisor);
+                return 1 + divide(dividend - divisor, divisor);
             }
         }
         if (divisor == INT_MIN) {
             return dividend == INT_MIN ? 1 : 0;
         }
-        int sign = 1;
+        bool positive = true;
         if ((dividend > 0 && divisor < 0) || (dividend < 0 && divisor > 0)) {
-            sign = -1;
+            positive = false;
         }
 
         int new_dividend = abs(dividend);
@@ -66,8 +66,8 @@ public:
         int result = 0;
 
         int power = 0;
-        while (new_divisor <= new_dividend / 2) {
-            new_divisor *= 2;
+        while (new_divisor <= (new_dividend >> 1)) {
+            new_divisor = new_divisor << 1;
             power++;
         }
         
@@ -77,9 +77,9 @@ public:
                 new_dividend -= new_divisor;
             }
             power--;
-            new_divisor /= 2;
+            new_divisor = new_divisor >> 1;
         }
         
-        return sign * result;
+        return positive ? result : -result;
     }
 };
