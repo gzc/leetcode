@@ -288,4 +288,10 @@ I uploaded some codes [here](https://zhenchaogan.gitbook.io/leetcode-solution/)
         <td align="center"><a href="https://youtu.be/0tB6Ozo40Kk"><font color="black">中文Youtube</font></td>
         <td align="center"><a href="https://www.bilibili.com/video/BV1Qi4y1T7jR/"><font color="black">中文b站</font></td>
     </tr>
+    <tr>
+        <td colspan='40'><font size="4px" color="#0x888888"><a href="https://github.com/gzc/leetcode/blob/master/cpp/1001-10000/1781-1790/Count%20Pairs%20Of%20Nodes.cpp">LeetCode 1782. Count Pairs Of Nodes</font></td>
+        <td align="center"><a href="https://youtu.be/Ubch4urToXI"><font color="black">English</font></td>
+        <td align="center"><a href="https://youtu.be/7tU017USVLw"><font color="black">中文Youtube</font></td>
+        <td align="center"><a href="https://www.bilibili.com/video/BV1z54y1a7WT/"><font color="black">中文b站</font></td>
+    </tr>
 </table>
