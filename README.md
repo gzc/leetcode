@@ -338,7 +338,7 @@ I uploaded some codes [here](https://zhenchaogan.gitbook.io/leetcode-solution/)
     </tr>
     <tr>
         <td colspan='40'><font size="4px" color="#0x888888"><a href="https://github.com/gzc/leetcode/blob/master/cpp/1001-10000/1781-1790/Make%20the%20XOR%20of%20All%20Segments%20Equal%20to%20Zero.cpp">LeetCode 1787. Make the XOR of All Segments Equal to Zero</font></td>
-        <td align="center"><font color="black">English</font></td>
+        <td align="center"><a href="https://youtu.be/IjzRWhLIaqA"><font color="black"><font color="black">English</font></td>
         <td align="center"><font color="black">中文Youtube</font></td>
         <td align="center"><font color="black">中文b站</font></td>
     </tr>
