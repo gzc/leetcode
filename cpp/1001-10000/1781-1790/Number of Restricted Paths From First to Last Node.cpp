@@ -1,7 +1,7 @@
 class Solution {
 public:
     
-    void bfs(int n, const vector<vector<pair<int, int>>>& graph, vector<int>& distances) {
+    void bfs(int n, const vector<vector<pair<int, int>>>& graph, vector<int>& distances, vector<int>& closest_nodes) {
         auto cmp = [](const pair<int, int> &a, const pair<int, int> &b) {
             return a.second > b.second;
         };
@@ -19,6 +19,7 @@ public:
             }
             distances[node] = dis;
             visited[node] = true;
+            closest_nodes.push_back(node);
             
             for (pair<int, int> neighbor : graph[node]) {
                 int neighbor_node = neighbor.first;
@@ -37,22 +38,14 @@ public:
         }
         
         vector<int> distances(n + 1, 0);
-        bfs(n, graph, distances);
-        
-        vector<pair<int, int>> node_distance_vec;
-        for (int i = 1; i < distances.size(); i++) {
-            node_distance_vec.push_back({i, distances[i]});
-        }
-        auto cmp = [](const pair<int, int> &a, const pair<int, int> &b) {
-            return a.second > b.second;
-        };
-        sort(node_distance_vec.begin(), node_distance_vec.end(), cmp);
+        vector<int> closest_nodes;
+        bfs(n, graph, distances, closest_nodes);
         
         vector<long> dp(n+1, 0);
         dp[1] = 1;
         int mod = 1e9+7;
-        for (const pair<int, int>& node_distance : node_distance_vec) {
-            int node = node_distance.first;
+        for (int i = closest_nodes.size() - 1; i >= 0; i--) {
+            int node = closest_nodes[i];
             for (pair<int, int> neighbor : graph[node]) {
                 int neighbor_node = neighbor.first;
                 if (distances[neighbor_node] < distances[node]) {
