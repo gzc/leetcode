@@ -318,4 +318,10 @@ I uploaded some codes [here](https://zhenchaogan.gitbook.io/leetcode-solution/)
         <td align="center"><a href="https://youtu.be/7tU017USVLw"><font color="black">中文Youtube</font></td>
         <td align="center"><a href="https://www.bilibili.com/video/BV1z54y1a7WT/"><font color="black">中文b站</font></td>
     </tr>
+    <tr>
+        <td colspan='40'><font size="4px" color="#0x888888"><a href="https://github.com/gzc/leetcode/blob/master/cpp/1001-10000/1781-1790/Number%20of%20Restricted%20Paths%20From%20First%20to%20Last%20Node.cpp">LeetCode 1786. Number of Restricted Paths From First to Last Node</font></td>
+        <td align="center"><a href="https://youtu.be/b0YQ-IQbX1k"><font color="black">English</font></td>
+        <td align="center"><a href="https://youtu.be/_NW5IRZtdOY"><font color="black">中文Youtube</font></td>
+        <td align="center"><a href="https://www.bilibili.com/video/BV1Xv411h74T/"><font color="black">中文b站</font></td>
+    </tr>
 </table>
