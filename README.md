@@ -301,6 +301,12 @@ I uploaded some codes [here](https://zhenchaogan.gitbook.io/leetcode-solution/)
         <td align="center"><a href="https://www.bilibili.com/video/BV1Qi4y1T7jR/"><font color="black">中文b站</font></td>
     </tr>
     <tr>
+        <td colspan='40'><font size="4px" color="#0x888888"><a href="https://github.com/gzc/leetcode/blob/master/cpp/1001-10000/1771-1780/Shortest%20Path%20in%20a%20Hidden%20Grid.cpp">LeetCode 1778. Shortest Path in a Hidden Grid</font></td>
+        <td align="center"><a href="https://youtu.be/P8H-oxAQAuY"><font color="black">English</font></td>
+        <td align="center"><a href="https://youtu.be/tfNTJtdOW6c"><font color="black">中文Youtube</font></td>
+        <td align="center"><a href="https://www.bilibili.com/video/BV1i54y1a74m/"><font color="black">中文b站</font></td>
+    </tr>
+    <tr>
         <td colspan='40'><font size="4px" color="#0x888888"><a href="https://github.com/gzc/leetcode/blob/master/cpp/1001-10000/1771-1780/Find%20Nearest%20Point%20That%20Has%20the%20Same%20X%20or%20Y%20Coordinate.cpp">LeetCode 1779. Find Nearest Point That Has the Same X or Y Coordinate</font></td>
         <td align="center"><font color="black">English</font></td>
         <td align="center"><font color="black">中文Youtube</font></td>
