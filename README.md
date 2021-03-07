@@ -319,6 +319,12 @@ I uploaded some codes [here](https://zhenchaogan.gitbook.io/leetcode-solution/)
         <td align="center"><a href="https://www.bilibili.com/video/BV1z54y1a7WT/"><font color="black">中文b站</font></td>
     </tr>
     <tr>
+        <td colspan='40'><font size="4px" color="#0x888888"><a href="https://github.com/gzc/leetcode/blob/master/cpp/1001-10000/1781-1790/Check%20if%20Binary%20String%20Has%20at%20Most%20One%20Segment%20of%20Ones.cpp">LeetCode 1784. Check if Binary String Has at Most One Segment of Ones</font></td>
+        <td align="center"><font color="black">English</font></td>
+        <td align="center"><font color="black">中文Youtube</font></td>
+        <td align="center"><font color="black">中文b站</font></td>
+    </tr>
+    <tr>
         <td colspan='40'><font size="4px" color="#0x888888"><a href="https://github.com/gzc/leetcode/blob/master/cpp/1001-10000/1781-1790/Minimum%20Elements%20to%20Add%20to%20Form%20a%20Given%20Sum.cpp">LeetCode 1785. Minimum Elements to Add to Form a Given Sum</font></td>
         <td align="center"><font color="black">English</font></td>
         <td align="center"><font color="black">中文Youtube</font></td>
