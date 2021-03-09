@@ -3,19 +3,20 @@ class Solution {
     
     int GetErrors(const string &s) {
         stack<char> mystack;
-        int errors = 0;
+        int valid = 0;
         for (char ch : s) {
             if (ch == '(') {
                 mystack.push(ch);
             } else if (ch == ')') {
-                if (mystack.empty()) {
-                    errors++;
-                } else {
+                if (!mystack.empty()) {
+                    valid += 2;
                     mystack.pop();
                 }
+            } else {
+                valid++;
             }
         }
-        return errors + mystack.size();
+        return s.length() - valid;
     }
     
 public:
@@ -71,19 +72,20 @@ class Solution {
     
     int GetErrors(const string &s) {
         stack<char> mystack;
-        int errors = 0;
+        int valid = 0;
         for (char ch : s) {
             if (ch == '(') {
                 mystack.push(ch);
             } else if (ch == ')') {
-                if (mystack.empty()) {
-                    errors++;
-                } else {
+                if (!mystack.empty()) {
+                    valid += 2;
                     mystack.pop();
                 }
+            } else {
+                valid++;
             }
         }
-        return errors + mystack.size();
+        return s.length() - valid;
     }
     
 public:
