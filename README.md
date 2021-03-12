@@ -372,4 +372,10 @@ I uploaded some codes [here](https://zhenchaogan.gitbook.io/leetcode-solution/)
         <td align="center"><a href="https://youtu.be/iMKtxo3N2r8"><font color="black">中文Youtube</font></td>
         <td align="center"><a href="https://www.bilibili.com/video/BV1Wb4y197Fx/"><font color="black">中文b站</font></td>
     </tr>
+    <tr>
+        <td colspan='40'><font size="4px" color="#0x888888"><a href="https://github.com/gzc/leetcode/blob/master/cpp/1001-10000/1781-1790/Maximize%20the%20Beauty%20of%20the%20Garden.cpp">LeetCode 1788. Maximize the Beauty of the Garden</font></td>
+        <td align="center"><a href="https://youtu.be/3eHQSpIGvwE"><font color="black"><font color="black">English</font></td>
+        <td align="center"><a href="https://youtu.be/GPgHycs-VTg"><font color="black">中文Youtube</font></td>
+        <td align="center"><a href="https://www.bilibili.com/video/BV1uh411Q7nt/"><font color="black">中文b站</font></td>
+    </tr>
 </table>
