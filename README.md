@@ -235,6 +235,12 @@ I uploaded some codes [here](https://zhenchaogan.gitbook.io/leetcode-solution/)
         <td align="center"><a href="https://www.bilibili.com/video/BV1gK4y1U7Bp/"><font color="black">中文b站</font></td>
     </tr>
     <tr>
+        <td colspan='40'><font size="4px" color="#0x888888"><a href="https://github.com/gzc/leetcode/blob/master/cpp/971-980/K%20Closest%20Points%20to%20Origin.cpp">LeetCode 973. K Closest Points to Origin</font></td>
+        <td align="center"><a href="https://youtu.be/V2pdqKe2mjY"><font color="black">English</font></td>
+        <td align="center"><a href="https://youtu.be/HaRE_RS70IQ"><font color="black">中文Youtube</font></td>
+        <td align="center"><a href="https://www.bilibili.com/video/BV1s54y1a7iQ/"><font color="black">中文b站</font></td>
+    </tr>
+    <tr>
         <td colspan='40'><font size="4px" color="#0x888888"><a href="https://github.com/gzc/leetcode/blob/master/cpp/1001-10000/1421-1430/Leftmost%20Column%20with%20at%20Least%20a%20One.cpp">LeetCode 1428. Leftmost Column with at Least a One</font></td>
         <td align="center"><a href="https://youtu.be/O3KQIh0J89g"><font color="black">English</font></td>
         <td align="center"><a href="https://youtu.be/koAFGCKT-Hw"><font color="black">中文Youtube</font></td>
