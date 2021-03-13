@@ -54,10 +54,10 @@ public:
 
 /********************************************************************************/
 /*
- * Solution 1: DFS, faster when building graph.
+ * Solution 2: DFS, faster when building graph.
  */
 class Solution {
-    void dfs(const vector<set<int>>& graph, const vector<vector<string>>& accounts, int ind, vector<bool>& visited, set<string>& emails) {
+    void dfs(const vector<vector<int>>& graph, const vector<vector<string>>& accounts, int ind, vector<bool>& visited, set<string>& emails) {
         visited[ind] = true;
         for (int i = 1; i < accounts[ind].size(); i++) {
             emails.insert(accounts[ind][i]);
@@ -72,23 +72,20 @@ public:
     vector<vector<string>> accountsMerge(vector<vector<string>>& accounts) {
         vector<vector<string>> res;
         int n = accounts.size();
-        vector<set<int>> graph(n);
+        vector<vector<int>> graph(n);
         vector<bool> visited(n, false);
         
-        unordered_map<string, set<int>> email_to_ids;
+        unordered_map<string, vector<int>> email_to_ids;
         for (int i = 0; i < n; i++) {
             for (int j = 1; j < accounts[i].size(); j++) {
-                email_to_ids[accounts[i][j]].insert(i);
+                email_to_ids[accounts[i][j]].push_back(i);
             }
         }
         for (const auto& pair : email_to_ids) {
-            const set<int>& ids_set = pair.second;
-            vector<int> ids(ids_set.begin(), ids_set.end());
-            for (int i1 = 0; i1 < ids.size(); i1++) {
-                for (int i2 = i1 + 1; i2 < ids.size(); i2++) {
-                    graph[ids[i1]].insert(ids[i2]);
-                    graph[ids[i2]].insert(ids[i1]);
-                }
+            const vector<int>& ids = pair.second;
+            for (int i = 1; i < ids.size(); i++) {
+                graph[ids[0]].push_back(ids[i]);
+                graph[ids[i]].push_back(ids[0]);
             }
         }
         
