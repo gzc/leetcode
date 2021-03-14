@@ -402,4 +402,10 @@ I uploaded some codes [here](https://zhenchaogan.gitbook.io/leetcode-solution/)
         <td align="center"><a href="https://youtu.be/PMV8u4d87r0"><font color="black">中文Youtube</font></td>
         <td align="center"><a href="https://www.bilibili.com/video/BV12f4y1471N/"><font color="black">中文b站</font></td>
     </tr>
+    <tr>
+        <td colspan='40'><font size="4px" color="#0x888888"><a href="https://github.com/gzc/leetcode/blob/master/cpp/1001-10000/1791-1800/Maximum%20Score%20of%20a%20Good%20Subarray.cpp">LeetCode 1793. Maximum Score of a Good Subarray</font></td>
+        <td align="center"><a href="https://youtu.be/An3r5pFOKLc"><font color="black"><font color="black">English</font></td>
+        <td align="center"><a href="https://youtu.be/Xiznf9co2sM"><font color="black">中文Youtube</font></td>
+        <td align="center"><a href="https://www.bilibili.com/video/BV14V411Y7kr/"><font color="black">中文b站</font></td>
+    </tr>
 </table>
