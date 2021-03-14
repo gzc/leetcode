@@ -235,6 +235,12 @@ I uploaded some codes [here](https://zhenchaogan.gitbook.io/leetcode-solution/)
         <td align="center"><a href="https://www.bilibili.com/video/BV1Cf4y147qd/"><font color="black">中文b站</font></td>
     </tr>
     <tr>
+        <td colspan='40'><font size="4px" color="#0x888888"><a href="https://github.com/gzc/leetcode/blob/master/cpp/721-730/Accounts%20Merge.cpp">LeetCode 721. Accounts Merge</font></td>
+        <td align="center"><a href="https://youtu.be/pqvyyDQ9yIo"><font color="black">English</font></td>
+        <td align="center"><a href="https://youtu.be/YAtoN4NikWM"><font color="black">中文Youtube</font></td>
+        <td align="center"><a href="https://www.bilibili.com/video/BV1RN411Q7Vk/"><font color="black">中文b站</font></td>
+    </tr>
+    <tr>
         <td colspan='40'><font size="4px" color="#0x888888"><a href="https://github.com/gzc/leetcode/blob/master/cpp/951-960/Verifying%20an%20Alien%20Dictionary.cpp">LeetCode 953. Verifying an Alien Dictionary</font></td>
         <td align="center"><a href="https://youtu.be/jwL1Q70YNso"><font color="black">English</font></td>
         <td align="center"><a href="https://youtu.be/Ou-28FTq00g"><font color="black">中文Youtube</font></td>
