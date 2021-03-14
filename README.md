@@ -397,6 +397,12 @@ I uploaded some codes [here](https://zhenchaogan.gitbook.io/leetcode-solution/)
         <td align="center"><a href="https://www.bilibili.com/video/BV1uh411Q7nt/"><font color="black">中文b站</font></td>
     </tr>
     <tr>
+        <td colspan='40'><font size="4px" color="#0x888888"><a href="https://github.com/gzc/leetcode/blob/master/cpp/1001-10000/1791-1800/Find%20Center%20of%20Star%20Graph.cpp">LeetCode 1791. Find Center of Star Graph</font></td>
+        <td align="center"><font color="black">English</font></td>
+        <td align="center"><font color="black">中文Youtube</font></td>
+        <td align="center"><font color="black">中文b站</font></td>
+    </tr>
+    <tr>
         <td colspan='40'><font size="4px" color="#0x888888"><a href="https://github.com/gzc/leetcode/blob/master/cpp/1001-10000/1791-1800/Maximum%20Average%20Pass%20Ratio.cpp">LeetCode 1792. Maximum Average Pass Ratio</font></td>
         <td align="center"><a href="https://youtu.be/sZBuARv5F2k"><font color="black"><font color="black">English</font></td>
         <td align="center"><a href="https://youtu.be/PMV8u4d87r0"><font color="black">中文Youtube</font></td>
