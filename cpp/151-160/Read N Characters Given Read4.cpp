@@ -6,14 +6,14 @@
 class Solution {
 public:
     int read(char *buf, int n) {
-        char cache[4];
         int ind = 0;
-        while (true) {
-            int cache_ind = 0;
+        while (ind < n) {
+            char cache[4];
             int cache_cnt = read4(cache);
             if (cache_cnt == 0) {
                 break;
             }
+            int cache_ind = 0;
             while (cache_cnt > 0 && ind < n) {
                 buf[ind] = cache[cache_ind];
                 cache_ind++;
