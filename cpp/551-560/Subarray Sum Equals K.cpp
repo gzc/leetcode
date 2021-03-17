@@ -1,17 +1,16 @@
 class Solution {
 public:
     int subarraySum(vector<int>& nums, int k) {
+        unordered_map<int, int> prefix_sum;
+        prefix_sum[0] = 1;
         
-        map<int, int> mymap;
         int sum = 0;
         int ans = 0;
-        mymap[0] = 1;
-        
-        for (int e : nums) {
-            sum += e;
-            int realTarget = sum - k;
-            ans += mymap[realTarget];
-            mymap[sum]++;
+        for (int num : nums) {
+            sum += num;
+            int target = sum - k;
+            ans += prefix_sum[target];
+            prefix_sum[sum]++;
         }
         
         return ans;
