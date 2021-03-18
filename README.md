@@ -247,6 +247,12 @@ I uploaded some codes [here](https://zhenchaogan.gitbook.io/leetcode-solution/)
         <td align="center"><a href="https://www.bilibili.com/video/BV1Cf4y147qd/"><font color="black">中文b站</font></td>
     </tr>
     <tr>
+        <td colspan='40'><font size="4px" color="#0x888888"><a href="https://github.com/gzc/leetcode/blob/master/cpp/551-560/Subarray%20Sum%20Equals%20K.cpp">LeetCode 560. Subarray Sum Equals K</font></td>
+        <td align="center"><a href="https://youtu.be/l0dLq-qI588"><font color="black">English</font></td>
+        <td align="center"><a href="https://youtu.be/cBGP5zAzom0"><font color="black">中文Youtube</font></td>
+        <td align="center"><a href="https://www.bilibili.com/video/BV1aK4y1U7jb/"><font color="black">中文b站</font></td>
+    </tr>
+    <tr>
         <td colspan='40'><font size="4px" color="#0x888888"><a href="https://github.com/gzc/leetcode/blob/master/cpp/721-730/Accounts%20Merge.cpp">LeetCode 721. Accounts Merge</font></td>
         <td align="center"><a href="https://youtu.be/pqvyyDQ9yIo"><font color="black">English</font></td>
         <td align="center"><a href="https://youtu.be/YAtoN4NikWM"><font color="black">中文Youtube</font></td>
