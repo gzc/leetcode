@@ -35,7 +35,7 @@ public:
                 swap_num--;
             }
             
-            if (blick_element > swap_num) break;
+            if (blick_element >= mod) break;
             
             updated_index[blick_element] = swap_num;
             swap_num--;
