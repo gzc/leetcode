@@ -31,12 +31,10 @@ public:
         
         int swap_num = N - 1;
         for (int blick_element : blacklist_set) {
+            if (blick_element >= mod) break;
             while (blacklist_set.count(swap_num) > 0) {
                 swap_num--;
             }
-            
-            if (blick_element >= mod) break;
-            
             updated_index[blick_element] = swap_num;
             swap_num--;
         }
@@ -50,9 +48,3 @@ public:
         return index;
     }
 };
-
-/**
- * Your Solution object will be instantiated and called as such:
- * Solution* obj = new Solution(N, blacklist);
- * int param_1 = obj->pick();
- */
