@@ -253,6 +253,12 @@ I uploaded some codes [here](https://zhenchaogan.gitbook.io/leetcode-solution/)
         <td align="center"><a href="https://www.bilibili.com/video/BV1aK4y1U7jb/"><font color="black">中文b站</font></td>
     </tr>
     <tr>
+        <td colspan='40'><font size="4px" color="#0x888888"><a href="https://github.com/gzc/leetcode/blob/master/cpp/701-710/Random%20Pick%20with%20Blacklist.cpp">LeetCode 710. Random Pick with Blacklist</font></td>
+        <td align="center"><a href="https://youtu.be/Bq3M4itMpbs"><font color="black">English</font></td>
+        <td align="center"><a href="https://youtu.be/vJPVDzVrMSE"><font color="black">中文Youtube</font></td>
+        <td align="center"><a href="https://www.bilibili.com/video/BV1FK4y1S7g6/"><font color="black">中文b站</font></td>
+    </tr>
+    <tr>
         <td colspan='40'><font size="4px" color="#0x888888"><a href="https://github.com/gzc/leetcode/blob/master/cpp/721-730/Accounts%20Merge.cpp">LeetCode 721. Accounts Merge</font></td>
         <td align="center"><a href="https://youtu.be/pqvyyDQ9yIo"><font color="black">English</font></td>
         <td align="center"><a href="https://youtu.be/YAtoN4NikWM"><font color="black">中文Youtube</font></td>
