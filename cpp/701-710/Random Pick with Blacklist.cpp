@@ -30,12 +30,12 @@ public:
         set<int> blacklist_set(blacklist.begin(), blacklist.end());
         
         int swap_num = N - 1;
-        for (int blick_element : blacklist_set) {
-            if (blick_element >= mod) break;
+        for (int blacklist_element : blacklist_set) {
+            if (blacklist_element >= mod) break;
             while (blacklist_set.count(swap_num) > 0) {
                 swap_num--;
             }
-            updated_index[blick_element] = swap_num;
+            updated_index[blacklist_element] = swap_num;
             swap_num--;
         }
     }
