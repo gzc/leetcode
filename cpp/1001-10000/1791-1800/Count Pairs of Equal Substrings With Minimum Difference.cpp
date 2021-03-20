@@ -6,14 +6,21 @@ public:
             last_occurence[secondString[i]] = i;
         }
         
-        map<int, int> counts;
+        int minimum_j_minus_a = INT_MAX;
+        int cnt = 0;
         for (int i = 0; i < firstString.length(); i++) {
             char ch = firstString[i];
             if (last_occurence.count(ch) > 0) {
-                counts[i - last_occurence[ch]]++;
+                int j_minus_a = i - last_occurence[ch];
+                if (j_minus_a < minimum_j_minus_a) {
+                    minimum_j_minus_a = j_minus_a;
+                    cnt = 1;
+                } else if (j_minus_a == minimum_j_minus_a) {
+                    cnt++;
+                }
             }
         }
         
-        return counts.empty() ? 0 : counts.begin()->second;
+        return cnt;
     }
 };
