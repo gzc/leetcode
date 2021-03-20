@@ -1,6 +1,6 @@
 class Solution {
     int dfs(const vector<int>& nums, int round, int state, unordered_map<int, int>& cache) {
-        if (round > nums.size()) {
+        if (round > nums.size() / 2) {
             return 0;
         }
         if (cache.count(state) > 0) {
@@ -25,3 +25,4 @@ public:
         return dfs(nums, /*round=*/1, /*state=*/0, cache);
     }
 };
+
