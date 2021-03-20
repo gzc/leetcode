@@ -457,6 +457,12 @@ I uploaded some codes [here](https://zhenchaogan.gitbook.io/leetcode-solution/)
         <td align="center"><a href="https://www.bilibili.com/video/BV14V411Y7kr/"><font color="black">中文b站</font></td>
     </tr>
     <tr>
+        <td colspan='40'><font size="4px" color="#0x888888"><a href="https://github.com/gzc/leetcode/blob/master/cpp/1001-10000/1791-1800/Design%20Authentication%20Manager.cpp">LeetCode 1797. Design Authentication Manager</font></td>
+        <td align="center"><font color="black">English</font></td>
+        <td align="center"><font color="black">中文Youtube</font></td>
+        <td align="center"><font color="black">中文b站</font></td>
+    </tr>
+    <tr>
         <td colspan='40'><font size="4px" color="#0x888888"><a href="https://github.com/gzc/leetcode/blob/master/cpp/1001-10000/1791-1800/Maximum%20Number%20of%20Consecutive%20Values%20You%20Can%20Make.cpp">LeetCode 1798. Maximum Number of Consecutive Values You Can Make</font></td>
         <td align="center"><a href="https://youtu.be/nx2ewP-wF6M"><font color="black"><font color="black">English</font></td>
         <td align="center"><a href="https://youtu.be/ZOE8TPrRG3M"><font color="black">中文Youtube</font></td>
