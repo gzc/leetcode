@@ -1,18 +1,24 @@
 class Solution {
 public:
-    bool search(vector<int>& nums, int key) {
-        int l(0), r(nums.size() - 1);
-        while (l <= r) {
-            int m = (l + r) >> 1;
-            if (nums[m] == key) return true;
-            if (nums[l] < nums[m]) {
-                if (nums[l] <= key && key < nums[m]) r = m - 1;
-                else l = m + 1;
-            } else if (nums[l] > nums[m]) {
-                if (nums[m] < key && key <= nums[r]) l = m + 1;
-                else r = m - 1;
-            } else l++;
+    bool search(vector<int>& nums, int target) {
+        int i = 0;
+        int j = nums.size() - 1;
+        
+        while (i <= j) {
+            int mid = (i + j) / 2;
+            if (nums[mid] == target) return true;
+            
+            if (nums[mid] < nums[i]) {
+                if (nums[mid] < target && nums[j] >= target) i = mid + 1;
+                else j = mid - 1;
+            } else if (nums[mid] > nums[i]) {
+                if (nums[mid] > target && nums[i] <= target) j = mid - 1;
+                else i = mid + 1;
+            } else {
+                i++;
+            }
         }
+        
         return false;
     }
 };
