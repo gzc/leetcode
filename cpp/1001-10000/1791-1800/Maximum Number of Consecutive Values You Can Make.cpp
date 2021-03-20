@@ -7,6 +7,8 @@ public:
         for (int coin : coins) {
             if (cur + 1 >= coin) {
                 cur += coin;
+            } else {
+                break;
             }
         }
         
