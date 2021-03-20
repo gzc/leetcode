@@ -205,6 +205,12 @@ I uploaded some codes [here](https://zhenchaogan.gitbook.io/leetcode-solution/)
         <td align="center"><a href="https://www.bilibili.com/video/BV13z4y117uv/"><font color="black">中文b站</font></td>
     </tr>
     <tr>
+        <td colspan='40'><font size="4px" color="#0x888888"><a href="https://github.com/gzc/leetcode/blob/master/cpp/031-040/Search%20in%20Rotated%20Sorted%20Array.cpp">LeetCode 33. Search in Rotated Sorted Array</font></td>
+        <td align="center"><a href="https://youtu.be/_0_8c6kZlxM"><font color="black">English</font></td>
+        <td align="center"><a href="https://youtu.be/gSevuT3fvZU"><font color="black">中文Youtube</font></td>
+        <td align="center"><a href="https://www.bilibili.com/video/BV1154y187P5/"><font color="black">中文b站</font></td>
+    </tr>
+    <tr>
         <td colspan='40'><font size="4px" color="#0x888888"><a href="https://github.com/gzc/leetcode/blob/master/cpp/151-160/Read%20N%20Characters%20Given%20Read4.cpp">LeetCode 157. Read N Characters Given Read4</font></td>
         <td align="center"><a href="https://youtu.be/bziuNha1nXw"><font color="black">English</font></td>
         <td align="center"><a href="https://youtu.be/Zw2UzFsMfZI"><font color="black">中文Youtube</font></td>
