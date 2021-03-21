@@ -499,6 +499,12 @@ I uploaded some codes [here](https://zhenchaogan.gitbook.io/leetcode-solution/)
         <td align="center"><font color="black">中文b站</font></td>
     </tr>
     <tr>
+        <td colspan='40'><font size="4px" color="#0x888888"><a href="https://github.com/gzc/leetcode/blob/master/cpp/1001-10000/1801-1810/Number%20of%20Orders%20in%20the%20Backlog.cpp">LeetCode 1801. Number of Orders in the Backlog</font></td>
+        <td align="center"><font color="black">English</font></td>
+        <td align="center"><font color="black">中文Youtube</font></td>
+        <td align="center"><font color="black">中文b站</font></td>
+    </tr>
+    <tr>
         <td colspan='40'><font size="4px" color="#0x888888"><a href="https://github.com/gzc/leetcode/blob/master/cpp/1001-10000/1801-1810/Maximum%20Value%20at%20a%20Given%20Index%20in%20a%20Bounded%20Array.cpp">LeetCode 1802. Maximum Value at a Given Index in a Bounded Array</font></td>
         <td align="center"><a href="https://youtu.be/YaxcdotEiwY"><font color="black"><font color="black">English</font></td>
         <td align="center"><a href="https://youtu.be/zDcsb9GYsC8">中文Youtube</font></td>
