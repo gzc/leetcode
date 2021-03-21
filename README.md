@@ -510,4 +510,10 @@ I uploaded some codes [here](https://zhenchaogan.gitbook.io/leetcode-solution/)
         <td align="center"><a href="https://youtu.be/zDcsb9GYsC8">中文Youtube</font></td>
         <td align="center"><a href="https://www.bilibili.com/video/BV1oz4y117Yb/"><font color="black">中文b站</font></td>
     </tr>
+    <tr>
+        <td colspan='40'><font size="4px" color="#0x888888"><a href="https://github.com/gzc/leetcode/blob/master/cpp/1001-10000/1801-1810/Count%20Pairs%20With%20XOR%20in%20a%20Range.cpp">LeetCode 1803. Count Pairs With XOR in a Range</font></td>
+        <td align="center"><a href="https://youtu.be/liaiLNNgOmo"><font color="black"><font color="black">English</font></td>
+        <td align="center"><a href="https://youtu.be/iS1_e8vsXz4">中文Youtube</font></td>
+        <td align="center"><a href="https://www.bilibili.com/video/BV16Z4y1w7pB/"><font color="black">中文b站</font></td>
+    </tr>
 </table>
