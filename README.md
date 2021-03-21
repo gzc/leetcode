@@ -217,6 +217,12 @@ I uploaded some codes [here](https://zhenchaogan.gitbook.io/leetcode-solution/)
         <td align="center"><a href="https://www.bilibili.com/video/BV1g54y187cX/"><font color="black">中文b站</font></td>
     </tr>
     <tr>
+        <td colspan='40'><font size="4px" color="#0x888888"><a href="https://github.com/gzc/leetcode/blob/master/cpp/151-160/Find%20Minimum%20in%20Rotated%20Sorted%20Array.cpp">LeetCode 153. Find Minimum in Rotated Sorted Array</font></td>
+        <td align="center"><a href="https://youtu.be/sNP3mg6dGAU"><font color="black">English</font></td>
+        <td align="center"><a href="https://youtu.be/PTS5CXXBT1s"><font color="black">中文Youtube</font></td>
+        <td align="center"><a href="https://www.bilibili.com/video/BV15h411X72i/"><font color="black">中文b站</font></td>
+    </tr>
+    <tr>
         <td colspan='40'><font size="4px" color="#0x888888"><a href="https://github.com/gzc/leetcode/blob/master/cpp/151-160/Read%20N%20Characters%20Given%20Read4.cpp">LeetCode 157. Read N Characters Given Read4</font></td>
         <td align="center"><a href="https://youtu.be/bziuNha1nXw"><font color="black">English</font></td>
         <td align="center"><a href="https://youtu.be/Zw2UzFsMfZI"><font color="black">中文Youtube</font></td>
