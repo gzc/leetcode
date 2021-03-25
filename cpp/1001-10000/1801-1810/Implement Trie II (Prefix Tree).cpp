@@ -2,11 +2,10 @@ class Trie {
     
     struct TrieNode {
         TrieNode* nodes[26];
-        bool word;
         int word_cnt;
         int prefix_cnt;
         // Initialize your data structure here.
-        TrieNode(): word(false) {
+        TrieNode() {
             memset(nodes, 0, sizeof(nodes));
             word_cnt = 0;
             prefix_cnt = 0;
@@ -30,7 +29,6 @@ public:
             tmp = tmp->nodes[index];
             tmp->prefix_cnt++;
         }
-        tmp->word = true;
         tmp->word_cnt++;
     }
     
@@ -61,7 +59,6 @@ public:
     void erase(string word) {
         TrieNode* tmp = root;
         TrieNode* to_be_deleted = nullptr;
-        bool disconnected = false;
         for(char ch : word) {
             int index = ch - 'a';
             TrieNode* parent = tmp;
@@ -72,11 +69,10 @@ public:
                 delete to_be_deleted;
             }
             if (tmp->prefix_cnt == 0) {
-                to_be_deleted = tmp;
-                if (disconnected == false) {
+                if (to_be_deleted == nullptr) {
                     parent->nodes[index] = nullptr;
-                    disconnected = true;
                 }
+                to_be_deleted = tmp;
             }
         }
         tmp->word_cnt--;
