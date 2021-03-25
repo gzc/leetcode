@@ -37,7 +37,7 @@ public:
         for(char ch : word) {
             int index = ch - 'a';
             if(tmp->nodes[index] == nullptr) {
-                return false;
+                return 0;
             }
             tmp = tmp->nodes[index];
         }
