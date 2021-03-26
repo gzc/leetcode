@@ -319,6 +319,12 @@ I uploaded some codes [here](https://zhenchaogan.gitbook.io/leetcode-solution/)
         <td align="center"><a href="https://www.bilibili.com/video/BV1sf4y1x7Kn/"><font color="black">中文b站</font></td>
     </tr>
     <tr>
+        <td colspan='40'><font size="4px" color="#0x888888"><a href="https://github.com/gzc/leetcode/blob/master/cpp/1001-10000/1641-1650/Lowest%20Common%20Ancestor%20of%20a%20Binary%20Tree%20III.cpp">LeetCode 1650. Lowest Common Ancestor of a Binary Tree III</font></td>
+        <td align="center"><a href="https://youtu.be/8hrKhABmle8"><font color="black">English</font></td>
+        <td align="center"><a href="https://youtu.be/31KtJn5IS9Q"><font color="black">中文Youtube</font></td>
+        <td align="center"><a href="https://www.bilibili.com/video/BV1sy4y1h7Ap/"><font color="black">中文b站</font></td>
+    </tr>
+    <tr>
         <td colspan='40'><font size="4px" color="#0x888888"><a href="https://github.com/gzc/leetcode/blob/master/cpp/1001-10000/1721-1730/Largest%20Submatrix%20With%20Rearrangements.cpp">LeetCode 1727. Largest Submatrix With Rearrangements</font></td>
         <td align="center"><a href="https://youtu.be/DDN9ROQPwzA"><font color="black">English</font></td>
         <td align="center"><a href="https://youtu.be/6S1eKneFu8I"><font color="black">中文Youtube</font></td>
