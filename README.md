@@ -540,4 +540,10 @@ I uploaded some codes [here](https://zhenchaogan.gitbook.io/leetcode-solution/)
         <td align="center"><a href="https://youtu.be/iS1_e8vsXz4">中文Youtube</font></td>
         <td align="center"><a href="https://www.bilibili.com/video/BV16Z4y1w7pB/"><font color="black">中文b站</font></td>
     </tr>
+    <tr>
+        <td colspan='40'><font size="4px" color="#0x888888"><a href="https://github.com/gzc/leetcode/blob/master/cpp/1001-10000/1801-1810/Implement%20Trie%20II%20(Prefix%20Tree).cpp">LeetCode 1804. Implement Trie II (Prefix Tree)</font></td>
+        <td align="center"><a href="https://youtu.be/_3ReIHJeTT4"><font color="black"><font color="black">English</font></td>
+        <td align="center"><a href="https://youtu.be/PAvVIROaw-Q">中文Youtube</font></td>
+        <td align="center"><a href="https://www.bilibili.com/video/BV1jv41187qN/"><font color="black">中文b站</font></td>
+    </tr>
 </table>
