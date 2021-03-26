@@ -20,9 +20,9 @@
 class Solution {
     
     void dfs(Robot &robot, set<pair<int, int>>& visited, int i, int j, int dir) {
-        pair<int, int> directions[4] = {{-1, 0}, {0, 1}, {1, 0}, {0, -1}};
         robot.clean();
         visited.insert({i, j});
+        pair<int, int> directions[4] = {{-1, 0}, {0, 1}, {1, 0}, {0, -1}};
         for (int k = 0; k < 4; k++) {
             int new_i = i + directions[dir].first;
             int new_j = j + directions[dir].second;
@@ -42,6 +42,6 @@ class Solution {
 public:
     void cleanRoom(Robot& robot) {
         set<pair<int, int>> visited;
-        dfs(robot, visited, 0, 0, 0);
+        dfs(robot, visited, /*i=*/0, /*j=*/0, /*dir=*/0);
     }
 };
