@@ -1,3 +1,4 @@
+// Solution 1: O(n) Time, O(n) Space
 /**
  * Definition for a binary tree node.
  * struct TreeNode {
@@ -10,45 +11,39 @@
 class Solution {
 public:
     vector<int> ans;   
-    map<TreeNode*, TreeNode*> parent;  // son=>parent  
-    set<TreeNode*> visit;    //record visied node
+    unordered_map<TreeNode*, TreeNode*> parent;  // son=>parent  
+    unordered_set<TreeNode*> visit;    //record visied node
     
-    void findParent(TreeNode* node){
-        if(!node ) return;
-        if( node->left ){
+    void findParent(TreeNode* node) {
+        if (node == nullptr) return;
+        if (node->left != nullptr) {
             parent[node->left] = node;
             findParent(node->left);
         }
-        if( node->right){
+        if (node->right != nullptr){
             parent[node->right] = node;
             findParent(node->right);
         }
     }
     
-    vector<int> distanceK(TreeNode* root, TreeNode* target, int K) {
-        if( !root ) return {};
-        
-        findParent(root);
-        dfs(target, K );
-        return ans;
-    }
-    void dfs( TreeNode* node, int K){
-        if( visit.find(node) != visit.end() )
+    void dfs(TreeNode* node, int K){
+        if (node == nullptr || visit.count(node) > 0) {
             return;
+        }
         visit.insert(node);
-        if( K == 0 ){
+        if (K == 0) {
             ans.push_back(node->val);
             return;
         }
-        if( node->left ){
-            dfs(node->left, K-1);
-        }
-        if( node->right){
-            dfs(node->right, K-1);
-        }
-        TreeNode* p = parent[node];
-        if( p )
-            dfs(p, K-1);
+        dfs(node->left, K-1);
+        dfs(node->right, K-1);
+        dfs(parent[node], K-1);
+    }
+    
+    vector<int> distanceK(TreeNode* root, TreeNode* target, int K) {
+        findParent(root);
+        dfs(target, K);
+        return ans;
     }
 };
 
