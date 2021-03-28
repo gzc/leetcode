@@ -564,4 +564,10 @@ I uploaded some codes [here](https://zhenchaogan.gitbook.io/leetcode-solution/)
         <td align="center"><a href="https://youtu.be/PAvVIROaw-Q">中文Youtube</font></td>
         <td align="center"><a href="https://www.bilibili.com/video/BV1jv41187qN/"><font color="black">中文b站</font></td>
     </tr>
+    <tr>
+        <td colspan='40'><font size="4px" color="#0x888888"><a href="https://github.com/gzc/leetcode/blob/master/cpp/1001-10000/1801-1810/Maximize%20Number%20of%20Nice%20Divisors.cpp">LeetCode 1808. Maximize Number of Nice Divisors</font></td>
+        <td align="center"><a href="https://youtu.be/kYm4bYrktkw"><font color="black"><font color="black">English</font></td>
+        <td align="center"><a href="https://youtu.be/xkqcceTrGJw">中文Youtube</font></td>
+        <td align="center"><a href="https://www.bilibili.com/video/BV1Si4y1P7wF/"><font color="black">中文b站</font></td>
+    </tr>
 </table>
