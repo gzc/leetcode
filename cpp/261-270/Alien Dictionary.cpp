@@ -1,51 +1,57 @@
-struct node {
-    char ch;
-    int color;
-    set<int> edges;
-};
-
 class Solution {
-    node nodes[26];
-    
-    bool dfs_visit(int u, string& result) {
-        if(nodes[u].color == 1) { return false; }
-        nodes[u].color = 1;
-        for(auto it = nodes[u].edges.begin(); it != nodes[u].edges.end(); it++) {
-            if(nodes[*it].color != 2)
-                if (!dfs_visit(*it, result))
-                    return false;
+    bool dfs(char ch, unordered_map<char, vector<char>>& graph, unordered_map<char, int>& colors, string& order) {
+        colors[ch] = 1;
+        for (char neighbor : graph[ch]) {
+            if (colors[neighbor] == 1) {
+                return true;
+            }
+            if (colors[neighbor] == 0) {
+                bool has_circle = dfs(neighbor, graph, colors, order);
+                if (has_circle) {
+                    return true;
+                }
+            }
         }
-        result = nodes[u].ch + result;
-        nodes[u].color = 2;
-        return true;
+        order.push_back(ch);
+        colors[ch] = 2;
+        return false;
     }
     
 public:
     string alienOrder(vector<string>& words) {
-        for (int i = 0;i < words.size();i++)
-            for (int j = 0;j < words[i].length();j++)
-                nodes[words[i][j] - 'a'].ch = words[i][j];
-        
-        for (int i = 0;i < words.size()-1;i++) {
-            const string& previous = words[i];
-            const string& next = words[i+1];
-            int len = min(previous.length(), next.length());
-            for (int j = 0;j < len;j++) {
-                char ch1 = previous[j];
-                char ch2 = next[j];
-                if (ch1 == ch2) continue;
-                nodes[ch1 - 'a'].edges.insert(ch2 - 'a');
-                break;
+        unordered_map<char, int> colors;
+        for (const string& word : words) {
+            for (char ch : word) {
+                colors[ch] = 0;
             }
         }
         
-        string result("");
-        for (int i = 0;i < 26;i++)
-            if (nodes[i].color == 0 && nodes[i].ch >= 'a')
-                if (!dfs_visit(i, result))
+        unordered_map<char, vector<char>> graph;
+        for (int i = 1; i < words.size(); i++) {
+            int len = min(words[i-1].size(), words[i].size());
+            for (int j = 0; j < len; j++) {
+                if (words[i-1][j] != words[i][j]) {
+                    graph[words[i-1][j]].push_back(words[i][j]);
+                    break;
+                }
+                if (j == len - 1 && words[i].size() < words[i-1].size()) {
                     return "";
-
-        return result;
+                }
+            }
+        }
+        
+        string res;
+        for (const auto& [ch, color] : colors) {
+            if (color == 0) {
+                string order;
+                if (dfs(ch, graph, colors, order)) {
+                    return "";
+                }
+                reverse(order.begin(), order.end());
+                res = order + res;
+            }
+        }
+        
+        return res;
     }
-    
 };
