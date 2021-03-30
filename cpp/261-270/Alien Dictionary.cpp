@@ -1,5 +1,8 @@
 class Solution {
-    bool dfs(char ch, unordered_map<char, vector<char>>& graph, unordered_map<char, int>& colors, string& order) {
+    bool dfs(char ch,
+             unordered_map<char, vector<char>>& graph,
+             unordered_map<char, int>& colors,
+             string& order) {
         colors[ch] = 1;
         for (char neighbor : graph[ch]) {
             if (colors[neighbor] == 1) {
@@ -19,13 +22,6 @@ class Solution {
     
 public:
     string alienOrder(vector<string>& words) {
-        unordered_map<char, int> colors;
-        for (const string& word : words) {
-            for (char ch : word) {
-                colors[ch] = 0;
-            }
-        }
-        
         unordered_map<char, vector<char>> graph;
         for (int i = 1; i < words.size(); i++) {
             int len = min(words[i-1].size(), words[i].size());
@@ -40,18 +36,22 @@ public:
             }
         }
         
-        string res;
-        for (const auto& [ch, color] : colors) {
-            if (color == 0) {
-                string order;
-                if (dfs(ch, graph, colors, order)) {
-                    return "";
-                }
-                reverse(order.begin(), order.end());
-                res = order + res;
+        unordered_map<char, int> colors;
+        for (const string& word : words) {
+            for (char ch : word) {
+                colors[ch] = 0;
             }
         }
         
+        string res;
+        for (const auto& [ch, color] : colors) {
+            if (color == 0) {
+                if (dfs(ch, graph, colors, res)) {
+                    return "";
+                }
+            }
+        }
+        reverse(res.begin(), res.end());
         return res;
     }
 };
