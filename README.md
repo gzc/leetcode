@@ -247,6 +247,12 @@ I uploaded some codes [here](https://zhenchaogan.gitbook.io/leetcode-solution/)
         <td align="center"><a href="https://www.bilibili.com/video/BV14B4y1P7PF/"><font color="black">中文b站</font></td>
     </tr>
     <tr>
+        <td colspan='40'><font size="4px" color="#0x888888"><a href="https://github.com/gzc/leetcode/blob/master/cpp/261-270/Alien%20Dictionary.cpp">LeetCode 269. Alien Dictionary</font></td>
+        <td align="center"><a href="https://youtu.be/OsjodfsorBs"><font color="black">English</font></td>
+        <td align="center"><a href="https://youtu.be/5slT8ZfVKrQ"><font color="black">中文Youtube</font></td>
+        <td align="center"><a href="https://www.bilibili.com/video/BV1NU4y1h7Ww/"><font color="black">中文b站</font></td>
+    </tr>
+    <tr>
         <td colspan='40'><font size="4px" color="#0x888888"><a href="https://github.com/gzc/leetcode/blob/master/cpp/291-300/Find%20Median%20from%20Data%20Stream.cpp">Leetcode 295. Find Median from Data Stream</font></td>
         <td align="center"><a href="https://youtu.be/sSUCgilaVJ4"><font color="black">English</font></td>
         <td align="center"><a href="https://youtu.be/ByZgcvujtSA"><font color="black">中文Youtube</font></td>
