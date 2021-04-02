@@ -594,4 +594,10 @@ I uploaded some codes [here](https://zhenchaogan.gitbook.io/leetcode-solution/)
         <td align="center"><a href="https://youtu.be/xkqcceTrGJw">中文Youtube</font></td>
         <td align="center"><a href="https://www.bilibili.com/video/BV1Si4y1P7wF/"><font color="black">中文b站</font></td>
     </tr>
+    <tr>
+        <td colspan='40'><font size="4px" color="#0x888888"><a href="https://github.com/gzc/leetcode/blob/master/cpp/1001-10000/1801-1810/Minimum%20Path%20Cost%20in%20a%20Hidden%20Grid.cpp">LeetCode 1810. Minimum Path Cost in a Hidden Grid</font></td>
+        <td align="center"><a href="https://youtu.be/qtKlnHso4BU"><font color="black"><font color="black">English</font></td>
+        <td align="center"><a href="https://youtu.be/6Id3jgq6FHg">中文Youtube</font></td>
+        <td align="center"><a href="https://www.bilibili.com/video/BV1Gp4y187nM/"><font color="black">中文b站</font></td>
+    </tr>
 </table>
