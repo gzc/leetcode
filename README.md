@@ -618,4 +618,10 @@ I uploaded some codes [here](https://zhenchaogan.gitbook.io/leetcode-solution/)
         <td align="center"><font color="black">中文Youtube</font></td>
         <td align="center"><font color="black">中文b站</font></td>
     </tr>
+    <tr>
+        <td colspan='40'><font size="4px" color="#0x888888"><a href="https://github.com/gzc/leetcode/blob/master/cpp/1001-10000/1811-1820/Maximum%20Number%20of%20Groups%20Getting%20Fresh%20Donuts.cpp">LeetCode 1815. Maximum Number of Groups Getting Fresh Donuts</font></td>
+        <td align="center"><a href="https://youtu.be/h7U1S7Ut3ws"><font color="black"><font color="black">English</font></td>
+        <td align="center"><a href="https://youtu.be/0FduysByEmE">中文Youtube</font></td>
+        <td align="center"><a href="https://www.bilibili.com/video/BV1Ly4y1b7bq/"><font color="black">中文b站</font></td>
+    </tr>
 </table>
