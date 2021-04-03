@@ -607,6 +607,12 @@ I uploaded some codes [here](https://zhenchaogan.gitbook.io/leetcode-solution/)
         <td align="center"><font color="black">中文b站</font></td>
     </tr>
     <tr>
+        <td colspan='40'><font size="4px" color="#0x888888"><a href="https://github.com/gzc/leetcode/blob/master/cpp/1001-10000/1811-1820/Sentence%20Similarity%20III.cpp">LeetCode 1813. Sentence Similarity III</font></td>
+        <td align="center"><font color="black">English</font></td>
+        <td align="center"><font color="black">中文Youtube</font></td>
+        <td align="center"><font color="black">中文b站</font></td>
+    </tr>
+    <tr>
         <td colspan='40'><font size="4px" color="#0x888888"><a href="https://github.com/gzc/leetcode/blob/master/cpp/1001-10000/1811-1820/Count%20Nice%20Pairs%20in%20an%20Array.cpp">LeetCode 1814. Count Nice Pairs in an Array</font></td>
         <td align="center"><font color="black">English</font></td>
         <td align="center"><font color="black">中文Youtube</font></td>
