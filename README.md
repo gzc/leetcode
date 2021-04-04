@@ -631,6 +631,12 @@ I uploaded some codes [here](https://zhenchaogan.gitbook.io/leetcode-solution/)
         <td align="center"><font color="black">中文b站</font></td>
     </tr>
     <tr>
+        <td colspan='40'><font size="4px" color="#0x888888"><a href="https://github.com/gzc/leetcode/blob/master/cpp/1001-10000/1811-1820/Finding%20the%20Users%20Active%20Minutes.cpp">LeetCode 1817. Finding the Users Active Minutes</font></td>
+        <td align="center"><font color="black">English</font></td>
+        <td align="center"><font color="black">中文Youtube</font></td>
+        <td align="center"><font color="black">中文b站</font></td>
+    </tr>
+    <tr>
         <td colspan='40'><font size="4px" color="#0x888888"><a href="https://github.com/gzc/leetcode/blob/master/cpp/1001-10000/1811-1820/Number%20of%20Different%20Subsequences%20GCDs.cpp">LeetCode 1819. Number of Different Subsequences GCDs</font></td>
         <td align="center"><a href="https://youtu.be/Jbs6p2MLZjQ"><font color="black"><font color="black">English</font></td>
         <td align="center"><a href="https://youtu.be/ptaC4X0hC2Q">中文Youtube</font></td>
