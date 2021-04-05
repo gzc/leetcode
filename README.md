@@ -211,6 +211,12 @@ I uploaded some codes [here](https://zhenchaogan.gitbook.io/leetcode-solution/)
         <td align="center"><a href="https://www.bilibili.com/video/BV1154y187P5/"><font color="black">中文b站</font></td>
     </tr>
     <tr>
+        <td colspan='40'><font size="4px" color="#0x888888"><a href="https://github.com/gzc/leetcode/blob/master/cpp/041-050/Trapping%20Rain%20Water.cpp">LeetCode 42. Trapping Rain Water</font></td>
+        <td align="center"><a href="https://youtu.be/1LXscFcXkOk"><font color="black">English</font></td>
+        <td align="center"><a href="https://youtu.be/vzNQr6ocvt4"><font color="black">中文Youtube</font></td>
+        <td align="center"><a href="https://www.bilibili.com/video/BV1BK4y1N75u/"><font color="black">中文b站</font></td>
+    </tr>
+    <tr>
         <td colspan='40'><font size="4px" color="#0x888888"><a href="https://github.com/gzc/leetcode/blob/master/cpp/081-090/Search%20in%20Rotated%20Sorted%20Array%20II.cpp">LeetCode 81. Search in Rotated Sorted Array II</font></td>
         <td align="center"><a href="https://youtu.be/SobfkJqBFYk"><font color="black">English</font></td>
         <td align="center"><a href="https://youtu.be/tBfnbjEw6RQ"><font color="black">中文Youtube</font></td>
