@@ -259,6 +259,12 @@ I uploaded some codes [here](https://zhenchaogan.gitbook.io/leetcode-solution/)
         <td align="center"><a href="https://www.bilibili.com/video/BV14B4y1P7PF/"><font color="black">中文b站</font></td>
     </tr>
     <tr>
+        <td colspan='40'><font size="4px" color="#0x888888"><a href="https://github.com/gzc/leetcode/blob/master/cpp/231-240/Product%20of%20Array%20Except%20Self.cpp">LeetCode 238. Product of Array Except Self</font></td>
+        <td align="center"><a href="https://youtu.be/_M6LXQqd33w"><font color="black">English</font></td>
+        <td align="center"><a href="https://youtu.be/hdCuT7xxNAY"><font color="black">中文Youtube</font></td>
+        <td align="center"><a href="https://www.bilibili.com/video/BV1rK4y1K72x/"><font color="black">中文b站</font></td>
+    </tr>
+    <tr>
         <td colspan='40'><font size="4px" color="#0x888888"><a href="https://github.com/gzc/leetcode/blob/master/cpp/261-270/Alien%20Dictionary.cpp">LeetCode 269. Alien Dictionary</font></td>
         <td align="center"><a href="https://youtu.be/OsjodfsorBs"><font color="black">English</font></td>
         <td align="center"><a href="https://youtu.be/5slT8ZfVKrQ"><font color="black">中文Youtube</font></td>
