@@ -685,6 +685,12 @@ I uploaded some codes [here](https://zhenchaogan.gitbook.io/leetcode-solution/)
         <td align="center"><a href="https://www.bilibili.com/video/BV1F5411A7dx/"><font color="black">中文b站</font></td>
     </tr>
     <tr>
+        <td colspan='40'><font size="4px" color="#0x888888"><a href="https://github.com/gzc/leetcode/blob/master/cpp/1001-10000/1821-1830/Sign%20of%20the%20Product%20of%20an%20Array.cpp">LeetCode 1822. Sign of the Product of an Array</font></td>
+        <td align="center"><font color="black">English</font></td>
+        <td align="center"><font color="black">中文Youtube</font></td>
+        <td align="center"><font color="black">中文b站</font></td>
+    </tr>
+    <tr>
         <td colspan='40'><font size="4px" color="#0x888888"><a href="https://github.com/gzc/leetcode/blob/master/cpp/1001-10000/1821-1830/Minimum%20Sideway%20Jumps.cpp">LeetCode 1824. Minimum Sideway Jumps</font></td>
         <td align="center"><a href="https://youtu.be/6-49f0eystc"><font color="black">English</font></td>
         <td align="center"><a href="https://youtu.be/PtYI0c8x8lY"><font color="black">中文Youtube</font></td>
