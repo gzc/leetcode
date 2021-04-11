@@ -690,4 +690,10 @@ I uploaded some codes [here](https://zhenchaogan.gitbook.io/leetcode-solution/)
         <td align="center"><a href="https://youtu.be/PtYI0c8x8lY"><font color="black">中文Youtube</font></td>
         <td align="center"><a href="https://www.bilibili.com/video/BV1HK4y1K7nk/"><font color="black">中文b站</font></td>
     </tr>
+    <tr>
+        <td colspan='40'><font size="4px" color="#0x888888"><a href="https://github.com/gzc/leetcode/blob/master/cpp/1001-10000/1821-1830/Finding%20MK%20Average.cpp">LeetCode 1825. Finding MK Average</font></td>
+        <td align="center"><a href="https://youtu.be/tHMWcAikcnY"><font color="black">English</font></td>
+        <td align="center"><a href="https://youtu.be/Nr_XX-joVm4"><font color="black">中文Youtube</font></td>
+        <td align="center"><a href="https://www.bilibili.com/video/BV1uy4y147Pi/"><font color="black">中文b站</font></td>
+    </tr>
 </table>
