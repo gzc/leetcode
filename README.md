@@ -355,6 +355,12 @@ I uploaded some codes [here](https://zhenchaogan.gitbook.io/leetcode-solution/)
         <td align="center"><a href="https://www.bilibili.com/video/BV1s54y1a7iQ/"><font color="black">中文b站</font></td>
     </tr>
     <tr>
+        <td colspan='40'><font size="4px" color="#0x888888"><a href="https://github.com/gzc/leetcode/blob/master/cpp/1001-10000/1241-1250/Minimum%20Remove%20to%20Make%20Valid%20Parentheses.cpp">LeetCode 1249. Minimum Remove to Make Valid Parentheses</font></td>
+        <td align="center"><a href="https://youtu.be/S4LLF3uT-EY"><font color="black">English</font></td>
+        <td align="center"><a href="https://youtu.be/vxMmmvdnuNs"><font color="black">中文Youtube</font></td>
+        <td align="center"><a href="https://www.bilibili.com/video/BV1n64y1v7Nm/"><font color="black">中文b站</font></td>
+    </tr>
+    <tr>
         <td colspan='40'><font size="4px" color="#0x888888"><a href="https://github.com/gzc/leetcode/blob/master/cpp/1001-10000/1421-1430/Leftmost%20Column%20with%20at%20Least%20a%20One.cpp">LeetCode 1428. Leftmost Column with at Least a One</font></td>
         <td align="center"><a href="https://youtu.be/O3KQIh0J89g"><font color="black">English</font></td>
         <td align="center"><a href="https://youtu.be/koAFGCKT-Hw"><font color="black">中文Youtube</font></td>
