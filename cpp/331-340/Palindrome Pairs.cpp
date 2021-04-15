@@ -1,4 +1,5 @@
 class Solution {
+    unordered_map<string, int> word_idx;
     bool isPalindrome(const string& s) {
         int left = 0;
         int right = s.size() - 1;
