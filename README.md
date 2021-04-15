@@ -295,6 +295,12 @@ I uploaded some codes [here](https://zhenchaogan.gitbook.io/leetcode-solution/)
         <td align="center"><a href="https://www.bilibili.com/video/BV1i54y1a7g9/"><font color="black">中文b站</font></td>
     </tr>
     <tr>
+        <td colspan='40'><font size="4px" color="#0x888888"><a href="https://github.com/gzc/leetcode/blob/master/cpp/331-340/Palindrome%20Pairs.cpp">LeetCode 336. Palindrome Pairs</font></td>
+        <td align="center"><a href="https://youtu.be/bNXpdDNjKjM"><font color="black">English</font></td>
+        <td align="center"><a href="https://youtu.be/P5-bM5g4m5Q"><font color="black">中文Youtube</font></td>
+        <td align="center"><a href="https://www.bilibili.com/video/BV1vb4y1D7Mq/"><font color="black">中文b站</font></td>
+    </tr>
+    <tr>
         <td colspan='40'><font size="4px" color="#0x888888"><a href="https://github.com/gzc/leetcode/blob/master/cpp/401-410/Trapping%20Rain%20Water%20II.cpp">LeetCode 407. Trapping Rain Water II</font></td>
         <td align="center"><a href="https://youtu.be/fqgqhRItdD4"><font color="black">English</font></td>
         <td align="center"><a href="https://youtu.be/GM2a2KalLYA"><font color="black">中文Youtube</font></td>
