@@ -331,6 +331,12 @@ I uploaded some codes [here](https://zhenchaogan.gitbook.io/leetcode-solution/)
         <td align="center"><a href="https://www.bilibili.com/video/BV1aK4y1U7jb/"><font color="black">中文b站</font></td>
     </tr>
     <tr>
+        <td colspan='40'><font size="4px" color="#0x888888"><a href="https://github.com/gzc/leetcode/blob/master/cpp/671-680/Valid%20Palindrome%20II.cpp">LeetCode 680. Valid Palindrome II</font></td>
+        <td align="center"><a href="https://youtu.be/rNTH2DSW8z0"><font color="black">English</font></td>
+        <td align="center"><a href="https://youtu.be/w18su7VGwUQ"><font color="black">中文Youtube</font></td>
+        <td align="center"><a href="https://www.bilibili.com/video/BV1Rf4y1W7GE/"><font color="black">中文b站</font></td>
+    </tr>
+    <tr>
         <td colspan='40'><font size="4px" color="#0x888888"><a href="https://github.com/gzc/leetcode/blob/master/cpp/701-710/Random%20Pick%20with%20Blacklist.cpp">LeetCode 710. Random Pick with Blacklist</font></td>
         <td align="center"><a href="https://youtu.be/Bq3M4itMpbs"><font color="black">English</font></td>
         <td align="center"><a href="https://youtu.be/vJPVDzVrMSE"><font color="black">中文Youtube</font></td>
