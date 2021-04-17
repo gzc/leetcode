@@ -733,6 +733,12 @@ I uploaded some codes [here](https://zhenchaogan.gitbook.io/leetcode-solution/)
         <td align="center"><font color="black">中文b站</font></td>
     </tr>
     <tr>
+        <td colspan='40'><font size="4px" color="#0x888888"><a href="https://github.com/gzc/leetcode/tree/master/cpp/1001-10000/1821-1830">LeetCode 1829. Maximum XOR for Each Query</font></td>
+        <td align="center"><font color="black">English</font></td>
+        <td align="center"><font color="black">中文Youtube</font></td>
+        <td align="center"><font color="black">中文b站</font></td>
+    </tr>
+    <tr>
         <td colspan='40'><font size="4px" color="#0x888888"><a href="https://github.com/gzc/leetcode/blob/master/cpp/1001-10000/1821-1830/Minimum%20Number%20of%20Operations%20to%20Make%20String%20Sorted.cpp">LeetCode 1830. Minimum Number of Operations to Make String Sorted</font></td>
         <td align="center"><a href="https://youtu.be/6u6l5Jd-HQc"><font color="black">English</font></td>
         <td align="center"><a href="https://youtu.be/0yxk667NXgw"><font color="black">中文Youtube</font></td>
