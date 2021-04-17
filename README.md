@@ -733,7 +733,13 @@ I uploaded some codes [here](https://zhenchaogan.gitbook.io/leetcode-solution/)
         <td align="center"><font color="black">中文b站</font></td>
     </tr>
     <tr>
-        <td colspan='40'><font size="4px" color="#0x888888"><a href="https://github.com/gzc/leetcode/tree/master/cpp/1001-10000/1821-1830">LeetCode 1829. Maximum XOR for Each Query</font></td>
+        <td colspan='40'><font size="4px" color="#0x888888"><a href="https://github.com/gzc/leetcode/blob/master/cpp/1001-10000/1821-1830/Queries%20on%20Number%20of%20Points%20Inside%20a%20Circle.cpp">LeetCode 1828. Queries on Number of Points Inside a Circle</font></td>
+        <td align="center"><font color="black">English</font></td>
+        <td align="center"><font color="black">中文Youtube</font></td>
+        <td align="center"><font color="black">中文b站</font></td>
+    </tr>
+    <tr>
+        <td colspan='40'><font size="4px" color="#0x888888"><a href="https://github.com/gzc/leetcode/blob/master/cpp/1001-10000/1821-1830/Maximum%20XOR%20for%20Each%20Query.cpp">LeetCode 1829. Maximum XOR for Each Query</font></td>
         <td align="center"><font color="black">English</font></td>
         <td align="center"><font color="black">中文Youtube</font></td>
         <td align="center"><font color="black">中文b站</font></td>
