@@ -757,6 +757,12 @@ I uploaded some codes [here](https://zhenchaogan.gitbook.io/leetcode-solution/)
         <td align="center"><a href="https://www.bilibili.com/video/BV1uA411V7Tr/"><font color="black">中文b站</font></td>
     </tr>
     <tr>
+        <td colspan='40'><font size="4px" color="#0x888888"><a href="https://github.com/gzc/leetcode/blob/master/cpp/1001-10000/1831-1840/Single-Threaded%20CPU.cpp">LeetCode 1834. Single-Threaded CPU</font></td>
+        <td align="center"><font color="black">English</font></td>
+        <td align="center"><font color="black">中文Youtube</font></td>
+        <td align="center"><font color="black">中文b站</font></td>
+    </tr>
+    <tr>
         <td colspan='40'><font size="4px" color="#0x888888"><a href="https://github.com/gzc/leetcode/blob/master/cpp/1001-10000/1831-1840/Find%20XOR%20Sum%20of%20All%20Pairs%20Bitwise%20AND.cpp">LeetCode 1835. Find XOR Sum of All Pairs Bitwise AND</font></td>
         <td align="center"><a href="https://youtu.be/H09_S0dbphs"><font color="black">English</font></td>
         <td align="center"><a href="https://youtu.be/d0cbmU9v-Pc"><font color="black">中文Youtube</font></td>
