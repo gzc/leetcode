@@ -313,6 +313,12 @@ I uploaded some codes [here](https://zhenchaogan.gitbook.io/leetcode-solution/)
         <td align="center"><a href="https://www.bilibili.com/video/BV1wK4y1K7t3/"><font color="black">中文b站</font></td>
     </tr>
     <tr>
+        <td colspan='40'><font size="4px" color="#0x888888"><a href="https://github.com/gzc/leetcode/blob/master/cpp/411-420/Add%20Strings.cpp">LeetCode 415. Add Strings</font></td>
+        <td align="center"><a href="https://youtu.be/UUhGJVIXFOQ"><font color="black">English</font></td>
+        <td align="center"><a href="https://youtu.be/jOBZnOcjBQc"><font color="black">中文Youtube</font></td>
+        <td align="center"><a href="https://www.bilibili.com/video/BV1Z54y1L7Ho/"><font color="black">中文b站</font></td>
+    </tr>
+    <tr>
         <td colspan='40'><font size="4px" color="#0x888888"><a href="https://github.com/gzc/leetcode/blob/master/cpp/421-430/Convert%20Binary%20Search%20Tree%20to%20Sorted%20Doubly%20Linked%20List.cpp">LeetCode 426. Convert Binary Search Tree to Sorted Doubly Linked List</font></td>
         <td align="center"><a href="https://youtu.be/SLT9NasJo4U"><font color="black">English</font></td>
         <td align="center"><a href="https://youtu.be/-TSxiyrOwIQ"><font color="black">中文Youtube</font></td>
