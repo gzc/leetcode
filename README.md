@@ -385,6 +385,12 @@ I uploaded some codes [here](https://zhenchaogan.gitbook.io/leetcode-solution/)
         <td align="center"><a href="https://www.bilibili.com/video/BV1ef4y1478d/"><font color="black">中文b站</font></td>
     </tr>
     <tr>
+        <td colspan='40'><font size="4px" color="#0x888888"><a href="https://github.com/gzc/leetcode/blob/master/cpp/1001-10000/1561-1570/Dot%20Product%20of%20Two%20Sparse%20Vectors.cpp">LeetCode 1570. Dot Product of Two Sparse Vectors</font></td>
+        <td align="center"><a href="https://youtu.be/yzaZJCCjV7M"><font color="black">English</font></td>
+        <td align="center"><a href="https://youtu.be/Ns_gNGRhGd8"><font color="black">中文Youtube</font></td>
+        <td align="center"><a href="https://www.bilibili.com/video/BV1FZ4y1w7tQ/"><font color="black">中文b站</font></td>
+    </tr>
+    <tr>
         <td colspan='40'><font size="4px" color="#0x888888"><a href="https://github.com/gzc/leetcode/blob/master/cpp/1001-10000/1641-1650/Lowest%20Common%20Ancestor%20of%20a%20Binary%20Tree%20II.cpp">LeetCode 1644. Lowest Common Ancestor of a Binary Tree II</font></td>
         <td align="center"><a href="https://youtu.be/d1b1WcKOGkU"><font color="black">English</font></td>
         <td align="center"><a href="https://youtu.be/NP9n3ebk620"><font color="black">中文Youtube</font></td>
