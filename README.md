@@ -223,6 +223,12 @@ I uploaded some codes [here](https://zhenchaogan.gitbook.io/leetcode-solution/)
         <td align="center"><a href="https://www.bilibili.com/video/BV1fK4y1N77s/"><font color="black">中文b站</font></td>
     </tr>
     <tr>
+        <td colspan='40'><font size="4px" color="#0x888888"><a href="https://github.com/gzc/leetcode/blob/master/cpp/061-070/Add%20Binary.cpp">LeetCode 67. Add Binary</font></td>
+        <td align="center"><a href="https://youtu.be/LIe-KekRmGE"><font color="black">English</font></td>
+        <td align="center"><a href="https://youtu.be/rZUpzKi0w50"><font color="black">中文Youtube</font></td>
+        <td align="center"><a href="https://www.bilibili.com/video/BV1LQ4y1Z7MB/"><font color="black">中文b站</font></td>
+    </tr>
+    <tr>
         <td colspan='40'><font size="4px" color="#0x888888"><a href="https://github.com/gzc/leetcode/blob/master/cpp/081-090/Search%20in%20Rotated%20Sorted%20Array%20II.cpp">LeetCode 81. Search in Rotated Sorted Array II</font></td>
         <td align="center"><a href="https://youtu.be/SobfkJqBFYk"><font color="black">English</font></td>
         <td align="center"><a href="https://youtu.be/tBfnbjEw6RQ"><font color="black">中文Youtube</font></td>
