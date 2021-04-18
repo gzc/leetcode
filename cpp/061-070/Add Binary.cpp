@@ -1,34 +1,21 @@
 class Solution {
-    
-    const static int SCALE = 2;
-    
 public:
     string addBinary(string a, string b) {
-        
-        reverse(a.begin(), a.end());
-        reverse(b.begin(), b.end());
-        
-        int add(0);
-        int len1 = a.length();
-        int len2 = b.length();
-        int maxlen = max(len1, len2);
-        
-        string result("");
-        
-        for(int i = 0;i < maxlen;i++)
-        {
-            int d1 = (i < len1) ? a[i] - '0' : 0;
-            int d2 = (i < len2) ? b[i] - '0' : 0;
-            int d = d1+d2+add;
-            add = d/SCALE;
-            d = d%SCALE;
-            result += ('0'+d);
+        string result;
+        int carry = 0;
+        int i1 = a.length() - 1;
+        int i2 = b.length() - 1;
+        while (i1 >= 0 || i2 >= 0 || carry > 0) {
+            int v1 = i1 >= 0 ? a[i1] - '0' : 0;
+            int v2 = i2 >= 0 ? b[i2] - '0' : 0;
+            int sum = v1 + v2 + carry;
+            result.push_back((sum & 1) + '0');
+            carry = (sum >> 1) & 1;
+            i1--;
+            i2--;
         }
         
-        if(add) result += "1";
-        
-        reverse(result.begin(), result.end());
+        reverse(begin(result), end(result));
         return result;
-        
     }
 };
