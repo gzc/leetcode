@@ -805,6 +805,12 @@ I uploaded some codes [here](https://zhenchaogan.gitbook.io/leetcode-solution/)
         <td align="center"><font color="black">中文b站</font></td>
     </tr>
     <tr>
+        <td colspan='40'><font size="4px" color="#0x888888"><a href="https://github.com/gzc/leetcode/blob/master/cpp/1001-10000/1831-1840/Sum%20of%20Digits%20in%20Base%20K.cpp">LeetCode 1837. Sum of Digits in Base K</font></td>
+        <td align="center"><font color="black">English</font></td>
+        <td align="center"><font color="black">中文Youtube</font></td>
+        <td align="center"><font color="black">中文b站</font></td>
+    </tr>
+    <tr>
         <td colspan='40'><font size="4px" color="#0x888888"><a href="https://github.com/gzc/leetcode/blob/master/cpp/1001-10000/1831-1840/Longest%20Substring%20Of%20All%20Vowels%20in%20Order.cpp">LeetCode 1839. Longest Substring Of All Vowels in Order</font></td>
         <td align="center"><font color="black">English</font></td>
         <td align="center"><font color="black">中文Youtube</font></td>
