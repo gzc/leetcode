@@ -829,6 +829,12 @@ I uploaded some codes [here](https://zhenchaogan.gitbook.io/leetcode-solution/)
         <td align="center"><a href="https://www.bilibili.com/video/BV13B4y1w7wS/"><font color="black">中文b站</font></td>
     </tr>
     <tr>
+        <td colspan='40'><font size="4px" color="#0x888888"><a href="https://github.com/gzc/leetcode/blob/master/cpp/1001-10000/1841-1850/Minimum%20Adjacent%20Swaps%20to%20Reach%20the%20Kth%20Smallest%20Number.cpp">LeetCode 1850. Minimum Adjacent Swaps to Reach the Kth Smallest Number</font></td>
+        <td align="center"><a href="https://youtu.be/5-GdjgRc4P0"><font color="black">English</font></td>
+        <td align="center"><a href="https://youtu.be/LMmWq6j73vU"><font color="black">中文Youtube</font></td>
+        <td align="center"><a href="https://www.bilibili.com/video/BV1j64y127Cx/"><font color="black">中文b站</font></td>
+    </tr>
+    <tr>
         <td colspan='40'><font size="4px" color="#0x888888"><a href="https://github.com/gzc/leetcode/blob/master/cpp/1001-10000/1851-1860/Minimum%20Interval%20to%20Include%20Each%20Query.cpp">LeetCode 1851. Minimum Interval to Include Each Query</font></td>
         <td align="center"><a href="https://youtu.be/Z7qiynScOPA"><font color="black">English</font></td>
         <td align="center"><a href="https://youtu.be/q5jHwTw139s"><font color="black">中文Youtube</font></td>
