@@ -20,8 +20,6 @@ public:
                 ans[it->second] = interval[1] - interval[0] + 1;
                 it = myset.erase(it);
             }
-            
-            if (myset.empty()) break;
         }
         
         return ans;
