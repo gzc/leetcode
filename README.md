@@ -822,4 +822,10 @@ I uploaded some codes [here](https://zhenchaogan.gitbook.io/leetcode-solution/)
         <td align="center"><a href="https://youtu.be/Gfv8tNiizCw"><font color="black">中文Youtube</font></td>
         <td align="center"><a href="https://www.bilibili.com/video/BV1uQ4y1f7QH/"><font color="black">中文b站</font></td>
     </tr>
+    <tr>
+        <td colspan='40'><font size="4px" color="#0x888888"><a href="https://github.com/gzc/leetcode/blob/master/cpp/1001-10000/1841-1850/Closest%20Room.cpp">LeetCode 1847. Closest Room</font></td>
+        <td align="center"><a href="https://youtu.be/Q1WGr7fxA6g"><font color="black">English</font></td>
+        <td align="center"><a href="https://youtu.be/6QW31b5CeoQ"><font color="black">中文Youtube</font></td>
+        <td align="center"><a href="https://www.bilibili.com/video/BV13B4y1w7wS/"><font color="black">中文b站</font></td>
+    </tr>
 </table>
