@@ -828,4 +828,10 @@ I uploaded some codes [here](https://zhenchaogan.gitbook.io/leetcode-solution/)
         <td align="center"><a href="https://youtu.be/6QW31b5CeoQ"><font color="black">中文Youtube</font></td>
         <td align="center"><a href="https://www.bilibili.com/video/BV13B4y1w7wS/"><font color="black">中文b站</font></td>
     </tr>
+    <tr>
+        <td colspan='40'><font size="4px" color="#0x888888"><a href="https://github.com/gzc/leetcode/blob/master/cpp/1001-10000/1851-1860/Minimum%20Interval%20to%20Include%20Each%20Query.cpp">LeetCode 1851. Minimum Interval to Include Each Query</font></td>
+        <td align="center"><a href="https://youtu.be/Z7qiynScOPA"><font color="black">English</font></td>
+        <td align="center"><a href="https://youtu.be/q5jHwTw139s"><font color="black">中文Youtube</font></td>
+        <td align="center"><a href="https://www.bilibili.com/video/BV14h411m7GA/"><font color="black">中文b站</font></td>
+    </tr>
 </table>
