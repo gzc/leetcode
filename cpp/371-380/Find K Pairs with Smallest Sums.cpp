@@ -3,12 +3,10 @@ class Solution {
     typedef pair<int, vector<int>::iterator> mm;
     
 public:
-    vector<pair<int, int>> kSmallestPairs(vector<int>& nums1, vector<int>& nums2, int k) {
-        int size = min(k, (int)(nums1.size())*int(nums2.size()));
-        vector<pair<int, int>> res(size);
-        if (nums1.empty() || nums2.empty()) return res;
+    vector<vector<int>> kSmallestPairs(vector<int>& nums1, vector<int>& nums2, int k) {
+        vector<vector<int>> res;
         
-        auto cmp = [&] (const mm& p1, const mm& p2) {
+        auto cmp = [] (const mm& p1, const mm& p2) {
             return p1.first + *(p1.second) > p2.first + *(p2.second);
         };
         priority_queue<mm, vector<mm>, decltype(cmp)> pq(cmp);
@@ -22,7 +20,7 @@ public:
         for (int i = 0; i < k && !pq.empty(); i++) {
             auto ele = pq.top();
             pq.pop();
-            res[i] = {ele.first, *(ele.second)};
+            res.push_back({ele.first, *(ele.second)});
             ele.second++;
             if (ele.second != nums2.end()) {
                 pq.push({ele.first, ele.second});
