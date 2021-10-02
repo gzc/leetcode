@@ -1,23 +1,31 @@
 class Solution {
     
-    int findroot(int c, const vector<int>& u) {
-        while (c != u[c]) c = u[c];
-        return c;
+    int findParent(const vector<int>& vec, int node) {
+        while (node != vec[node]) {
+            node = vec[node];
+        }
+        
+        return node;
     }
     
 public:
-    bool validTree(int n, vector<pair<int, int>>& edges) {
-        vector<int> u(n, 0);
-        for (int i = 0;i < n;i++)
-            u[i] = i;
-        
-        for (int i = 0;i < edges.size();i++) {
-            int root1 = findroot(edges[i].first, u);
-            int root2 = findroot(edges[i].second, u);
-            if(root1 == root2) return false;
-            u[root2] = root1;
+    bool validTree(int n, vector<vector<int>>& edges) {
+        if (edges.size() + 1 != n) {
+            return false;
         }
         
-        return edges.size() + 1 == n;
+        vector<int> vec(n, 0);
+        for (int i = 0; i < n; i++) {
+            vec[i] = i;
+        }
+        
+        for (const vector<int>& edge : edges) {
+            int p1 = findParent(vec, edge[0]);
+            int p2 = findParent(vec, edge[1]);
+            if (p1 == p2) return false;
+            vec[p1] = p2;
+        }
+        
+        return true;
     }
 };
