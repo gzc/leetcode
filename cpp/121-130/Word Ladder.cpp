@@ -1,27 +1,38 @@
+
+   
 class Solution {
 public:
     int ladderLength(string beginWord, string endWord, vector<string>& wordList) {
         unordered_set<string> dict(begin(wordList), end(wordList));
-        unordered_map<string, int> dis; // store the distance from start to the current word
-        queue<string> q; // FIFO for bfs purpose
-        dis[beginWord] = 1;
+        queue<string> q;
         q.push(beginWord);
+        unordered_set<string> visited;
+        visited.insert(beginWord);
+        int step = 1;
         while (!q.empty()) {
-            string word = q.front();
-            q.pop();
-            if (word == endWord) break;
-            for (int i = 0; i < word.size(); i++) {
-                for (int j = 0; j < 26; j++) {
-                    string newWord = word;
-                    newWord[i] = 'a' + j;
-                    if (dict.count(newWord) > 0 && dis.count(newWord) == 0) {
-                        dis[newWord] = dis[word] + 1;
-                        q.push(newWord);
+            int k = q.size();
+            for (int i = 0; i < k; i++) {
+                string word = q.front();
+                q.pop();
+                if (word == endWord) {
+                    return step;
+                }
+                for (int i = 0; i < word.size(); i++) {
+                    char ch = word[i];
+                    for (int j = 0; j < 26; j++) {
+                        word[i] = 'a' + j;
+                        if (visited.count(word) == 0 && dict.count(word) > 0) {
+                            visited.insert(word);
+                            q.push(word);
+                        }
                     }
+                    word[i] = ch;
                 }
             }
+            
+            step++;
         }
-        if (dis.count(endWord) == 0) return 0;
-        return dis[endWord];
+        
+        return 0;
     }
 };
