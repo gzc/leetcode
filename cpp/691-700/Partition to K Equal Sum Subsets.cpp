@@ -1,19 +1,18 @@
 class Solution {
 
-    bool isKPartitionPossibleRec(const vector<int>& nums, int subsetSum, bool taken[],
-                       int subset, int K, int N, int limitIdx) {
-        if (subsetSum == subset) {
+    bool isKPartitionPossibleRec(const vector<int>& nums, int subsetSum, bool taken[], int target, int K, int limitIdx) {
+        if (subsetSum == target) {
             if (K == 2) return true;
-            return isKPartitionPossibleRec(nums, 0, taken, subset, K - 1, N, N - 1);
+            return isKPartitionPossibleRec(nums, 0, taken, target, K - 1, 0);
         }
 
-        for (int i = limitIdx; i >= 0; i--) {
+        for (int i = limitIdx; i < nums.size(); i++) {
             if (taken[i]) continue;
             int tmp = subsetSum + nums[i];
 
-            if (tmp <= subset) {
+            if (tmp <= target) {
                 taken[i] = true;
-                bool nxt = isKPartitionPossibleRec(nums, subsetSum + nums[i], taken, subset, K, N, i - 1);
+                bool nxt = isKPartitionPossibleRec(nums, subsetSum + nums[i], taken, target, K, i + 1);
                 taken[i] = false;
                 if (nxt) return true;
             }
@@ -33,9 +32,9 @@ public:
         int subset = sum / k;
         bool taken[N];
         fill(taken, taken + N, false);
-        taken[N - 1] = true;
+        taken[0] = true;
 
         //  call recursive method to check K-substitution condition
-        return isKPartitionPossibleRec(nums, nums[N-1], taken, subset, k, N, N - 1);
+        return isKPartitionPossibleRec(nums, nums[0], taken, subset, k, 0);
     }
 };
