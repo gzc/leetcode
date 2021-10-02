@@ -1,17 +1,19 @@
 class Solution {
 public:
     double myPow(double x, int n) {
-        if (n == 0) return 1;
-        double result(1);
+        double res = 1.0;
+        double tmp = x;
         bool sign = (n >= 0);
-        long nn = labs(n);
-        while (nn > 0) {
-            if (nn % 2 == 1)
-                result *= x;
-            x = x * x;
-            nn /= 2;
+        n = abs(n);
+        
+        while (n > 0) {
+            if (n & 1) {
+                res *= tmp;
+            }
+            tmp *= tmp;
+            n = n >> 1;
         }
-        if (sign == false) return 1.0/result;
-        return result;
+        
+        return sign ? res : 1/res;
     }
 };
