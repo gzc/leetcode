@@ -1,37 +1,28 @@
 class Solution {
 public:
-    string minWindow(string S, string T) {
-        if (S.empty() || T.empty()) return "";
-        int needed(T.size());
-        int require[128] = {0};
-        for (int i = 0; i < needed; ++i) {
-            require[T[i]]++;
+    string minWindow(string s, string t) {
+        unordered_map<char, int> dict;
+        int cnt = 0, start = 0, len = INT_MAX, first = 0;
+        for (char c : t) {
+            dict[c]++;
         }
-        int left(0), right(-1);
-        int minLen(INT_MAX), minIdx(0);
-        while (right < (int)S.size()) {
-            if (needed) {
-                char ch = S[++right];
-                require[ch]--;
-                if (require[ch] >= 0) {
-                    needed--;
-                }
+        for (int i = 0; i < s.size(); i++) {
+            dict[s[i]]--;
+            if (dict[s[i]] >= 0) {
+                cnt++;
             }
-            else {
-                char ch = S[left];
-                int temp_length = right-left+1;
-                if (minLen > temp_length) {
-                    minLen = temp_length;
-                    minIdx = left;
+            while (cnt == t.size()) {
+                dict[s[start]]++;
+                if (dict[s[start]] > 0) {
+                    cnt--;
                 }
-                require[ch]++;
-                if (require[ch] > 0) {
-                    needed++;
+                if (i - start + 1 < len) {
+                    len = i - start + 1;
+                    first = start;
                 }
-                left++;
+                start++;
             }
         }
-        if (minLen == INT_MAX) return "";
-        return S.substr(minIdx, minLen);
+        return len == INT_MAX ? "" : s.substr(first, len);
     }
 };
