@@ -26,7 +26,7 @@ public:
         
         // Avoid waiters waking up and immediately blocking by unlocking
         // before notifying
-        m_queue_changed.notify_one();
+        m_queue_changed.notify_all();
     }
     
     int dequeue() {
@@ -37,12 +37,12 @@ public:
             unique_lock<mutex> lk(m_queue_mutex);
 
             // Grab the lock with queue size > 0
-            m_queue_changed.wait(lk, [this] {return m_queue.size() > 0;});
+            m_queue_changed.wait(lk, [this] {return !m_queue.empty();});
 
             ret = m_queue.front();
             m_queue.pop();
         }
-        m_queue_changed.notify_one();
+        m_queue_changed.notify_all();
         
         return ret;
     }
