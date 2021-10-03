@@ -1,8 +1,4 @@
 class Solution {
-    bool validate(int a, int b, int c) {
-        if (a+b > c && a+c > b && b+c > a) return true;
-        return false;
-    }
 public:
     int triangleNumber(vector<int>& nums) {
         int n = nums.size();
@@ -12,7 +8,7 @@ public:
             int left = 0;
             int right = i - 1;
             while (left < right) {
-                if (validate(nums[i], nums[left], nums[right])) {
+                if ((nums[left] + nums[right]) > nums[i]) {
                     result += (right - left);
                     right--;
                 } else {
