@@ -7,6 +7,7 @@
  *     TreeNode(int x) : val(x), left(NULL), right(NULL) {}
  * };
  */
+
 class Solution {
 public:
     TreeNode* deleteNode(TreeNode* root, int key) {
@@ -20,11 +21,18 @@ public:
                 TreeNode* right = root->right;
                 while (right->left)
                     right = right->left;
-                swap(root->val, right->val);    
+                swap(root->val, right->val);
+                root->right = deleteNode(root->right, key);
+                return root;
             }
         }
-        root->left = deleteNode(root->left, key);
-        root->right = deleteNode(root->right, key);
+        
+        if (key < root->val) {
+            root->left = deleteNode(root->left, key);
+        } else {
+            root->right = deleteNode(root->right, key);
+        }
+        
         return root;
     }
 };
