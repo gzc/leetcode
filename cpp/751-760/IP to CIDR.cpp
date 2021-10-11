@@ -33,7 +33,7 @@ public:
         vector<string> ans;
         
         while (n > 0) {
-            long rightMost = start & -start;
+            long rightMost = start == 0 ? 1 << 30 : start & -start;
             while (rightMost > n) rightMost /= 2;
             ans.push_back(construct(start, rightMost));
             n -= rightMost;
