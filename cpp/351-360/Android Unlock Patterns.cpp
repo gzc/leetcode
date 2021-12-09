@@ -1,13 +1,14 @@
 class Solution {
     
     int DFS(vector<bool> &vis, vector<vector<int>> &skip, int cur, int remain) {
-        if(remain < 0) return 0;
         if(remain == 0) return 1;
         vis[cur] = true;
         int rst = 0;
-        for(int i = 1; i <= 9; ++i) 
-            if(!vis[i] && (skip[i][cur] == 0 || (vis[skip[i][cur]])))
+        for (int i = 1; i <= 9; ++i) {
+            if(!vis[i] && (skip[i][cur] == 0 || (vis[skip[i][cur]]))) {
                 rst += DFS(vis, skip, i, remain - 1);
+            }
+        }
         vis[cur] = false;
         return rst;
     }
