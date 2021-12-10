@@ -5,15 +5,15 @@ public:
             return true;
         }
         if (i >= board.size() || j >= board[0].size() || i < 0 || j < 0) return false;
-        if (board[i][j] == 0) return false;
-        if (board[i][j] == word[ind]) {
-            board[i][j] = 0;
-            if (dfs(board, word, i+1, j, ind + 1)) return true;
-            if (dfs(board, word, i, j+1, ind + 1)) return true;
-            if (dfs(board, word, i-1, j, ind + 1)) return true;
-            if (dfs(board, word, i, j-1, ind + 1)) return true;
-            board[i][j] = word[ind];
-        }
+        if (board[i][j] == 0 || board[i][j] != word[ind]) return false;
+
+        board[i][j] = 0;
+        if (dfs(board, word, i+1, j, ind + 1)) return true;
+        if (dfs(board, word, i, j+1, ind + 1)) return true;
+        if (dfs(board, word, i-1, j, ind + 1)) return true;
+        if (dfs(board, word, i, j-1, ind + 1)) return true;
+        board[i][j] = word[ind];
+
         return false;
     }
     
