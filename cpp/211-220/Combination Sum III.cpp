@@ -1,16 +1,15 @@
 class Solution {
     
-    void help(vector<int>& now, int index, int num, int target, vector<vector<int>>& results)
-    {
-        for(int i = index;i <= 9;i++)
-        {
-            if(num == 0) return;
-            else if(i < target)
-            {
+    void help(vector<int>& now, int index, int num, int target, vector<vector<int>>& results) {
+        if (num == 0) {
+            return;
+        }
+        for (int i = index; i <= 9; i++) {
+            if (i < target) {
                 now.push_back(i);
                 help(now, i+1, num-1, target-i, results);
                 now.pop_back();
-            } else if(i == target && num == 1) {
+            } else if (i == target && num == 1) {
                 now.push_back(i);
                 results.push_back(now);
                 now.pop_back();
