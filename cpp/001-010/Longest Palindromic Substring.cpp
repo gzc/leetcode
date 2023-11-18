@@ -8,18 +8,10 @@ public:
         for (int i = 0; i < n; i++)
             table[i][i] = true;
   
-        for (int i = 0; i < n-1; i++) {
-            if (s[i] == s[i+1]) {
-                table[i][i+1] = true;
-                longestBegin = i;
-                maxLen = 2;
-            }
-        }
-  
-        for (int len = 3; len <= n; len++) {
+        for (int len = 2; len <= n; len++) {
             for (int i = 0; i < n-len+1; i++) {
                 int j = i+len-1;
-                if (s[i] == s[j] && table[i+1][j-1]) {
+                if (s[i] == s[j] && (j-i == 1 || table[i+1][j-1])) {
                     table[i][j] = true;
                     longestBegin = i;
                     maxLen = len;
