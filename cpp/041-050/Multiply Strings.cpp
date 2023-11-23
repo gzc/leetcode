@@ -8,25 +8,18 @@ public:
         reverse(num1.begin(), num1.end());
         reverse(num2.begin(), num2.end());
         
-        for (int i = 0;i < num1.length();i++)
-        {
-            int carry(0);
-            for (int j = 0;j < num2.length();j++)
-            {
+        for (int i = 0;i < num1.length();i++) {
+            int carry = 0;
+            int j = 0;
+            while (j < num2.size() || carry > 0) {
                 int digit = result[i+j] - '0';
-                int num = (num1[i] - '0') * (num2[j] - '0');
+                int v = j < num2.size() ? num2[j] : '0';
+                int num = (num1[i] - '0') * (v - '0');
                 int res = digit + num + carry;
                 result[i+j] = (res % 10) + '0';
                 carry = res / 10;
-            }
-            
-            int index = i + num2.size();
-            while (carry)
-            {
-                int digit = result[index] - '0';
-                int res = digit + carry;
-                result[index] = (res % 10) + '0';
-                carry = res / 10;
+
+                j++;
             }
         }
         
