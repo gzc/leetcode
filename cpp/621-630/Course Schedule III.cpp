@@ -17,7 +17,7 @@ public:
             if (current[0] + totalTime <= current[1]) {
                 totalTime += current[0];
                 pq.push(current);
-            } else {
+            } else if (!pq.empty()) {
                 vector<int> mayDiscard = pq.top();
                 if (current[0] < mayDiscard[0]) {
                     pq.pop();
