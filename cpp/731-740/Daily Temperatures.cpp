@@ -1,28 +1,17 @@
 class Solution {
 public:
     vector<int> dailyTemperatures(vector<int>& temperatures) {
-        vector<int> result(temperatures.size());
-        
-        stack<pair<int, int>> mystack; // day, temp
-        
-        for (int i = temperatures.size() - 1; i >= 0; i--) {
-            int currentTemp = temperatures[i];
-            int day = -1;
-            while (!mystack.empty()) {
-                if (currentTemp >= mystack.top().second) {
-                    mystack.pop();
-                } else {
-                    day = mystack.top().first;
-                    mystack.push({i, currentTemp});
-                    break;
-                }
+        vector<int> res(temperatures.size(), 0);
+        stack<pair<int, int>> mystack;
+
+        for (int i = 0; i < temperatures.size(); i++) {
+            while (!mystack.empty() && mystack.top().first < temperatures[i]) {
+                res[mystack.top().second] = i - mystack.top().second;
+                mystack.pop();
             }
-            if (mystack.empty()) {
-                mystack.push({i, currentTemp});
-            }
-            result[i] = day == -1 ? 0 : day - i;
+            mystack.push({temperatures[i], i});
         }
-        
-        return result;
+
+        return res;
     }
 };
